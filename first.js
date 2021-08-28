@@ -1,4 +1,4 @@
-const buildUrl = (pageAddress, domain) => pageAddress.replace(/^\/|()/g, x => `https://${domain}${x}`)
+const buildUrl = (pageAddress, domain) => `https://${domain + pageAddress.replace(/^\/|()/, '/$1')}`
 
 
 console.log(buildUrl('pages/about', 'hexlet.io'))
