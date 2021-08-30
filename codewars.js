@@ -1,10 +1,11 @@
-function calculator(a, b, sign) {
-    if (typeof a !== 'number' || typeof b !== 'number'
-        || !(sign === '+' || sign === '*' || sign === '/' || sign === '-')) {
-        return 'unknown value'
+function numberToPower(number, power) {
+    let numberToPower = 1;
+    for (let i = 0; i < power; i++) {
+        numberToPower *= number
     }
 
-    return eval(a + sign + b)
+    return numberToPower
 }
-
-console.log(calculator(1, 2, "j"))
+console.log(numberToPower(4, 2));
+console.log(numberToPower(10, 4));
+console.log(numberToPower(10, 0))
