@@ -1,15 +1,11 @@
-const filterString = (str, symbol) => {
-    let i = 0;
+const encrypt = (text) => {
     let result = ''
-    while (i < str.length) {
-        if (str[i] !== symbol) {
-            result = `${result}${str[i]}`
-        }
-        i += 1
-    }
-    return console.log(result)
+    for (let i = 0; i < text.length; i += 2) {
+        const nextSymbol = text[i + 1] || '';
+        result = `${result}${nextSymbol}${text[i]}`
+
+    } return console.log(result)
 }
 
-const text = 'If I look back I am lost'
-filterString(text, 'I')
-filterString('zz zorro', 'z')
+encrypt('attack'); // 'taatkc'
+encrypt('go!'); // 'og!'
