@@ -1,11 +1,9 @@
-function numberToPower(number, power) {
-    let numberToPower = 1;
-    for (let i = 0; i < power; i++) {
-        numberToPower *= number
-    }
-
-    return numberToPower
+function findMultiples(integer, limit) {
+    let result = [];
+    for (let i = integer; i <= limit; i += integer) {
+        result.push(i)
+    } return result
 }
-console.log(numberToPower(4, 2));
-console.log(numberToPower(10, 4));
-console.log(numberToPower(10, 0))
+
+console.log(findMultiples(11, 54))
+
