@@ -64,4 +64,4 @@ function maxWord(arr) {
     }
     return arrMaxWord
 }
-console.log(maxWord(color))
+console.log(maxWord(color))//
