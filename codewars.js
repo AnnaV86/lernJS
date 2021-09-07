@@ -50,18 +50,18 @@
 // }
 // console.log(getString('Hello', 3))
 
-const color = 'White, Black, Red, Green, Blue'
 
-function maxWord(arr) {
-    const arr2 = arr.split(', ')
-    const sortWord = arr2.sort((a, b) => a.length - b.length)
-    const maxWord = sortWord[sortWord.length - 1].length
-    let arrMaxWord = []
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length = maxWord) {
-            arrMaxWord.push(arr[i])
-        }
-    }
-    return arrMaxWord
-}
-console.log(maxWord(color))
+
+
+// const color = 'White, Black, Red, Green, Blue, Violette, Orange'
+
+// function words(str) {
+//     const newArr = str.split(', ')
+//     const sortWord = newArr.sort((a, b) => a.length - b.length)
+//     const maxWord = sortWord[sortWord.length - 1].length
+//     const result = sortWord.filter(word => maxWord === word.length)
+//     return result.length === 1 ? result[0] : result
+
+// }
+// console.log(words(color))
+
