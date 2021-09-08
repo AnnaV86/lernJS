@@ -75,27 +75,80 @@
 // console.log(take([-38, 69, -12, 27, -27, -81, -10], 22))
 
 
-function peopleWithAgeDrink(old) {
-    switch (old) {
-        case old < 14 ? old : null:
-            return 'drink toddy';
-        case old < 14 ? old : null:
-            return 'drink toddy';
-        case old < 14 ? old : null:
-            return 'drink toddy';
-        default: return 2
+// function peopleWithAgeDrink(old) {
+//     switch (old) {
+//         case old < 14 ? old : null:
+//             return 'drink toddy';
+//         case old < 18 ? old : null:
+//             return 'drink coke';
+//         case old < 21 ? old : null:
+//             return 'drink beer';
+//         default: return 'drink whisky'
+//     }
+// }
+// console.log(peopleWithAgeDrink(8))
+// console.log(peopleWithAgeDrink(16))
+// console.log(peopleWithAgeDrink(18))
+// console.log(peopleWithAgeDrink(20))
+// console.log(peopleWithAgeDrink(50))
+
+
+
+// function howManySmaller(arr, n) {
+
+//     total = 0;
+
+//     for (i = 0; i < arr.length; i++) {
+
+//         if (arr[i].toFixed(2) < n)
+
+//             total++;
+
+//     }
+
+//     return total;
+
+// }
+
+// console.log(howManySmaller([1.234, 1.235, 1.228], 1.24))    //2
+// console.log(howManySmaller([1.1888, 1.1868, 1.1838], 1.19))     //1
+// console.log(howManySmaller([3.1288, 3.1212, 3.1205], 3.1212))    //2
+
+// function pointsPer48(ppg, mpg) {
+//     return +(ppg / mpg * 48).toFixed(1) || 0
+// }
+// console.log(pointsPer48(12, 20))
+// console.log(pointsPer48(10, 10))
+// console.log(pointsPer48(0, 0))
+// console.log(pointsPer48(5, 17))
+// console.log(pointsPer48(30.8, 34.7))
+
+
+// function remove(s) {
+//     if (s[s.length - 1] === '!') {
+//         return s.substring(0, s.length - 1)
+//     } else {
+//         return s
+//     }
+// }
+
+
+// function remove(s) {
+//     return s[s.length - 1] === '!' ? s.substring(0, s.length - 1) : s
+// }
+
+// console.log(remove("!Hi!"))
+
+var array1 = [2, 3, 5, 7, 11];
+
+function find(array, element) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === element) {
+            return i
+        }
     }
-};
-console.log(peopleWithAgeDrink(14))
-
-let a = 1;
-let b = 0;
-
-switch (a) {
-    case 1:
-        console.log("Выполнится, т.к. значением +a будет 1, что в точности равно b+1");
-        break;
-
-    default:
-        console.log("Это не выполнится");
+    return 'Not found'
 }
+
+console.log(find(array1, 5))
+
