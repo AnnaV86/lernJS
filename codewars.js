@@ -65,3 +65,37 @@
 // }
 // console.log(words(color))
 
+
+
+// function take(arr, n) {
+//     return arr.slice(0, n)
+// }
+// console.log(take([0, 1, 2, 3, 5, 8, 13], 3))
+// console.log(take([], 3))
+// console.log(take([-38, 69, -12, 27, -27, -81, -10], 22))
+
+
+function peopleWithAgeDrink(old) {
+    switch (old) {
+        case old < 14 ? old : null:
+            return 'drink toddy';
+        case old < 14 ? old : null:
+            return 'drink toddy';
+        case old < 14 ? old : null:
+            return 'drink toddy';
+        default: return 2
+    }
+};
+console.log(peopleWithAgeDrink(14))
+
+let a = 1;
+let b = 0;
+
+switch (a) {
+    case 1:
+        console.log("Выполнится, т.к. значением +a будет 1, что в точности равно b+1");
+        break;
+
+    default:
+        console.log("Это не выполнится");
+}
