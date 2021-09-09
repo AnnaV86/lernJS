@@ -141,14 +141,11 @@
 
 var array1 = [2, 3, 5, 7, 11];
 
-function find(array, element) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === element) {
-            return i
-        }
-    }
-    return 'Not found'
+find = (arr, el) => {
+    return arr.includes(el) ? arr.indexOf(el) : "Not found"
 }
 
-console.log(find(array1, 5))
+console.log(find(array1, 3))
+
+
 
