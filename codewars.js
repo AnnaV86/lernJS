@@ -139,13 +139,25 @@
 
 // console.log(remove("!Hi!"))
 
-var array1 = [2, 3, 5, 7, 11];
+// var array1 = [2, 3, 5, 7, 11];
 
-find = (arr, el) => {
-    return arr.includes(el) ? arr.indexOf(el) : "Not found"
+// find = (arr, el) => {
+//     return arr.includes(el) ? arr.indexOf(el) : "Not found"
+// }
+
+// console.log(find(array1, 3))
+
+
+function sc(floor) {
+    if (floor <= 1) return '';
+    return 'Aa~ '.repeat(floor - 1) + 'Pa! ' + (floor <= 6 ? 'Aa! ' : "")
+
 }
 
-console.log(find(array1, 3))
 
 
-
+console.log(sc(5))
+console.log(sc(6))
+console.log(sc(10))
+console.log(sc(1))
+console.log(sc(-1))
