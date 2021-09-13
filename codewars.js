@@ -238,3 +238,40 @@
 // }
 
 // console.log(repeatStr(3, "*"))
+
+
+
+// function solution(str) {
+//     return str.split('').reverse().join('')
+// }
+// console.log(solution('world'))
+
+
+// var summation = function (num) {    //все цифры в числе от 1 до num
+//     return num * (num + 1) / 2
+
+// }
+// console.log(summation(8))
+// console.log(summation(2))
+
+
+// **Удаление пробелов**
+
+
+// function noSpace(x) {
+//     return x.replace(/\s/g, '')
+// }
+// console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+
+class SmallestIntegerFinder {
+    findSmallestInt(arrNumbers) {
+        return arrNumbers.reduce((acc, number) => {
+            acc > number ? acc = number : number
+            return acc
+        })
+    }
+}
+
+const objectSmallestIntegerFinder = new SmallestIntegerFinder()
+
+console.log(objectSmallestIntegerFinder.findSmallestInt([78, 56, 232, 412, 228]))
