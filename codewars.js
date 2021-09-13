@@ -162,30 +162,79 @@
 // console.log(sc(1))
 // console.log(sc(-1))
 
-const month = {
-    январь: 1,
-    февраль: 2,
-    март: 3,
-    апрель: 4,
-    май: 5,
-    июнь: 6,
-    июль: 7,
-    август: 8,
-    сентябрь: 9,
-    октябрь: 10,
-    ноябрь: 11,
-    декабрь: 12
-}
+// const month = {
+//     январь: 1,
+//     февраль: 2,
+//     март: 3,
+//     апрель: 4,
+//     май: 5,
+//     июнь: 6,
+//     июль: 7,
+//     август: 8,
+//     сентябрь: 9,
+//     октябрь: 10,
+//     ноябрь: 11,
+//     декабрь: 12
+// }
 
 
-const arrMonth = ['март', 'февраль', 'январь', 'июнь', 'май', 'апрель', 'сентябрь', 'август', 'июль', 'декабрь', 'ноябрь', 'октябрь']
+// const arrMonth = ['март', 'февраль', 'январь', 'июнь', 'май', 'апрель', 'сентябрь', 'август', 'июль', 'декабрь', 'ноябрь', 'октябрь']
 
-console.log(arrMonth.sort((a, b) => month[a] - month[b]))
-
-
-const arr = [['u', 1], ['p', 1], ['l', 2], ['w', 2], ['f', 1], ['j', 1], ['k', 1], ['h', 4], ['d', 2], ['v', 5]]
+// console.log(arrMonth.sort((a, b) => month[a] - month[b]))
 
 
-console.log(arr.sort((a, b) => a[1] === b[1]
-    ? a[0].charCodeAt() - b[0].charCodeAt()
-    : a[1] - b[1]))
+// const arr = [['u', 1], ['p', 1], ['l', 2], ['w', 2], ['f', 1], ['j', 1], ['k', 1], ['h', 4], ['d', 2], ['v', 5]]
+
+
+// console.log(arr.sort((a, b) => a[1] === b[1]
+//     ? a[0].charCodeAt() - b[0].charCodeAt()
+//     : a[1] - b[1]))
+
+
+// function even_or_odd(number) {
+//     return number % 2 === 0 ? 'Even' : 'Odd'
+// }
+
+// console.log(even_or_odd(-8))
+
+// function positiveSum(arr) {
+//     let summ = 0
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 0) {
+//             summ = summ + arr[i]
+//         }
+//     } return summ
+// }
+
+
+// function positiveSum(arr) {
+//     const newArr = arr.filter(numb => numb > 0)
+//     return newArr.reduce((a, b) => a + b, 0)
+// }
+
+// console.log(positiveSum([0]))
+
+
+// function opposite(number) {
+//     return 0 - number
+// }
+
+
+// console.log(opposite(1))
+// console.log(opposite(0))
+// console.log(opposite(-51))
+// console.log(opposite(100))
+
+
+// function removeChar(str) {
+//     return str.slice(1, str.length - 1)
+// };
+
+// console.log(removeChar('eloquent'))
+
+// function repeatStr(n, s) {
+//     return s.repeat(n);
+// }
+
+// console.log(repeatStr(3, "*"))
