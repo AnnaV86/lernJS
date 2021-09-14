@@ -263,15 +263,36 @@
 // }
 // console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
 
-class SmallestIntegerFinder {
-    findSmallestInt(arrNumbers) {
-        return arrNumbers.reduce((acc, number) => {
-            acc > number ? acc = number : number
-            return acc
-        })
-    }
+// class SmallestIntegerFinder {
+//     findSmallestInt(arrNumbers) {
+//         return arrNumbers.reduce((acc, number) => {
+//             acc > number ? acc = number : number
+//             return acc
+//         })
+//     }
+// }
+
+// const objectSmallestIntegerFinder = new SmallestIntegerFinder()
+
+// console.log(objectSmallestIntegerFinder.findSmallestInt([78, 56, 232, 412, 228]))
+
+// var array1 = [true, true, true, false,
+//     true, true, true, true,
+//     true, false, true, false,
+//     true, false, false, true,
+//     true, true, true, true,
+//     false, false, true, true];
+
+// function countSheeps(arrayOfSheep) {
+//     return arrayOfSheep.filter(word => word === true).length
+// }
+
+
+// console.log(countSheeps(array1))
+
+function squareSum(numbers) {
+    return numbers.reduce((acc, num) => acc + (num * num), 0)
 }
 
-const objectSmallestIntegerFinder = new SmallestIntegerFinder()
-
-console.log(objectSmallestIntegerFinder.findSmallestInt([78, 56, 232, 412, 228]))
+console.log(squareSum([1, 2]))
+console.log(squareSum([0, 3, 4, 5]))
