@@ -290,9 +290,19 @@
 
 // console.log(countSheeps(array1))
 
-function squareSum(numbers) {
-    return numbers.reduce((acc, num) => acc + (num * num), 0)
+// function squareSum(numbers) {
+//     return numbers.reduce((acc, num) => acc + (num * num), 0)
+// }
+
+// console.log(squareSum([1, 2]))
+// console.log(squareSum([0, 3, 4, 5]))
+
+function century(year) {
+    return Math.ceil(year / 100);
 }
 
-console.log(squareSum([1, 2]))
-console.log(squareSum([0, 3, 4, 5]))
+console.log(century(1705))
+console.log(century(1900))
+console.log(century(1601))
+console.log(century(2000))
+console.log(century(89))
