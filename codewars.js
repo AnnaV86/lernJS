@@ -297,12 +297,92 @@
 // console.log(squareSum([1, 2]))
 // console.log(squareSum([0, 3, 4, 5]))
 
-function century(year) {
-    return Math.ceil(year / 100);
+
+
+// function century(year) {
+//     return Math.ceil(year / 100);
+// }
+
+// console.log(century(1705))
+// console.log(century(1900))
+// console.log(century(1601))
+// console.log(century(2000))
+// console.log(century(89))
+
+// function litres(time) {
+//     return Math.floor(time / 2);
+// }
+
+// console.log(litres(2))
+// console.log(litres(1.4))
+// console.log(litres(12.3))
+// console.log(litres(0.82))
+// console.log(litres(1787))
+// console.log(litres(0))
+
+
+
+// function isDivisible(n, x, y) {
+//     return n % x === 0 && n % y === 0
+// }
+
+// console.log(isDivisible(3, 3, 4))
+// console.log(isDivisible(12, 3, 4))
+// console.log(isDivisible(8, 3, 4))
+// console.log(isDivisible(48, 3, 4))
+
+// function basicOp(operation, value1, value2) {
+//     switch (operation) {
+//         case '+': return value1 + value2;
+//         case '-': return value1 - value2;
+//         case '*': return value1 * value2;
+//         case '/': return value1 / value2;
+//     }
+//     return 0
+// }
+// console.log(basicOp('+', 4, 7))
+// console.log(basicOp('-', 15, 18))
+// console.log(basicOp('*', 5, 5))
+// console.log(basicOp('/', 49, 7))
+
+// function digitize(n) {
+//     return String(n).split('').reverse().map(Number)
+// }
+// console.log(digitize(35231))
+
+// function abbrevName(name) {
+//     const nameArr = name.split(' ')
+//     return (nameArr[0][0] + '.' + nameArr[1][0]).toUpperCase()
+// }
+
+// console.log(abbrevName("Sam Harris"))
+// console.log(abbrevName("Patrick Feenan"))
+// console.log(abbrevName("k Favuzzi"))
+// console.log(abbrevName("David Mendieta"))
+
+// function findNeedle(haystack) {
+//     let result = haystack.indexOf('needle')
+//     return `found the needle at position ${result}`
+// }
+
+// console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]))
+
+// function countPositivesSumNegatives(input) {
+//     let negativeArr = input.filter(i => i < 0).reduce((acc, i) => acc + i, 0)
+//     let positiveArr = input.filter(i => i > 0).length
+//     if (positiveArr === 0 && negativeArr === 0) {
+//         return []
+//     }
+//     return [positiveArr, negativeArr]
+// }
+
+// console.log(countPositivesSumNegatives([0, 0]))
+
+function invert(array) {
+    return array.map(n => -n)
 }
 
-console.log(century(1705))
-console.log(century(1900))
-console.log(century(1601))
-console.log(century(2000))
-console.log(century(89))
+console.log(invert([1, 2, 3, 4, 5]))
+console.log(invert([-1, 2, -3, 4, -5]))
+console.log(invert([]))
+console.log(invert([0]))
