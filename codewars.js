@@ -378,11 +378,38 @@
 
 // console.log(countPositivesSumNegatives([0, 0]))
 
-function invert(array) {
-    return array.map(n => -n)
+// function invert(array) {
+//     return array.map(n => -n)
+// }
+
+// console.log(invert([1, 2, 3, 4, 5]))
+// console.log(invert([-1, 2, -3, 4, -5]))
+// console.log(invert([]))
+// console.log(invert([0]))
+
+
+// function getAverage(marks) {
+//     return Math.round((marks.reduce((acc, n) => acc + n)) / marks.length)
+// }
+
+// console.log(getAverage([15, 7, 13, 8, 11, 16, 6, 17]))
+
+// function reverseWords(str) {
+//     return str.split(' ').reverse().join(' ')
+// }
+// console.log(reverseWords("hello world!"))
+
+
+// function past(h, m, s) {
+//     return (s + m * 60 + h * 60 * 60) * 1000
+// }
+
+// console.log(past(0, 0, 0))
+
+function sumArray(array) {
+    return array.sort((a, b) => a - b)
+        .slice(1, array.length - 1)
+        .reduce((acc, n) => acc + n, 0)
 }
 
-console.log(invert([1, 2, 3, 4, 5]))
-console.log(invert([-1, 2, -3, 4, -5]))
-console.log(invert([]))
-console.log(invert([0]))
+console.log(sumArray([6, 2, 1, 8, 10]))
