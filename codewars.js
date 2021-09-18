@@ -406,10 +406,73 @@
 
 // console.log(past(0, 0, 0))
 
-function sumArray(array) {
-    return array.sort((a, b) => a - b)
-        .slice(1, array.length - 1)
-        .reduce((acc, n) => acc + n, 0)
-}
+// function sumArray(array) {
+//     return array.sort((a, b) => a - b)
+//         .slice(1, array.length - 1)
+//         .reduce((acc, n) => acc + n, 0)
+// }
 
-console.log(sumArray([6, 2, 1, 8, 10]))
+// console.log(sumArray([6, 2, 1, 8, 10]))
+
+// function points(games) {
+//     return games.map(game => game[0] > game[2] ? 3 : game[0] === game[2] ? 1 : 0)
+//         .reduce((acc, n) => acc + n, 0)
+// }
+
+// console.log(points(["1:1", "2:2", "3:3", "4:4", "2:2", "3:3", "4:4", "3:3", "4:4", "4:4"]))
+
+
+// const reverseSeq = n => {
+//     let arr = []
+//     for (let i = n; i > 0; i--) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// console.log(reverseSeq(4))
+
+// function hero(bullets, dragons) {
+//     return bullets >= dragons * 2
+// }
+// console.log(hero(0, 0))
+
+// function arrayPlusArray(arr1, arr2) {
+//     return [...arr1, ...arr2].reduce((acc, n) => acc + n, 0)
+// }
+// console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]))
+
+// function bonusTime(salary, bonus) {
+//     return bonus === true ? `\u00A3${salary * 10}` : '\u00A3' + salary
+// }
+
+// console.log(bonusTime(10000, true))
+// console.log(bonusTime(30, false))
+
+
+// function bmi(weight, height) {
+//     let index = weight / (height * height)
+//     if (index <= 18.5) {
+//         return 'Underweight'
+//     }
+//     else if (index <= 25.0) {
+//         return 'Normal'
+//     }
+//     else if (index <= 30.0) {
+//         return 'Overweight'
+//     }
+//     return 'Obese'
+// }
+// console.log(bmi(80, 1.80))
+
+// function paperwork(n, m) {
+//     return n < 0 || m < 0 ? 0 : n * m
+// }
+// console.log(paperwork(5, 5))
+// console.log(paperwork(-5, 5))
+// console.log(paperwork(5, -5))
+
+function firstNonConsecutive(arr) {
+    if arr[]
+
+}
+console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])
