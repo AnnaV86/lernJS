@@ -1,4 +1,4 @@
-String.prototype.toAlternatingCase = function () {
-    return this.split('').map(a => a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()).join('')
-}
-console.log("hellO woRld".toAlternatingCase())
+// String.prototype.toAlternatingCase = function () {
+//     return this.split('').map(a => a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()).join('')
+// }
+// console.log("hellO woRld".toAlternatingCase())

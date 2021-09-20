@@ -16,3 +16,12 @@
 //     return sum < 0 ? 0 : sum
 // }
 // console.log(solution(10))
+
+
+
+// function accum(s) {
+//     return s.split('').map((el, i) =>
+//         el.toUpperCase() + [...Array(i)].map(n => el.toLowerCase()).join('')
+//     ).join('-')
+// }
+// console.log(accum("ZpglnRxqenU"))

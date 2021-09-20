@@ -736,3 +736,42 @@
 // }
 // console.log(solution(10))
 
+
+// function accum(s) {
+//     return s.split('').map((el, i) =>
+//         el.toUpperCase() + [...Array(i)].map(n => el.toLowerCase()).join('')
+//     ).join('-')
+
+// }
+// console.log(accum("ZpglnRxqenU"))
+
+
+// function disemvowel(str) {
+//     return str.replace(/[aeiuo]/ig, '');
+// }
+// console.log(disemvowel("This website is for losers LOL!"))
+
+
+// function highAndLow(numbers) {
+//     const arr = numbers.split(' ').map(el => Number(el))
+//     return `${Math.max(...arr)} ${Math.min(...arr)}`
+// }
+
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -
+
+
+
+// function findOdd(arr) {
+//     return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+// }
+// console.log(3 % 2)
+
+
+function digital_root(n) {
+    if (String(n).length === 1) {
+        return n
+    }
+    const arrString = String(n).split('').reduce((acc, el) => acc + Number(el), 0)
+    return digital_root(arrString)
+}
+console.log(digital_root(456))
