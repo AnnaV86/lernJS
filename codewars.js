@@ -422,6 +422,8 @@
 // console.log(points(["1:1", "2:2", "3:3", "4:4", "2:2", "3:3", "4:4", "3:3", "4:4", "4:4"]))
 
 
+
+
 // const reverseSeq = n => {
 //     let arr = []
 //     for (let i = n; i > 0; i--) {
@@ -431,15 +433,27 @@
 // }
 // console.log(reverseSeq(4))
 
+
+
+
+
 // function hero(bullets, dragons) {
 //     return bullets >= dragons * 2
 // }
 // console.log(hero(0, 0))
 
+
+
+
+
 // function arrayPlusArray(arr1, arr2) {
 //     return [...arr1, ...arr2].reduce((acc, n) => acc + n, 0)
 // }
 // console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]))
+
+
+
+
 
 // function bonusTime(salary, bonus) {
 //     return bonus === true ? `\u00A3${salary * 10}` : '\u00A3' + salary
@@ -447,6 +461,9 @@
 
 // console.log(bonusTime(10000, true))
 // console.log(bonusTime(30, false))
+
+
+
 
 
 // function bmi(weight, height) {
@@ -464,6 +481,9 @@
 // }
 // console.log(bmi(80, 1.80))
 
+
+
+
 // function paperwork(n, m) {
 //     return n < 0 || m < 0 ? 0 : n * m
 // }
@@ -471,8 +491,248 @@
 // console.log(paperwork(-5, 5))
 // console.log(paperwork(5, -5))
 
-function firstNonConsecutive(arr) {
-    const result = arr.find((el, i, m) => el - 1 !== m[i - 1] && i !== 0)
-    return typeof result === 'number' ? result : null
-}
-console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]))
+
+
+
+
+// function firstNonConsecutive(arr) {
+//     const result = arr.find((el, i, m) => el - 1 !== m[i - 1] && i !== 0)
+//     return typeof result === 'number' ? result : null
+// }
+// console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]))
+
+
+
+
+
+// function DNAtoRNA(dna) {
+//     return dna.replace(/T/g, 'U')
+// }
+// console.log(DNAtoRNA("GCAT"))
+// console.log(DNAtoRNA("TTTT"))
+// console.log(DNAtoRNA("GACCGCCGCC"))
+
+
+
+
+
+
+
+
+// const rps = (p1, p2) => {
+//     if (p1 === p2) return "Draw!";
+//     var rules = {
+//         rock: "scissors",
+//         paper: "rock",
+//         scissors: "paper"
+//     };
+//     if (p2 === rules[p1]) {
+//         return "Player 1 won!";
+//     }
+//     else {
+//         return "Player 2 won!";
+//     }
+// };
+
+// console.log(rps('rock', 'paper'))
+// console.log(rps('paper', 'scissors'))
+// console.log(rps('rock', 'scissors'))
+// console.log(rps('rock', 'rock'))
+
+
+
+
+
+// function countBy(x, n) {
+//     var z = [];
+//     let a = 1
+
+//     for (let i = 1; i <= n; i++) {
+//         z.push(x * i)
+//     }
+//     return z;
+// }
+
+// console.log(countBy(2, 4))
+
+
+
+
+
+// function betterThanAverage(classPoints, yourPoints) {
+//     return (classPoints.reduce((acc, n) => acc + n)) / classPoints.length < yourPoints
+// }
+
+// console.log(betterThanAverage([2, 3, 5], 5))
+
+
+
+
+
+
+// function sumMix(x) {
+//     return x.map(n => Number(n)).reduce((acc, n) => acc + n, 0)
+
+// }
+
+
+
+
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//     return distanceToPump <= mpg * fuelLeft
+// };
+// console.log(zeroFuel(50, 25, 2))
+// console.log(zeroFuel(100, 50, 1))
+
+
+
+
+
+// var countSheep = function (num) {
+//     let str = ''
+//     for (let i = 1; i <= num; i++) {
+//         str += `${i} sheep...`
+//     }
+//     return str
+// }
+
+// console.log(countSheep(4))
+
+
+
+// function feast(beast, dish) {
+//     return beast[0] === dish[0] && beast.slice(-1) === dish.slice(-1)
+// }
+
+// console.log(feast("brown bear", "bear claw"))
+
+
+// function areYouPlayingBanjo(name) {
+//     return name[0].toUpperCase() === 'R' ? name + " plays banjo" : name + " does not play banjo"
+// }
+
+// console.log(areYouPlayingBanjo("Adam"))
+// console.log(areYouPlayingBanjo("Ringo"))
+// console.log(areYouPlayingBanjo("rolf"))
+
+
+// function removeExclamationMarks(s) {
+//     return s.replace(/!/g, '');
+// }
+
+// console.log(removeExclamationMarks("Hello World!!"))
+
+
+
+// function lovefunc(flower1, flower2) {
+//     return flower1 % 2 !== flower2 % 2
+// }
+// console.log(lovefunc(1, 4))
+// console.log(lovefunc(2, 2))
+// console.log(lovefunc(0, 1))
+// console.log(lovefunc(0, 0))
+
+
+// function expressionMatter(a, b, c) {
+//     return Math.max((a * (b + c)), (a * b * c), ((a + b) * c), (a + b + c), (a * b + c), (a + b * c))
+// }
+
+// console.log(expressionMatter(2, 1, 2))
+
+
+
+
+
+// String.prototype.toAlternatingCase = function () {
+//     return this.split('').map(a => a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()).join('')
+// }
+
+
+// console.log("hellO woRld".toAlternatingCase())
+
+
+
+
+
+
+// function greet(language) {
+//     const odjLanguage = {
+//         english: 'Welcome',
+//         czech: 'Vitejte',
+//         danish: 'Velkomst',
+//         dutch: 'Welkom',
+//         estonian: 'Tere tulemast',
+//         finnish: 'Tervetuloa',
+//         flemish: 'Welgekomen',
+//         french: 'Bienvenue',
+//         german: 'Willkommen',
+//         irish: 'Failte',
+//         italian: 'Benvenuto',
+//         latvian: 'Gaidits',
+//         lithuanian: 'Laukiamas',
+//         polish: 'Witamy',
+//         spanish: 'Bienvenido',
+//         swedish: 'Valkommen',
+//         welsh: 'Croeso'
+//     }
+//     return odjLanguage[language] === undefined ? 'Welcome' : odjLanguage[language]
+// }
+
+// console.log(greet('english'))
+// console.log(greet('dutch'))
+// console.log(greet('IP_ADDRESS_INVALID'))
+
+
+
+
+
+// function simpleMultiplication(number) {
+//     return number % 2 === 0 ? number * 8 : number * 9
+// }
+// console.log(simpleMultiplication(2))
+
+
+// function cockroachSpeed(s) {
+//     return Math.floor(s / 3.60 * 100)
+// }
+// console.log(cockroachSpeed(1.08))
+// console.log(cockroachSpeed(1.09))
+// console.log(cockroachSpeed(0))
+
+// function oddCount(n) {
+//     return Math.floor(n / 2)
+// }
+
+// console.log(oddCount(15023))
+
+
+// function getCount(str) {
+//     var vowelsCount = 0;
+
+//     for (let i = 0; i <= str.length; i++) {
+//         if (str[i] === 'a' ||
+//             str[i] === 'e' ||
+//             str[i] === 'i' ||
+//             str[i] === 'o' ||
+//             str[i] === 'u') {
+//             vowelsCount += 1
+//         }
+//     }
+//     return vowelsCount;
+// }
+
+// console.log(getCount("abracadabra"))
+
+
+
+// function solution(number) {
+//     if (number <= 0) {
+//         return 0
+//     }
+//     let arr = [...Array(number - 1)].map((_, i) => i + 1).filter(el => el % 3 === 0 || el % 5 === 0)
+//     const sum = arr.reduce((acc, n) => acc + n, 0)
+//     return sum < 0 ? 0 : sum
+// }
+// console.log(solution(10))
+
