@@ -17,6 +17,12 @@ function factorial(number) {
 
 console.log(factorial(5)) // 120
 
+const persistence = num => {
+    const arrMulti = String(num).split('').reduce((a, b) => a * Number(b), 1)
+    return num < 10 ? 0 : 1 + persistence(arrMulti)
+}
+
+console.log(persistence(999))
 
 
 // 4+5+6=15  1+5=6

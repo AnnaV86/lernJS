@@ -767,11 +767,102 @@
 // console.log(3 % 2)
 
 
-function digital_root(n) {
-    if (String(n).length === 1) {
-        return n
-    }
-    const arrString = String(n).split('').reduce((acc, el) => acc + Number(el), 0)
-    return digital_root(arrString)
+// function digital_root(n) {
+//     if (String(n).length === 1) {
+//         return n
+//     }
+//     const arrString = String(n).split('').reduce((acc, el) => acc + Number(el), 0)
+//     return digital_root(arrString)
+// }
+// console.log(digital_root(456))
+
+
+
+function likes(names) {
+    return names.length === 0 ? "no one likes this"
+        : names.length === 1 ? names[0] + " likes this"
+            : names.length === 2 ? `${names[0]}, ${names[1]} like this`
+                : names.length === 3 ? `${names[0]}, ${names[1]}, ${names[2]} like this`
+                    : `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
 }
-console.log(digital_root(456))
+
+
+
+
+// function likes(names) {
+//     const text = {
+//         0: "no one likes this",
+//         1: names[0] + " likes this",
+//         2: `${names[0]} and ${names[1]} like this`,
+//         3: `${names[0]}, ${names[1]} and ${names[2]} like this`,
+//         4: `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+//     }
+//     return names.length > 4 ? text[4] : text[names.length]
+// }
+
+
+// console.log(likes([]))
+// console.log(likes(['Peter']))
+// console.log(likes(['Jacob', 'Alex']))
+// console.log(likes(['Max', 'John', 'Mark']))
+// console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'Kate']))
+
+
+
+// function spinWords(string) {
+//     return string.split(' ').map(el => el.length > 4 ? el.split('').reverse().join('') : el)
+//         .join(' ')
+// }
+
+// console.log(spinWords("Hey fellow warriors"))
+
+
+// function duplicateCount(text) {
+//     const objList = text.split('').map(el => el.toLowerCase()).reduce((acc, str) => {
+//         acc[str] = ++acc[str] || 1
+//         return acc
+//     }, {})
+//     return Object.entries(objList).filter(num => num[1] > 1).length
+// }
+// console.log(duplicateCount(""))
+
+
+// function persistence(n) {
+//     let count = -1
+//     return (function persistence(n) {
+//         ++count
+//         if (String(n).length === 1) {
+//             return count
+//         }
+
+//         const arrString = String(n).split('').reduce((acc, el) => acc * Number(el), 1)
+//         return persistence(arrString)
+//     })(n)
+// }
+
+// console.log(persistence(999))
+
+// function arrayDiff(a, b) {
+//     return a.filter(el => !b.includes(el))
+// }
+
+// console.log(arrayDiff([3, 4], [3]))
+
+// function findOutlier(integers) {
+//     const filterOdd = integers.filter(el => el % 2 === 0)
+//     const filterEven = integers.filter(el => el % 2 !== 0)
+//     return Number(filterOdd.length === 1 ? filterOdd.join() : filterEven.join())
+// }
+
+// console.log(findOutlier([1, 1, 0, 1, 1]))
+
+function duplicateEncode(word) {
+    const objList = word.split('').reduce((acc, str) => {
+        acc[str] = ++acc[str] || 1
+        return acc
+    }, {})
+    return
+}
+
+
+console.log(duplicateEncode("recede"))
