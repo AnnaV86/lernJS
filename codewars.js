@@ -856,13 +856,54 @@ function likes(names) {
 
 // console.log(findOutlier([1, 1, 0, 1, 1]))
 
-function duplicateEncode(word) {
-    const objList = word.split('').reduce((acc, str) => {
-        acc[str] = ++acc[str] || 1
-        return acc
-    }, {})
-    return
+// function duplicateEncode(word) {
+//     const objList = word.split('').reduce((acc, str) => {
+//         acc[str] = ++acc[str] || 1
+//         return acc
+//     }, {})
+//     return word.split('').map(el => objList[el] === 1 ? "(" : ")").join('')
+// }
+// console.log(duplicateEncode("din  "))
+
+
+// function createPhoneNumber(numbers) {
+//     return `(${numbers.slice(0, 3).join('')}) ${numbers.slice(3, 6).join('')}-${numbers.slice(6, 10).join('')}`
+// }
+// function createPhoneNumber(numbers) {
+//     return numbers.join('').replace(/(...)(...)(.*)/, '($1) $2-$3');
+// }
+
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+
+
+// function isValidWalk(walk) {
+//     const objList = walk.reduce((acc, str) => {
+//         acc[str] = ++acc[str] || 1
+//         return acc
+//     }, {})
+//     return objList['n'] === objList['s'] && objList['w'] === objList['e'] && walk.length === 10
+// }
+// console.log(isValidWalk(['w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e']))
+
+
+
+// function alphabetPosition(text) {
+//     const arrText = text.match(/[a-z]/ig) || []
+//     if (arrText.length === 0) {
+//         return ''
+//     }
+//     return arrText.map(x => x.toLowerCase().charCodeAt() - 96).join(' ')
+// }
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+
+// console.log(''.charCodeAt())
+
+function order(words) {
+    const arr = words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/))
+    return arr
 }
 
 
-console.log(duplicateEncode("recede"))
+console.log(order("is2 Thi1s T4est 3a"))
