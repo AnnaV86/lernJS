@@ -900,10 +900,23 @@ function likes(names) {
 
 // console.log(''.charCodeAt())
 
-function order(words) {
-    const arr = words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/))
-    return arr
+// function order(words) {
+//     const arr = words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/))
+//     return arr
+// }
+
+
+// console.log(order("is2 Thi1s T4est 3a"))
+
+function tribonacci(signature, n) {
+    return [...Array(n)].reduce((acc, _, index) => {
+        return [...acc, acc[index] + acc[index + 1] + acc[index + 2]]
+    }, signature).slice(0, n)
 }
 
 
-console.log(order("is2 Thi1s T4est 3a"))
+console.log(tribonacci([1, 1, 1], 10)) // [1,1,1,3,5,9,17,31,57,105]
+console.log(tribonacci([0, 0, 1], 10)) // [0, 0, 1, 1, 2, 4, 7, 13, 24, 44]
+console.log(tribonacci([0, 0, 0], 10)) // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+console.log(tribonacci([3, 2, 1], 10)) // [3, 2, 1, 6, 9, 16, 31, 56, 103, 190]
+console.log(tribonacci([1, 1, 1], 1)) // [1]

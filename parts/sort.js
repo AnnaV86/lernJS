@@ -38,3 +38,11 @@ const month = {
 const arrMonth = ['март', 'февраль', 'январь', 'июнь', 'май', 'апрель', 'сентябрь', 'август', 'июль', 'декабрь', 'ноябрь', 'октябрь']
 
 console.log(arrMonth.sort((a, b) => month[a] - month[b]))
+
+
+function order(words) {
+    const arr = words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/))  //сортирует только по цифрам
+    return arr
+}
+
+console.log(order("is2 Thi1s T4est 3a"))
