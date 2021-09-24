@@ -909,9 +909,10 @@ function likes(names) {
 // console.log(order("is2 Thi1s T4est 3a"))
 
 function tribonacci(signature, n) {
-    return [...Array(n)].reduce((acc, _, index) => {
-        return [...acc, acc[index] + acc[index + 1] + acc[index + 2]]
-    }, signature).slice(0, n)
+    for (let i = 3; i < n; i++) {
+        signature.push(signature[i - 1] + signature[i - 2] + signature[i - 3])
+    }
+    return signature.slice(0, n)
 }
 
 
