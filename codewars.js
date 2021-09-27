@@ -908,16 +908,27 @@ function likes(names) {
 
 // console.log(order("is2 Thi1s T4est 3a"))
 
-function tribonacci(signature, n) {
-    for (let i = 3; i < n; i++) {
-        signature.push(signature[i - 1] + signature[i - 2] + signature[i - 3])
-    }
-    return signature.slice(0, n)
+// function tribonacci(signature, n) {
+//     for (let i = 3; i < n; i++) {
+//         signature.push(signature[i - 1] + signature[i - 2] + signature[i - 3])
+//     }
+//     return signature.slice(0, n)
+// }
+
+
+// console.log(tribonacci([1, 1, 1], 10)) // [1,1,1,3,5,9,17,31,57,105]
+// console.log(tribonacci([0, 0, 1], 10)) // [0, 0, 1, 1, 2, 4, 7, 13, 24, 44]
+// console.log(tribonacci([0, 0, 0], 10)) // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+// console.log(tribonacci([3, 2, 1], 10)) // [3, 2, 1, 6, 9, 16, 31, 56, 103, 190]
+// console.log(tribonacci([1, 1, 1], 1)) // [1]
+
+
+function digPow(n, p) {
+    const summPow = String(n).split('').reduce((acc, el, index) => acc + el ** (p + index), 0)
+    return summPow % n === 0 ? summPow / n : -1
 }
 
 
-console.log(tribonacci([1, 1, 1], 10)) // [1,1,1,3,5,9,17,31,57,105]
-console.log(tribonacci([0, 0, 1], 10)) // [0, 0, 1, 1, 2, 4, 7, 13, 24, 44]
-console.log(tribonacci([0, 0, 0], 10)) // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-console.log(tribonacci([3, 2, 1], 10)) // [3, 2, 1, 6, 9, 16, 31, 56, 103, 190]
-console.log(tribonacci([1, 1, 1], 1)) // [1]
+console.log(digPow(89, 1))
+console.log(digPow(92, 1))
+console.log(digPow(46288, 3))
