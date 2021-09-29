@@ -923,12 +923,77 @@ function likes(names) {
 // console.log(tribonacci([1, 1, 1], 1)) // [1]
 
 
-function digPow(n, p) {
-    const summPow = String(n).split('').reduce((acc, el, index) => acc + el ** (p + index), 0)
-    return summPow % n === 0 ? summPow / n : -1
+// function digPow(n, p) {
+//     const summPow = String(n).split('').reduce((acc, el, index) => acc + el ** (p + index), 0)
+//     return summPow % n === 0 ? summPow / n : -1
+// }
+
+
+// console.log(digPow(89, 1))
+// console.log(digPow(92, 1))
+// console.log(digPow(46288, 3))
+
+// const tri = (signature, n) => {
+//     return
+// }
+
+// console.log(tri([1, 1, 1], 6)) // [1,1,1,3,5,8]
+
+
+// function findEvenIndex(arr) {
+//     let findIndex = arr.map((_, i) => arr.slice(0, i).reduce((acc, el) => acc + el, 0) === arr.slice(i + 1, arr.length).reduce((acc, el) => acc + el, 0))
+
+//     return findIndex.indexOf(true)
+// }
+
+
+// console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1]))
+// console.log(findEvenIndex([1, 100, 50, -51, 1, 1]))
+// console.log(findEvenIndex([1, 2, 3, 4, 5, 6]))
+// console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35]))
+
+// function maxMultiple(divisor, bound) {
+//     const multi = Math.floor(bound / divisor)
+//     return multi * divisor
+// }
+
+// function maxMultiple(divisor, bound) {
+//     return bound % divisor === 0 ? bound : maxMultiple(divisor, bound - 1)
+// // }
+
+// function maxMultiple(divisor, bound) {
+//     return [...Array(bound + 1)].reduce((acc, _, index) => {
+//         return index % divisor === 0 ? index : acc
+//     }, 0)
+// }
+
+// console.log(maxMultiple(2, 7))
+// console.log(maxMultiple(3, 10))
+// console.log(maxMultiple(7, 17))
+// console.log(maxMultiple(10, 50))
+
+
+// [1, 2, 3].reduce((acc, el) => {
+//     return acc + el // 0 + 1  acc = 0
+// }, 0).reduce((acc, el) => {
+//     return acc + el // 1 + 2  acc = 1
+// }, 0).reduce((acc, el) => {
+//     return acc + el // 3 + 3  acc = 3
+// }, 0)
+
+
+
+// function songDecoder(song) {
+//     return song.replace(/WUB/g, ' ').split('').join('')
+// }
+// console.log(songDecoder("AMWUBBLKJWUBC"))
+
+
+function iqTest(numbers) {
+    const arrOdd = numbers.split(' ').filter(el => el % 2 === 0)
+    const arrEven = numbers.split(' ').filter(el => el % 2)
+    return arrEven.length === 1 ? numbers.split(' ').indexOf(arrEven.join('')) + 1 : numbers.split(' ').indexOf(arrOdd.join('')) + 1
 }
 
-
-console.log(digPow(89, 1))
-console.log(digPow(92, 1))
-console.log(digPow(46288, 3))
+console.log(iqTest("2 4 8 7 8 10"))
+console.log(iqTest("1 1 2"))

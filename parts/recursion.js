@@ -34,3 +34,13 @@ function digital_root(n) {
     return digital_root(arrString)
 }
 console.log(digital_root(456)) // 6
+
+    **//Максимальное число, которое делится на divisor и меньше или равно bound
+    function maxMultiple(divisor, bound) {
+        return bound % divisor === 0 ? bound : maxMultiple(divisor, bound - 1)
+    }
+
+console.log(maxMultiple(2, 7))
+console.log(maxMultiple(3, 10))
+console.log(maxMultiple(7, 17))
+console.log(maxMultiple(10, 50))
