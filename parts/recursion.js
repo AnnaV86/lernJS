@@ -44,3 +44,9 @@ console.log(maxMultiple(2, 7))
 console.log(maxMultiple(3, 10))
 console.log(maxMultiple(7, 17))
 console.log(maxMultiple(10, 50))
+
+function roundToNext5(n) {
+    return n % 5 === 0 ? n : roundToNext5(n + 1)
+}
+
+console.log(roundToNext5(-5))

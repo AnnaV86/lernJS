@@ -989,11 +989,47 @@ function likes(names) {
 // console.log(songDecoder("AMWUBBLKJWUBC"))
 
 
-function iqTest(numbers) {
-    const arrOdd = numbers.split(' ').filter(el => el % 2 === 0)
-    const arrEven = numbers.split(' ').filter(el => el % 2)
-    return arrEven.length === 1 ? numbers.split(' ').indexOf(arrEven.join('')) + 1 : numbers.split(' ').indexOf(arrOdd.join('')) + 1
-}
+// function iqTest(numbers) {
+//     const arrOdd = numbers.split(' ').filter(el => el % 2 === 0)
+//     const arrEven = numbers.split(' ').filter(el => el % 2)
+//     return arrEven.length === 1 ? numbers.split(' ').indexOf(arrEven.join('')) + 1 : numbers.split(' ').indexOf(arrOdd.join('')) + 1
+// }
 
-console.log(iqTest("2 4 8 7 8 10"))
-console.log(iqTest("1 1 2"))
+// console.log(iqTest("2 4 8 7 8 10"))
+// console.log(iqTest("1 1 2"))
+
+
+
+// function roundToNext5(n) {
+//     while (n % 5 !== 0) {
+//         n++
+//     }
+//     return n
+// }
+
+// function roundToNext5(n) {
+//     return n % 5 === 0 ? n : roundToNext5(n + 1)
+// }
+
+// console.log(roundToNext5(-5))
+
+
+// function reverseLetter(str) {
+//     return str.match(/[a-z]/gi).reverse().join('')
+// }
+
+// console.log(reverseLetter("ultr53o?n"))
+
+// function removeDuplicateWords(s) {
+//     const arr = s.split(' ')
+//     return [...new Set(arr)].join(' ')
+// }
+
+// console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta'))
+
+
+
+function minValue(values) {
+    return [...new Set(values)].sort((a, b) => a - b).join('')
+}
+console.log(minValue([5, 6, 9, 9, 7, 6, 4]))
