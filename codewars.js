@@ -1029,7 +1029,12 @@ function likes(names) {
 
 
 
-function minValue(values) {
-    return [...new Set(values)].sort((a, b) => a - b).join('')
+// function minValue(values) {
+//     return [...new Set(values)].sort((a, b) => a - b).join('')
+// }
+// console.log(minValue([5, 6, 9, 9, 7, 6, 4]))
+
+function squareDigits(num) {
+    return Number(String(num).split('').map(el => el * el).join(''));
 }
-console.log(minValue([5, 6, 9, 9, 7, 6, 4]))
+console.log(squareDigits(3212))
