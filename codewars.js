@@ -1034,7 +1034,60 @@ function likes(names) {
 // }
 // console.log(minValue([5, 6, 9, 9, 7, 6, 4]))
 
-function squareDigits(num) {
-    return Number(String(num).split('').map(el => el * el).join(''));
+// function squareDigits(num) {
+//     return Number(String(num).split('').map(el => el * el).join(''));
+// }
+// console.log(squareDigits(3212))
+
+// function getMiddle(s) {
+//     const result = Math.trunc(s.length / 2)
+//     return s.length % 2 === 0 ? s.slice(result - 1, result + 1) : s[result]
+// }
+// console.log(getMiddle("midple"))
+// console.log(getMiddle("A"))
+// console.log(getMiddle("dfrfh"))
+
+// function isSortedAndHow(array) {
+//     const arrInOrder = array.filter((el, i, arr) => el < arr[i + 1]).length === 0
+//     const outOfOrder = array.filter((el, i, arr) => el > arr[i + 1]).length === 0
+
+//     if (!arrInOrder && !outOfOrder) {
+//         return 'no'
+//     }
+
+//     return arrInOrder ? "yes, descending" : "yes, ascending"
+// }
+// console.log(isSortedAndHow([15, 7, 3, -8]))
+// console.log(isSortedAndHow([1, 2]))
+// console.log(isSortedAndHow([4, 2, 30]))
+
+// function alphabetWar(fight) {
+//     const objList = {
+//         w: -4,
+//         p: -3,
+//         b: -2,
+//         s: -1,
+//         m: 4,
+//         q: 3,
+//         d: 2,
+//         z: 1
+//     }
+
+//     const war = [...fight].reduce((acc, symbol) => {
+//         acc += objList[symbol] || 0
+//         return acc
+//     }, 0)
+//     return war < 0 ? "Left side wins!"
+//         : war > 0 ? "Right side wins!"
+//             : "Let's fight again!"
+// }
+// console.log(alphabetWar("gwumsq"))
+// console.log(alphabetWar("z"))
+// console.log(alphabetWar("wwwwww"))
+
+function isIsogram(str) {
+
 }
-console.log(squareDigits(3212))
+
+console.log(isIsogram("Dermatoglyphics"))
+console.log(isIsogram("moOse"))

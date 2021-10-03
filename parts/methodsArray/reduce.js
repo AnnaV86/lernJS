@@ -55,22 +55,49 @@ const arr = [1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5]
 
 
 
-function maxMultiple(divisor, bound) {
-    return [...Array(bound + 1)].reduce((acc, _, index) => {
-        return index % divisor === 0 ? index : acc
+// function maxMultiple(divisor, bound) {
+//     return [...Array(bound + 1)].reduce((acc, _, index) => {
+//         return index % divisor === 0 ? index : acc
+//     }, 0)
+// }
+
+// console.log(maxMultiple(2, 7))
+// console.log(maxMultiple(3, 10))
+// console.log(maxMultiple(7, 17))
+// console.log(maxMultiple(10, 50))
+
+
+// [1, 2, 3].reduce((acc, el) => {
+//     return acc + el // 0 + 1  acc = 0
+// }, 0).reduce((acc, el) => {
+//     return acc + el // 1 + 2  acc = 1
+// }, 0).reduce((acc, el) => {
+//     return acc + el // 3 + 3  acc = 3
+// }, 0)
+
+
+
+//**Объект и редюсе - выситывается кол-во
+function alphabetWar(fight) {
+    const objList = {
+        w: -4,
+        p: -3,
+        b: -2,
+        s: -1,
+        m: 4,
+        q: 3,
+        d: 2,
+        z: 1
+    }
+
+    const war = [...fight].reduce((acc, symbol) => {
+        acc += objList[symbol] || 0
+        return acc
     }, 0)
+    return war < 0 ? "Left side wins!"
+        : war > 0 ? "Right side wins!"
+            : "Let's fight again!"
 }
-
-console.log(maxMultiple(2, 7))
-console.log(maxMultiple(3, 10))
-console.log(maxMultiple(7, 17))
-console.log(maxMultiple(10, 50))
-
-
-[1, 2, 3].reduce((acc, el) => {
-    return acc + el // 0 + 1  acc = 0
-}, 0).reduce((acc, el) => {
-    return acc + el // 1 + 2  acc = 1
-}, 0).reduce((acc, el) => {
-    return acc + el // 3 + 3  acc = 3
-}, 0)
+console.log(alphabetWar("gwumsq"))
+console.log(alphabetWar("z"))
+console.log(alphabetWar("wwwwww"))
