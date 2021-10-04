@@ -77,27 +77,42 @@ const arr = [1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5]
 
 
 
-//**Объект и редюсе - выситывается кол-во
-function alphabetWar(fight) {
-    const objList = {
-        w: -4,
-        p: -3,
-        b: -2,
-        s: -1,
-        m: 4,
-        q: 3,
-        d: 2,
-        z: 1
-    }
+// //**Объект и редюсе - выситывается кол-во
+// function alphabetWar(fight) {
+//     const objList = {
+//         w: -4,
+//         p: -3,
+//         b: -2,
+//         s: -1,
+//         m: 4,
+//         q: 3,
+//         d: 2,
+//         z: 1
+//     }
 
-    const war = [...fight].reduce((acc, symbol) => {
-        acc += objList[symbol] || 0
-        return acc
+//     const war = [...fight].reduce((acc, symbol) => {
+//         acc += objList[symbol] || 0
+//         return acc
+//     }, 0)
+//     return war < 0 ? "Left side wins!"
+//         : war > 0 ? "Right side wins!"
+//             : "Let's fight again!"
+// }
+// console.log(alphabetWar("gwumsq"))
+// console.log(alphabetWar("z"))
+// console.log(alphabetWar("wwwwww"))
+
+
+function rowWeights(array) {
+    const first = [...array].reduce((acc, el, index) => {
+        return index % 2 === 0 ? acc + el : acc
     }, 0)
-    return war < 0 ? "Left side wins!"
-        : war > 0 ? "Right side wins!"
-            : "Let's fight again!"
+    const second = [...array].reduce((acc, el, index) => {
+        return index % 2 !== 0 ? acc + el : acc
+    }, 0)
+    return [first, second]
 }
-console.log(alphabetWar("gwumsq"))
-console.log(alphabetWar("z"))
-console.log(alphabetWar("wwwwww"))
+
+console.log(rowWeights([100, 50]))
+console.log(rowWeights([50, 60, 70, 80]))
+console.log(rowWeights([80]))
