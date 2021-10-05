@@ -1085,25 +1085,26 @@ function likes(names) {
 // console.log(alphabetWar("z"))
 // console.log(alphabetWar("wwwwww"))
 
-// function isIsogram(str) {
-
-// }
-
-// console.log(isIsogram("Dermatoglyphics"))
-// console.log(isIsogram("moOse"))
-
-
-
-function rowWeights(array) {
-    const first = [...array].reduce((acc, el, index) => {
-        return index % 2 === 0 ? acc + el : acc
-    }, 0)
-    const second = [...array].reduce((acc, el, index) => {
-        return index % 2 !== 0 ? acc + el : acc
-    }, 0)
-    return [first, second]
+function isIsogram(str) {
+    const arr = str.toUpperCase().split('')
+    return [...new Set(arr)].length === arr.length
 }
 
-console.log(rowWeights([100, 50]))
-console.log(rowWeights([50, 60, 70, 80]))
-console.log(rowWeights([80]))
+console.log(isIsogram("Dermatoglyphics"))
+console.log(isIsogram("moOse"))
+
+
+
+// function rowWeights(array) {
+//     const first = [...array].reduce((acc, el, index) => {
+//         return index % 2 === 0 ? acc + el : acc
+//     }, 0)
+//     const second = [...array].reduce((acc, el, index) => {
+//         return index % 2 !== 0 ? acc + el : acc
+//     }, 0)
+//     return [first, second]
+// }
+
+// console.log(rowWeights([100, 50]))
+// console.log(rowWeights([50, 60, 70, 80]))
+// console.log(rowWeights([80]))
