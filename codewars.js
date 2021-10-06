@@ -1085,13 +1085,13 @@ function likes(names) {
 // console.log(alphabetWar("z"))
 // console.log(alphabetWar("wwwwww"))
 
-function isIsogram(str) {
-    const arr = str.toUpperCase().split('')
-    return [...new Set(arr)].length === arr.length
-}
+// function isIsogram(str) {
+//     const arr = str.toUpperCase().split('')
+//     return [...new Set(arr)].length === arr.length
+// }
 
-console.log(isIsogram("Dermatoglyphics"))
-console.log(isIsogram("moOse"))
+// console.log(isIsogram("Dermatoglyphics"))
+// console.log(isIsogram("moOse"))
 
 
 
@@ -1108,3 +1108,8 @@ console.log(isIsogram("moOse"))
 // console.log(rowWeights([100, 50]))
 // console.log(rowWeights([50, 60, 70, 80]))
 // console.log(rowWeights([80]))
+
+function wordsToMarks(string) {
+    return [...string].reduce((acc, el) => acc + (el.charCodeAt() - 96), 0)
+}
+console.log(wordsToMarks("attitude"))
