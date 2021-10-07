@@ -1109,7 +1109,27 @@ function likes(names) {
 // console.log(rowWeights([50, 60, 70, 80]))
 // console.log(rowWeights([80]))
 
-function wordsToMarks(string) {
-    return [...string].reduce((acc, el) => acc + (el.charCodeAt() - 96), 0)
-}
-console.log(wordsToMarks("attitude"))
+// function wordsToMarks(string) {
+//     return [...string].reduce((acc, el) => acc + (el.charCodeAt() - 96), 0)
+// }
+// console.log(wordsToMarks("attitude"))
+// const randomElement = {
+//     a: 1,
+//     b: 2
+// }
+
+// console.log(`${JSON.stringify(randomElement)}`)
+
+// var isSquare = function (n) {
+
+//     return false;
+// }
+// console.log(isSquare(25))
+// console.log(isSquare(0))
+// console.log(isSquare(-1))
+// console.log(isSquare(3))
+
+String.prototype.toJadenCase = function () {
+    return this.split(' ').map(el => el(0).toUpperCase()).join('')
+};
+
