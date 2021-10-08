@@ -1120,16 +1120,57 @@ function likes(names) {
 
 // console.log(`${JSON.stringify(randomElement)}`)
 
-// var isSquare = function (n) {
 
-//     return false;
+// var isSquare = function (n) {
+//     return Number.isInteger(Math.sqrt(n))
 // }
+
 // console.log(isSquare(25))
 // console.log(isSquare(0))
 // console.log(isSquare(-1))
 // console.log(isSquare(3))
 
-String.prototype.toJadenCase = function () {
-    return this.split(' ').map(el => el(0).toUpperCase()).join('')
-};
+// String.prototype.toJadenCase = function () {
+//     return this.split(' ').map(el => el(0).toUpperCase()).join('')
+// };
 
+// function findShort(s) {
+//     return Math.min(...s.split(' ').map(el => el.length))
+// }
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+
+// function DNAStrand(dna) {
+//     const replace = {
+//         G: 'C',
+//         C: 'G',
+//         T: 'A',
+//         A: 'T'
+//     }
+//     return [...dna].map(x => replace[x]).join('')
+// }
+// console.log(DNAStrand("GTAT"))
+
+// function XO(str) {
+//     const xo = [...str.toLowerCase()].reduce((acc, str) => {
+//         acc[str] = ++acc[str] || 1
+//         return acc
+//     }, {})
+//     return xo.x === xo.o
+// }
+
+// console.log(XO("xxxooom"))
+
+// function filter_list(l) {
+//     return l.filter(el => typeof (el) === 'number')
+// }
+// console.log(filter_list([1, 2, 'aasf', '1', '123', 123]))
+
+function getSum(a, b) {
+    if (b < a) {
+        return b === a ? b : b + getSum(a, b + 1)
+    }
+    return a === b ? a : a + getSum(a + 1, b)
+}
+
+console.log(getSum(-1, 0))
+console.log(getSum(0, -1))
