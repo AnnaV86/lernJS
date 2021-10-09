@@ -1165,12 +1165,36 @@ function likes(names) {
 // }
 // console.log(filter_list([1, 2, 'aasf', '1', '123', 123]))
 
-function getSum(a, b) {
-    if (b < a) {
-        return b === a ? b : b + getSum(a, b + 1)
-    }
-    return a === b ? a : a + getSum(a + 1, b)
-}
+// function getSum(a, b) {
+//     if (b < a) {
+//         return b === a ? b : b + getSum(a, b + 1)
+//     }
+//     return a === b ? a : a + getSum(a + 1, b)
+// }
+// console.log(getSum(-1, 0))
+// console.log(getSum(0, -1))
 
-console.log(getSum(-1, 0))
-console.log(getSum(0, -1))
+// function maskify(cc) {
+//     return cc.slice(0, -4).replace(/\w/g, '#') + cc.slice(-4, cc.length)
+// }
+// console.log(maskify('4556364607935616'))
+// console.log(maskify('1'))
+// console.log(maskify('11111'))
+// console.log(maskify(''))
+// console.log(maskify('jfidyvls'))
+
+// function nbYear(p0, percent, aug, p) {
+//     let year = 0
+//     for (let i = 1; p0 < p; i++) {
+//         p0 = p0 + p0 * percent / 100 + aug;
+//         ++year
+//     }
+//     return year
+// }
+// console.log(nbYear(1500, 5, 100, 5000))
+
+function longest(s1, s2) {
+    const newArr = [...s1, ...s2].sort()
+    return [...new Set(newArr)].join('')
+}
+console.log(longest("aretheyhere", "yestheyarehere"))
