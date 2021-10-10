@@ -25,3 +25,24 @@
 //     ).join('-')
 // }
 // console.log(accum("ZpglnRxqenU"))
+
+
+// function openOrSenior(data) {
+//     return data.map(([age, handicap]) => age >= 55 && handicap >= 7 ? 'Senior' : 'Open')
+// }
+// console.log(openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]]))
+
+// function friend(friend) {
+//     return friend.filter(el => el.length === 4)
+// }
+// console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]))
+
+// function isTriangle(a, b, c) {
+//     if (a < b + c && b < a + c && c < a + b) {
+//         return true
+//     }
+//     return false;
+// }
+
+// console.log(isTriangle(1, 2, 2))
+// console.log(isTriangle(7, 2, 2))

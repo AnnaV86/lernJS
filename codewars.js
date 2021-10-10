@@ -1193,8 +1193,69 @@ function likes(names) {
 // }
 // console.log(nbYear(1500, 5, 100, 5000))
 
-function longest(s1, s2) {
-    const newArr = [...s1, ...s2].sort()
-    return [...new Set(newArr)].join('')
-}
-console.log(longest("aretheyhere", "yestheyarehere"))
+// function longest(s1, s2) {
+//     const newArr = [...s1, ...s2].sort()
+//     return [...new Set(newArr)].join('')
+// }
+// console.log(longest("aretheyhere", "yestheyarehere"))
+
+// function validatePIN(pin) {
+//     if (pin.length === 6 || pin.length === 4) {
+//         return pin.replace(/[0-9]/g, '') === ''
+//     } else {
+//         return false
+//     }
+// }
+// console.log(validatePIN("1234567"))
+// console.log(validatePIN("123456"))
+// console.log(validatePIN("1234"))
+// console.log(validatePIN("123e56"))
+// console.log(validatePIN("123e"))
+
+// function findNextSquare(sq) {
+//     if (Number.isInteger(Math.sqrt(sq))) {
+//         return Math.pow((Math.sqrt(sq) + 1), 2)
+//     }
+//     return -1;
+// }
+// console.log(findNextSquare(121))
+// console.log(findNextSquare(7))
+
+// function openOrSenior(data) {
+//     return data.map(([age, handicap]) => age >= 55 && handicap >= 7 ? 'Senior' : 'Open')
+// }
+// console.log(openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]]))
+
+
+// function printerError(str) {
+//     return `${[...str].filter(el => el.charCodeAt() > 109).length}/${str.length}`
+// }
+// console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"))
+
+
+
+// const binaryArrayToNumber = arr => {
+//     return parseInt(arr.join(''), 2)
+// };
+// console.log(binaryArrayToNumber([0, 0, 0, 1]))
+
+// function addBinary(a, b) {
+//     return parseInt(a + b).toString(2)
+// }
+// console.log(addBinary(1, 2))
+
+// var number = function (busStops) {
+//     return busStops.reduce((acc, el) => acc + el[0] - el[1], 0)
+// }
+// console.log(number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]))
+
+function divisors(integer) {
+    const arr = []
+    for (let i = 1; i < integer; i++) {
+        Number.isInteger(integer / i) === integer / i ? arr.push()
+          }
+    return arr.length > 0 ? arr : integer + ' is prime'
+};
+console.log(divisors(15))
+console.log(divisors(12))
+console.log(divisors(13))
