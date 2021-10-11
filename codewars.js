@@ -1258,4 +1258,4 @@ function divisors(integer) {
 };
 console.log(divisors(15))
 console.log(divisors(12))
-console.log(divisors(13))
+console.log(divisors(131))
