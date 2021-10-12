@@ -1249,13 +1249,27 @@ function likes(names) {
 // }
 // console.log(number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]))
 
-function divisors(integer) {
-    const arr = []
-    for (let i = 1; i < integer; i++) {
-        Number.isInteger(integer / i) === integer / i ? arr.push()
-          }
-    return arr.length > 0 ? arr : integer + ' is prime'
-};
-console.log(divisors(15))
-console.log(divisors(12))
-console.log(divisors(131))
+// function divisors(integer) {
+//     let res = []
+//     for (let i = 2; i <= Math.floor(integer / 2); ++i) if (integer % i == 0) res.push(i);
+//     return res.length ? res : integer + ' is prime'
+// };
+// console.log(divisors(15))
+// console.log(divisors(12))
+// console.log(divisors(13))
+
+
+function SeriesSum(n) {
+    let summ = 0
+    let count = 1
+    for (let i = 0; i < n; i++) {
+        summ += 1 / count
+        count = count + 3
+    }
+    return summ.toFixed(2)
+}
+
+console.log(SeriesSum(3))
+console.log(SeriesSum(1))
+console.log(SeriesSum(5))
+console.log(SeriesSum(4))
