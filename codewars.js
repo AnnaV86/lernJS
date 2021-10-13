@@ -1259,17 +1259,60 @@ function likes(names) {
 // console.log(divisors(13))
 
 
-function SeriesSum(n) {
-    let summ = 0
-    let count = 1
-    for (let i = 0; i < n; i++) {
-        summ += 1 / count
-        count = count + 3
+// function SeriesSum(n) {
+//     let summ = 0
+//     let count = 1
+//     for (let i = 0; i < n; i++) {
+//         summ += 1 / count
+//         count = count + 3
+//     }
+//     return summ.toFixed(2)
+// }
+
+// console.log(SeriesSum(3))
+// console.log(SeriesSum(1))
+// console.log(SeriesSum(5))
+// console.log(SeriesSum(4))
+
+// function reverseWords(str) {
+//     return str.split(' ').map(el => [...el].reverse().join('')).join(' ')
+// }
+// console.log(reverseWords('double  spaced  words'))
+// console.log(reverseWords('a b c d'))
+// console.log(reverseWords('apple'))
+
+// function oddOrEven(array) {
+//     return array.reduce((acc, n) => acc + n, 0) % 2 === 0 ? "even" : "odd"
+// }
+// console.log(oddOrEven([0, -1, 2]))
+// console.log(oddOrEven([0]))
+// console.log(oddOrEven([0, 1, -4]))
+// console.log(oddOrEven([0, 1, 5]))
+
+// function solution(str, ending) {
+//     return str.endsWith(ending)
+// }
+
+// console.log(solution('abcde', ''))
+// console.log(solution('abcde', ''))
+
+// function removeSmallest(numbers) {
+//     const min = Math.min(...numbers)
+//     const indMin = numbers.indexOf(min)
+//     return numbers.filter((_, ind) => ind !== indMin)
+// }
+// console.log(removeSmallest([132, 229, 247, 361, 9, 297, 349, 106]))
+
+function calculateYears(principal, interest, tax, desired) {
+    let year = 0
+    for (let i = 1; principal < desired; i++) {
+        principal = principal + (principal * interest) - (principal * interest) * tax
+        year = year + 1
     }
-    return summ.toFixed(2)
+    return year
 }
 
-console.log(SeriesSum(3))
-console.log(SeriesSum(1))
-console.log(SeriesSum(5))
-console.log(SeriesSum(4))
+
+console.log(calculateYears(1000, 0.05, 0.18, 1100))
+console.log(calculateYears(1000, 0.01625, 0.18, 1200))
+console.log(calculateYears(1000, 0.05, 0.18, 1000))
