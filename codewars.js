@@ -1303,16 +1303,80 @@ function likes(names) {
 // }
 // console.log(removeSmallest([132, 229, 247, 361, 9, 297, 349, 106]))
 
-function calculateYears(principal, interest, tax, desired) {
-    let year = 0
-    for (let i = 1; principal < desired; i++) {
-        principal = principal + (principal * interest) - (principal * interest) * tax
-        year = year + 1
-    }
-    return year
-}
+// function calculateYears(principal, interest, tax, desired) {
+//     let year = 0
+//     for (let i = 1; principal < desired; i++) {
+//         principal = principal + (principal * interest) - (principal * interest) * tax
+//         year = year + 1
+//     }
+//     return year
+// }
 
 
-console.log(calculateYears(1000, 0.05, 0.18, 1100))
-console.log(calculateYears(1000, 0.01625, 0.18, 1200))
-console.log(calculateYears(1000, 0.05, 0.18, 1000))
+// console.log(calculateYears(1000, 0.05, 0.18, 1100))
+// console.log(calculateYears(1000, 0.01625, 0.18, 1200))
+// console.log(calculateYears(1000, 0.05, 0.18, 1000))
+
+// function dontGiveMeFive(start, end) {
+//     const arr = []
+//     for (let i = start; i <= end; i++) {
+//         arr.push(i)
+//     }
+//     return (arr.map(String).filter(el => el.replace(/5/g, '').length === el.length)).length
+// }
+// console.log(dontGiveMeFive(4, 17))
+
+// function minMax(arr) {
+//     return [Math.min(...arr), Math.max(...arr)]
+// }
+
+// console.log(minMax([2, 6, 8, 1, 9]))
+
+// function Fighter(name, health, damagePerAttack) {
+//     this.name = name;
+//     this.health = health;
+//     this.damagePerAttack = damagePerAttack;
+//     this.toString = function () { return this.name; }
+// }
+
+// function declareWinner(fighter1, fighter2, firstAttacker) {
+
+//     while (fighter1.health > 0 && fighter2.health > 0) {
+//         if (firstAttacker === fighter1.name) {
+//             fighter2.health -= fighter1.damagePerAttack
+//             if (fighter2.health > 0) {
+//                 fighter1.health -= fighter2.damagePerAttack
+//             }
+//         } else {
+//             fighter1.health -= fighter2.damagePerAttack
+//             if (fighter1.health > 0) {
+//                 fighter2.health -= fighter1.damagePerAttack
+//             }
+//         }
+//     }
+//     return fighter1.health > fighter2.health ? fighter1.name : fighter2.name
+// }
+
+// console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"))
+
+// function nbDig(n, d) {
+//     const arr = []
+//     for (let i = 0; i <= n; i++) {
+//         if (String(i * i).indexOf(d) !== -1) {
+//             arr.push(i * i)
+//         }
+//     }
+//     return arr.join('').split(d).length - 1
+// }
+
+
+// // console.log(nbDig(11011, 2))
+// console.log(nbDig(25, 1))
+// // console.log(nbDig(5750, 0))
+
+// let number = function (array) {
+//     return array.map((el, ind) => `${ind + 1}: ${el}`)
+// }
+// console.log(number(["a", "b", "c"]))
+// console.log(number([]))
+
