@@ -1415,13 +1415,14 @@ function likes(names) {
 // console.log(sequenceSum(1, 5, 1))
 // console.log(sequenceSum(1, 5, 3))
 
-function arithmetic(a, b, operator) {
-    const operators = {
-        "add": a + b,
-        "subtract": a - b,
-        "multiply": a * b,
-        "divide": a / b
-    }
-    return operators[operator]
-}
-console.log(arithmetic(8, 2, "subtract"))
+// function arithmetic(a, b, operator) {
+//     const operators = {
+//         "add": a + b,
+//         "subtract": a - b,
+//         "multiply": a * b,
+//         "divide": a / b
+//     }
+//     return operators[operator]
+// }
+// console.log(arithmetic(8, 2, "subtract"))
+
