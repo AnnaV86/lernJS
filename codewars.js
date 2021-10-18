@@ -1426,3 +1426,7 @@ function likes(names) {
 // }
 // console.log(arithmetic(8, 2, "subtract"))
 
+function sortByLength(array) {
+    return array.sort((a, b) => a.length - b.length)
+}
+console.log(sortByLength(["", "Moderately", "Brains", "Pizza"]))
