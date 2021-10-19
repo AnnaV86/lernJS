@@ -1426,7 +1426,18 @@ function likes(names) {
 // }
 // console.log(arithmetic(8, 2, "subtract"))
 
-function sortByLength(array) {
-    return array.sort((a, b) => a.length - b.length)
-}
-console.log(sortByLength(["", "Moderately", "Brains", "Pizza"]))
+// function sortByLength(array) {
+//     return array.sort((a, b) => a.length - b.length)
+// }
+// console.log(sortByLength(["", "Moderately", "Brains", "Pizza"]))
+
+// function findSum(n) {
+//     let sum = 0
+//     for (let i = 3; i <= 10; i++) {
+//         if (i % 3 === 0 || i % 5 === 0) {
+//             sum += i
+//         }
+//     }
+//     return sum
+// }
+// console.log(findSum(10))
