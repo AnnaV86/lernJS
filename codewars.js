@@ -1441,3 +1441,22 @@ function likes(names) {
 //     return sum
 // }
 // console.log(findSum(10))
+
+// function solve(arr) {
+//     return arr.filter((el, index, array) => index === array.lastIndexOf(el))
+// }
+// console.log(solve([3, 4, 4, 3, 6, 3]))
+
+// function mxdiflg(a1, a2) {
+//     if (a1.length < 1 || a2.length < 1) {
+//         return -1
+//     }
+//     const sortA1 = a1.sort((a, b) => a.length - b.length).map(el => el.length)
+//     const sortA2 = a2.sort((a, b) => a.length - b.length).map(el => el.length)
+//     const maxMin = Math.abs(sortA1[sortA1.length - 1] - sortA2[0])
+//     const minMax = Math.abs(sortA2[sortA2.length - 1] - sortA1[0])
+
+//     return maxMin > minMax ? maxMin : minMax
+// }
+// console.log(mxdiflg([], ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]))
+
