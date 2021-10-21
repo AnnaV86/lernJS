@@ -46,3 +46,22 @@
 
 // console.log(isTriangle(1, 2, 2))
 // console.log(isTriangle(7, 2, 2))
+
+
+const fizzbuzz = (n) => [...Array(n)].map((_, i) => {
+    const index = i + 1
+    if (index % 3 === 0 && index % 5 === 0) {
+        return "FizzBuzz"
+    }
+
+    if (index % 3 === 0) {
+        return "Fizz"
+    }
+
+    if (index % 5 === 0) {
+        return "Buzz"
+    }
+    return index
+})
+
+console.log(fizzbuzz(10))

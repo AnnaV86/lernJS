@@ -1460,3 +1460,42 @@ function likes(names) {
 // }
 // console.log(mxdiflg([], ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]))
 
+// function factorial(n) {
+//     console.log(n)
+//     if (n === 0) {
+//         return 1
+//     }
+//     if (n < 0 || n > 12) {
+//         throw 'RangeError'
+//     }
+//     return n === 1 ? 1 : n * factorial(n - 1)
+// }
+// // console.log(factorial(3))
+// // console.log(factorial(0))
+// console.log(factorial(-100))
+
+// const fizzbuzz = (n) => [...Array(n)].map((_, i) => {
+//     const index = i + 1
+//     if (index % 3 === 0 && index % 5 === 0) {
+//         return "FizzBuzz"
+//     }
+
+//     if (index % 3 === 0) {
+//         return "Fizz"
+//     }
+
+//     if (index % 5 === 0) {
+//         return "Buzz"
+//     }
+//     return index
+// })
+
+// console.log(fizzbuzz(10))
+
+
+const gimme = function (inputArray) {
+    return inputArray.indexOf(inputArray.concat().sort((a, b) => a - b)[1])
+}
+console.log(gimme([2, 3, 1]))
+console.log(gimme([1, 3, 2]))
+console.log(gimme([3, 2, 1]))
