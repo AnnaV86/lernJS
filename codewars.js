@@ -1493,9 +1493,11 @@ function likes(names) {
 // console.log(fizzbuzz(10))
 
 
-const gimme = function (inputArray) {
-    return inputArray.indexOf(inputArray.concat().sort((a, b) => a - b)[1])
-}
-console.log(gimme([2, 3, 1]))
-console.log(gimme([1, 3, 2]))
-console.log(gimme([3, 2, 1]))
+// const gimme = function (inputArray) {
+//     console.log(inputArray === inputArray.filter(el => el))
+//     return inputArray.indexOf(inputArray.slice(0).sort((a, b) => a - b)[1])
+// }
+// console.log(gimme([2, 3, 1]))
+// console.log(gimme([1, 3, 2]))
+// console.log(gimme([3, 2, 1]))
+
