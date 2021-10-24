@@ -1501,10 +1501,30 @@ function likes(names) {
 // console.log(gimme([1, 3, 2]))
 // console.log(gimme([3, 2, 1]))
 
-// const gimme = function (inputArray) {
-//     console.log(inputArray === inputArray.filter(el => el))
-//     return inputArray.indexOf(inputArray.slice(0).sort((a, b) => a - b)[1])
+// const isAnagram = function (test, original) {
+//     const arrayTest = [...test.toLowerCase()].sort().join()
+//     const arrayOriginal = [...original.toLowerCase()].sort().join()
+//     return arrayTest === arrayOriginal
 // }
-// console.log(gimme([2, 3, 1]))
-// console.log(gimme([1, 3, 2]))
-// console.log(gimme([3, 2, 1]))
+
+// console.log(isAnagram("foefet", "toffee"))
+// console.log(isAnagram("Buckethead", "DeathCubeK"))
+// console.log(isAnagram("ound", "round"))
+// console.log(isAnagram("apple", "pale"))
+
+function checkExam(array1, array2) {
+    const ball = array1.map((_, ind) => {
+        if (array2[ind] === '') {
+            return 0
+        }
+        if (array1[ind] === array2[ind]) {
+            return 4
+        }
+        if (array1[ind] !== array2[ind]) {
+            return -1
+        }
+    })
+    const summ = ball.reduce((acc, n) => acc + n, 0)
+    return summ > 0 ? summ : 0
+}
+console.log(checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]))
