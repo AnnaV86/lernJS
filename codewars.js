@@ -1512,19 +1512,23 @@ function likes(names) {
 // console.log(isAnagram("ound", "round"))
 // console.log(isAnagram("apple", "pale"))
 
-function checkExam(array1, array2) {
-    const ball = array1.map((_, ind) => {
-        if (array2[ind] === '') {
-            return 0
-        }
-        if (array1[ind] === array2[ind]) {
-            return 4
-        }
-        if (array1[ind] !== array2[ind]) {
-            return -1
-        }
-    })
-    const summ = ball.reduce((acc, n) => acc + n, 0)
-    return summ > 0 ? summ : 0
-}
-console.log(checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]))
+// function checkExam(array1, array2) {
+//     const ball = array1.map((_, ind) => {
+//         if (array2[ind] === '') {
+//             return 0
+//         }
+//         if (array1[ind] === array2[ind]) {
+//             return 4
+//         }
+//         if (array1[ind] !== array2[ind]) {
+//             return -1
+//         }
+//     }).reduce((acc, n) => acc + n, 0)
+//     return ball > 0 ? ball : 0
+// }
+// console.log(checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]))
+
+function capitalize(s) {
+    return [[...s].map((el, index) => index % 2 ? el.toUpperCase() : el).join(''), [...s].map((el, index) => index % 2 ? el : el.toUpperCase()).join('')];
+};
+console.log(capitalize("abcdef"))
