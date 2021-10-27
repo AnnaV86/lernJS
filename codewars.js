@@ -1533,8 +1533,13 @@ function likes(names) {
 // };
 // console.log(capitalize("abcdef"))
 
-function myLanguages(results) {
-    return Object.entries(results).filter(el => el[1] >= 60).sort((a, b) => b[1] - a[1]).map(el => el[0])
+// function myLanguages(results) {
+//     return Object.entries(results).filter(el => el[1] >= 60).sort((a, b) => b[1] - a[1]).map(el => el[0])
+// }
+// console.log(myLanguages({ "Java": 10, "Ruby": 80, "Python": 65 }))
+// console.log(myLanguages({ "Hindi": 60, "Greek": 71, "Dutch": 93 }))
+
+function sumDigits(number) {
+    return [...String(Math.abs(number))].map(Number).reduce((acc, n) => n + acc, 0)
 }
-console.log(myLanguages({ "Java": 10, "Ruby": 80, "Python": 65 }))
-console.log(myLanguages({ "Hindi": 60, "Greek": 71, "Dutch": 93 }))
+console.log(sumDigits(-99))
