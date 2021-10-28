@@ -1539,7 +1539,17 @@ function likes(names) {
 // console.log(myLanguages({ "Java": 10, "Ruby": 80, "Python": 65 }))
 // console.log(myLanguages({ "Hindi": 60, "Greek": 71, "Dutch": 93 }))
 
-function sumDigits(number) {
-    return [...String(Math.abs(number))].map(Number).reduce((acc, n) => n + acc, 0)
+// function sumDigits(number) {
+//     return [...String(Math.abs(number))].map(Number).reduce((acc, n) => n + acc, 0)
+// }
+// console.log(sumDigits(-99))
+
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+    const date = new Date(currentDate)
+    const date2 = new Date(expirationDate)
+    return date <= date2 && enteredCode === correctCode
 }
-console.log(sumDigits(-99))
+console.log(checkCoupon('123', '123', 'September 5, 2014', 'October 1, 2014'))
+console.log(checkCoupon('123a', '123', 'September 5, 2014', 'October 1, 2014'))
+console.log(checkCoupon('123a', '123', 'October 5, 2014', 'October 1, 2014'))
