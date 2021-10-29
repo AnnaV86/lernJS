@@ -1545,11 +1545,30 @@ function likes(names) {
 // console.log(sumDigits(-99))
 
 
-function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
-    const date = new Date(currentDate)
-    const date2 = new Date(expirationDate)
-    return date <= date2 && enteredCode === correctCode
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+//     const date = new Date(currentDate)
+//     const date2 = new Date(expirationDate)
+//     return date <= date2 && enteredCode === correctCode
+// }
+// console.log(checkCoupon('123', '123', 'September 5, 2014', 'October 1, 2014'))
+// console.log(checkCoupon('123a', '123', 'September 5, 2014', 'October 1, 2014'))
+// console.log(checkCoupon('123a', '123', 'October 5, 2014', 'October 1, 2014'))
+
+
+//A-Z 65-90
+//a-z 97-122 
+
+// function solve(s) {
+//     const arr = [...s].filter(el => el.charCodeAt() < 97).length
+//     return s.length / 2 >= arr ? s.toLowerCase() : s.toUpperCase()
+// }
+// console.log(solve("code"))
+// console.log(solve("CODe"))
+// console.log(solve("COde"))
+// console.log(solve("Code"))
+
+function twoOldestAges(ages) {
+    const sortArr = ages.slice().sort((a, b) => a - b)
+    return [sortArr[sortArr.length - 2], sortArr[sortArr.length - 1]]
 }
-console.log(checkCoupon('123', '123', 'September 5, 2014', 'October 1, 2014'))
-console.log(checkCoupon('123a', '123', 'September 5, 2014', 'October 1, 2014'))
-console.log(checkCoupon('123a', '123', 'October 5, 2014', 'October 1, 2014'))
+console.log(twoOldestAges([1, 2, 10, 8]))
