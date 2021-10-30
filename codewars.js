@@ -1567,8 +1567,19 @@ function likes(names) {
 // console.log(solve("COde"))
 // console.log(solve("Code"))
 
-function twoOldestAges(ages) {
-    const sortArr = ages.slice().sort((a, b) => a - b)
-    return [sortArr[sortArr.length - 2], sortArr[sortArr.length - 1]]
+// function twoOldestAges(ages) {
+//     const sortArr = ages.slice().sort((a, b) => a - b)
+//     return [sortArr[sortArr.length - 2], sortArr[sortArr.length - 1]]
+// }
+// console.log(twoOldestAges([1, 2, 10, 8]))
+
+// bsjq", ["bsjq", "qbsj","jqbs", "sjqb", ])
+
+function containAllRots(str, arr) {
+    return [...str].reduce((acc, _, index) => {
+        acc.push(str.slice(index) + str.slice(0, index))
+        return acc
+    }, []).every(el => arr.includes(el))
 }
-console.log(twoOldestAges([1, 2, 10, 8]))
+
+console.log(containAllRots('bsjq', ["bsjq", "qbsj", "jqbs", "sjqb"]))
