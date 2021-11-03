@@ -1419,14 +1419,25 @@ function likes(names) {
 //     }, []).every(el => arr.includes(el))
 // }
 
-const capitals = function (word) {
-  return [...word]
-    .map((el, index) => {
-      if (el === el.toUpperCase()) {
-        el = index;
-      }
-      return el;
-    })
-    .filter((el) => typeof el === 'number');
-};
-console.log(capitals('CodEWaRs'));
+// const capitals = function (word) {
+//   return [...word]
+//     .map((el, index) => {
+//       if (el === el.toUpperCase()) {
+//         el = index;
+//       }
+//       return el;
+//     })
+//     .filter((el) => typeof el === 'number');
+// };
+// console.log(capitals('CodEWaRs'));
+
+function evaporator(content, evap_per_day, threshold) {
+  let day = 0;
+  const pers = (content * threshold) / 100;
+  for (let i = 1; pers <= content; i++) {
+    content = content - (content * evap_per_day) / 100;
+    day += 1;
+  }
+  return day;
+}
+console.log(evaporator(10, 10, 10));
