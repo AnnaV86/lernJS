@@ -1431,13 +1431,22 @@ function likes(names) {
 // };
 // console.log(capitals('CodEWaRs'));
 
-function evaporator(content, evap_per_day, threshold) {
-  let day = 0;
-  const pers = (content * threshold) / 100;
-  for (let i = 1; pers <= content; i++) {
-    content = content - (content * evap_per_day) / 100;
-    day += 1;
-  }
-  return day;
+// function evaporator(content, evap_per_day, threshold) {
+//   let day = 0;
+//   const pers = (content * threshold) / 100;
+//   for (let i = 1; pers <= content; i++) {
+//     content = content - (content * evap_per_day) / 100;
+//     day += 1;
+//   }
+//   return day;
+// }
+// console.log(evaporator(10, 10, 10));
+
+function inAscOrder(arr) {
+  return !arr
+    .map((_, ind, arr) => arr[ind] < arr[ind + 1])
+    .slice(0, -1)
+    .includes(false);
 }
-console.log(evaporator(10, 10, 10));
+console.log(inAscOrder([1, 2, 4, 7, 19]));
+console.log(inAscOrder([1, 2, 9, 7, 19]));
