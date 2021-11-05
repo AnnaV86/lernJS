@@ -1442,11 +1442,28 @@ function likes(names) {
 // }
 // console.log(evaporator(10, 10, 10));
 
-function inAscOrder(arr) {
-  return !arr
-    .map((_, ind, arr) => arr[ind] < arr[ind + 1])
-    .slice(0, -1)
-    .includes(false);
+// function inAscOrder(arr) {
+//   return !arr
+//     .map((_, ind, arr) => arr[ind] < arr[ind + 1])
+//     .slice(0, -1)
+//     .includes(false);
+// }
+// console.log(inAscOrder([1, 2, 4, 7, 19]));
+// console.log(inAscOrder([1, 2, 9, 7, 19]));
+
+// function generateShape(integer) {
+//   return [...Array(integer * integer + integer)]
+//     .map((el, ind) => (ind % (integer + 1) === 0 ? (el = '\n') : (el = '+')))
+//     .slice(1)
+//     .join('');
+// }
+// console.log(generateShape(8));
+
+// let generateShape = (int) =>
+//   [...Array(int)].map((_) => '+'.repeat(int)).join('\n');
+
+function solution(str, ending) {
+  return ending === str.slice(-ending.length)
 }
-console.log(inAscOrder([1, 2, 4, 7, 19]));
-console.log(inAscOrder([1, 2, 9, 7, 19]));
+console.log(solution('abcde', 'cde'));
+console.log(solution('abcde', 'abc'));
