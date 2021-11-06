@@ -1462,8 +1462,14 @@ function likes(names) {
 // let generateShape = (int) =>
 //   [...Array(int)].map((_) => '+'.repeat(int)).join('\n');
 
-function solution(str, ending) {
-  return ending === str.slice(-ending.length)
+// function solution(str, ending) {
+//   return ending === str.slice(-ending.length)
+// }
+// console.log(solution('abcde', 'cde'));
+// console.log(solution('abcde', 'abc'));
+
+function smallEnough(a, limit) {
+  return a.every(el => el <= limit)
 }
-console.log(solution('abcde', 'cde'));
-console.log(solution('abcde', 'abc'));
+console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100))
+console.log(smallEnough([101, 45, 75, 105, 99, 107], 107))
