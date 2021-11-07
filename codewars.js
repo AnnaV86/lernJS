@@ -1468,8 +1468,14 @@ function likes(names) {
 // console.log(solution('abcde', 'cde'));
 // console.log(solution('abcde', 'abc'));
 
-function smallEnough(a, limit) {
-  return a.every(el => el <= limit)
+// function smallEnough(a, limit) {
+//   return a.every(el => el <= limit)
+// }
+// console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100))
+// console.log(smallEnough([101, 45, 75, 105, 99, 107], 107))
+
+function overTheRoad(address, n) {
+  return n * 2 + 1 - address;
 }
-console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100))
-console.log(smallEnough([101, 45, 75, 105, 99, 107], 107))
+console.log(overTheRoad(1, 3));
+console.log(overTheRoad(4, 3));
