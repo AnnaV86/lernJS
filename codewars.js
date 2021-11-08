@@ -1,7 +1,7 @@
 // const arrNumbers = [10, -5, 5, -1, -8, 30, 16, -4, 11]
 // const arrNumbers2 = [4, -6, 9, -3, -4, 35, 78, -3, 51]
 
-// function summPlusNumber(arr) {
+// function PlusNumber(arr) {
 //     let result = 0
 //     for (let i = 0; i < arr.length; i++) {
 //         if (arr[i] > 0) {
@@ -1474,8 +1474,47 @@ function likes(names) {
 // console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100))
 // console.log(smallEnough([101, 45, 75, 105, 99, 107], 107))
 
-function overTheRoad(address, n) {
-  return n * 2 + 1 - address;
+// function overTheRoad(address, n) {
+//   return n * 2 + 1 - address;
+// }
+// console.log(overTheRoad(1, 3));
+// console.log(overTheRoad(4, 3));
+
+class Cat {
+  constructor(options) {
+    this.name = options.name;
+    this.age = options.age;
+  }
+  voice() {
+    console.log('Мяу');
+  }
 }
-console.log(overTheRoad(1, 3));
-console.log(overTheRoad(4, 3));
+
+const cat1 = new Cat({
+  name: 'Mаркиз',
+  age: 13,
+});
+
+const cat2 = new Cat({
+  name: 'Бусик',
+  age: 5,
+});
+
+const cat3 = new Cat({
+  name: 'Лиза',
+  age: 8,
+});
+
+const cat4 = new Cat({
+  name: 'Мотильда',
+  age: 10,
+});
+
+const cat5 = new Cat({
+  name: 'Марс',
+  age: 7,
+});
+
+// console.log(cat2);
+// console.log(cat1.age);
+console.log(cat3.voice());
