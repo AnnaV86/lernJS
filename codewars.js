@@ -1480,41 +1480,63 @@ function likes(names) {
 // console.log(overTheRoad(1, 3));
 // console.log(overTheRoad(4, 3));
 
-class Cat {
-  constructor(options) {
-    this.name = options.name;
-    this.age = options.age;
+// class Cat {
+//   constructor(options) {
+//     this.name = options.name;
+//     this.age = options.age;
+//   }
+//   voice() {
+//     console.log('Мяу');
+//   }
+// }
+
+// const cat1 = new Cat({
+//   name: 'Mаркиз',
+//   age: 13,
+// });
+
+// const cat2 = new Cat({
+//   name: 'Бусик',
+//   age: 5,
+// });
+
+// const cat3 = new Cat({
+//   name: 'Лиза',
+//   age: 8,
+// });
+
+// const cat4 = new Cat({
+//   name: 'Мотильда',
+//   age: 10,
+// });
+
+// const cat5 = new Cat({
+//   name: 'Марс',
+//   age: 7,
+// });
+
+// // console.log(cat2);
+// // console.log(cat1.age);
+// console.log(cat3.voice());
+// console.log(String.fromCharCode(100));
+// console.log('Ì'.charCodeAt());
+
+function addLetters(...letters) {
+  if ([...letters].length === 0) {
+    return String.fromCharCode(122);
   }
-  voice() {
-    console.log('Мяу');
+  let number = letters
+    .map((el) => (el = el.charCodeAt() - 96))
+    .reduce((acc, el) => acc + el, 0 + 96);
+  if (number > 122) {
+    for (let i = 1; number > 122; i++) {
+      number -= 26;
+    }
   }
+  return String.fromCharCode(number);
 }
-
-const cat1 = new Cat({
-  name: 'Mаркиз',
-  age: 13,
-});
-
-const cat2 = new Cat({
-  name: 'Бусик',
-  age: 5,
-});
-
-const cat3 = new Cat({
-  name: 'Лиза',
-  age: 8,
-});
-
-const cat4 = new Cat({
-  name: 'Мотильда',
-  age: 10,
-});
-
-const cat5 = new Cat({
-  name: 'Марс',
-  age: 7,
-});
-
-// console.log(cat2);
-// console.log(cat1.age);
-console.log(cat3.voice());
+console.log(addLetters('i', 's', 'i', 'w', 'r', 'y', 'e'));
+console.log(addLetters());
+// console.log(addLetters('z'));
+// console.log(addLetters('z', 'a'));
+// console.log(addLetters('y', 'c', 'b'));
