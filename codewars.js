@@ -1521,22 +1521,36 @@ function likes(names) {
 // console.log(String.fromCharCode(100));
 // console.log('Ì'.charCodeAt());
 
-function addLetters(...letters) {
-  if ([...letters].length === 0) {
-    return String.fromCharCode(122);
-  }
-  let number = letters
-    .map((el) => (el = el.charCodeAt() - 96))
-    .reduce((acc, el) => acc + el, 0 + 96);
-  if (number > 122) {
-    for (let i = 1; number > 122; i++) {
-      number -= 26;
-    }
-  }
-  return String.fromCharCode(number);
+// function addLetters(...letters) {
+//   if ([...letters].length === 0) {
+//     return String.fromCharCode(122);
+//   }
+//   let number = letters
+//     .map((el) => (el = el.charCodeAt() - 96))
+//     .reduce((acc, el) => acc + el, 0 + 96);
+//   if (number > 122) {
+//     for (let i = 1; number > 122; i++) {
+//       number -= 26;
+//     }
+//   }
+//   return String.fromCharCode(number);
+// }
+// console.log(addLetters('i', 's', 'i', 'w', 'r', 'y', 'e'));
+// console.log(addLetters());
+// // console.log(addLetters('z'));
+// // console.log(addLetters('z', 'a'));
+// // console.log(addLetters('y', 'c', 'b'));
+
+function sumOfMinimums(arr) {
+  return arr
+    .map((el) => el.sort((a, b) => a - b)[0])
+    .reduce((acc, n) => acc + n, 0);
 }
-console.log(addLetters('i', 's', 'i', 'w', 'r', 'y', 'e'));
-console.log(addLetters());
-// console.log(addLetters('z'));
-// console.log(addLetters('z', 'a'));
-// console.log(addLetters('y', 'c', 'b'));
+
+console.log(
+  sumOfMinimums([
+    [1, 2, 3, 4, 5], // minimum value of row is 1
+    [5, 6, 7, 8, 9], // minimum value of row is 5
+    [20, 21, 34, 56, 100],
+  ])
+);
