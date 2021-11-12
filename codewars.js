@@ -1541,16 +1541,23 @@ function likes(names) {
 // // console.log(addLetters('z', 'a'));
 // // console.log(addLetters('y', 'c', 'b'));
 
-function sumOfMinimums(arr) {
-  return arr
-    .map((el) => el.sort((a, b) => a - b)[0])
-    .reduce((acc, n) => acc + n, 0);
-}
+// function sumOfMinimums(arr) {
+//   return arr
+//     .map((el) => el.sort((a, b) => a - b)[0])
+//     .reduce((acc, n) => acc + n, 0);
+// }
 
-console.log(
-  sumOfMinimums([
-    [1, 2, 3, 4, 5], // minimum value of row is 1
-    [5, 6, 7, 8, 9], // minimum value of row is 5
-    [20, 21, 34, 56, 100],
-  ])
-);
+// console.log(
+//   sumOfMinimums([
+//     [1, 2, 3, 4, 5], // minimum value of row is 1
+//     [5, 6, 7, 8, 9], // minimum value of row is 5
+//     [20, 21, 34, 56, 100],
+//   ])
+// );
+
+function removeUrlAnchor(url) {
+  const ind = [...url].indexOf('#');
+
+  return ind !== -1 ? url.slice(0, ind) : url;
+}
+console.log(removeUrlAnchor('www.codewars.com#about'));
