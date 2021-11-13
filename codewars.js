@@ -1555,9 +1555,38 @@ function likes(names) {
 //   ])
 // );
 
-function removeUrlAnchor(url) {
-  const ind = [...url].indexOf('#');
+// function removeUrlAnchor(url) {
+//  return url.split('#')[0]
+// }
+// console.log(removeUrlAnchor('www.codewars.com#about'));
 
-  return ind !== -1 ? url.slice(0, ind) : url;
+function sumIntervals(intervals) {
+  return [
+    ...new Set(
+      intervals.reduce((acc, el) => {
+        const number = el[1] - el[0];
+        console.log(el)
+        console.log([...Array(number)]);
+        return acc;
+      }, [])
+    ),
+  ];
 }
-console.log(removeUrlAnchor('www.codewars.com#about'));
+
+// console.log('>>>>>>', [...new Set([1, 2, 3].concat([3, 4]))].length);
+
+console.log(
+  sumIntervals([
+    [1, 4],
+    [7, 10],
+    [3, 5],
+  ])
+);
+console.log(
+  sumIntervals([
+    [
+      [1, 5],
+      [1, 5],
+    ],
+  ])
+); //4
