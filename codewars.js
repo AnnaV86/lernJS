@@ -652,17 +652,17 @@
 // }
 // console.log(digital_root(456))
 
-function likes(names) {
-  return names.length === 0
-    ? 'no one likes this'
-    : names.length === 1
-    ? names[0] + ' likes this'
-    : names.length === 2
-    ? `${names[0]}, ${names[1]} like this`
-    : names.length === 3
-    ? `${names[0]}, ${names[1]}, ${names[2]} like this`
-    : `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
-}
+// function likes(names) {
+//   return names.length === 0
+//     ? 'no one likes this'
+//     : names.length === 1
+//     ? names[0] + ' likes this'
+//     : names.length === 2
+//     ? `${names[0]}, ${names[1]} like this`
+//     : names.length === 3
+//     ? `${names[0]}, ${names[1]}, ${names[2]} like this`
+//     : `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+// }
 
 // function likes(names) {
 //     const text = {
@@ -1565,15 +1565,12 @@ function sumIntervals(intervals) {
     ...new Set(
       intervals.reduce((acc, el) => {
         const number = el[1] - el[0];
-        console.log(el)
-        console.log([...Array(number)]);
+        acc = acc.concat([...Array(number)].map((_, index) => index + el[0]));
         return acc;
       }, [])
     ),
-  ];
+  ].length;
 }
-
-// console.log('>>>>>>', [...new Set([1, 2, 3].concat([3, 4]))].length);
 
 console.log(
   sumIntervals([
@@ -1581,12 +1578,10 @@ console.log(
     [7, 10],
     [3, 5],
   ])
-);
+); // 7
 console.log(
   sumIntervals([
-    [
-      [1, 5],
-      [1, 5],
-    ],
+    [1, 5],
+    [1, 5],
   ])
 ); //4
