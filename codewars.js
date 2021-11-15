@@ -1560,28 +1560,36 @@
 // }
 // console.log(removeUrlAnchor('www.codewars.com#about'));
 
-function sumIntervals(intervals) {
-  return [
-    ...new Set(
-      intervals.reduce((acc, el) => {
-        const number = el[1] - el[0];
-        acc = acc.concat([...Array(number)].map((_, index) => index + el[0]));
-        return acc;
-      }, [])
-    ),
-  ].length;
-}
+// function sumIntervals(intervals) {
+//   return [
+//     ...new Set(
+//       intervals.reduce((acc, el) => {
+//         const number = el[1] - el[0];
+//         acc = acc.concat([...Array(number)].map((_, index) => index + el[0]));
+//         return acc;
+//       }, [])
+//     ),
+//   ].length;
+// }
 
-console.log(
-  sumIntervals([
-    [1, 4],
-    [7, 10],
-    [3, 5],
-  ])
-); // 7
-console.log(
-  sumIntervals([
-    [1, 5],
-    [1, 5],
-  ])
-); //4
+// console.log(
+//   sumIntervals([
+//     [1, 4],
+//     [7, 10],
+//     [3, 5],
+//   ])
+// ); // 7
+// console.log(
+//   sumIntervals([
+//     [1, 5],
+//     [1, 5],
+//   ])
+// ); //4
+
+const palindromeChainLength = (n) => {
+  let numArr = Number(String(n).split('').reverse().join(''));
+  return n === numArr ? 0 : 1 + palindromeChainLength(n + numArr);
+};
+
+console.log(palindromeChainLength(87));
+console.log(palindromeChainLength(22));
