@@ -1605,3 +1605,4 @@ console.log(findLongest([1, 10, 100]));
 console.log(findLongest([1, 900, 500]));
 console.log(findLongest([1000, 10, 100]));
 console.log(findLongest([130, 10, 100]));
+console.log(findLongest([60, 10, 100]));
