@@ -1586,10 +1586,21 @@
 //   ])
 // ); //4
 
-const palindromeChainLength = (n) => {
-  let numArr = Number(String(n).split('').reverse().join(''));
-  return n === numArr ? 0 : 1 + palindromeChainLength(n + numArr);
-};
+// const palindromeChainLength = (n) => {
+//   let numArr = Number(String(n).split('').reverse().join(''));
+//   return n === numArr ? 0 : 1 + palindromeChainLength(n + numArr);
+// };
 
-console.log(palindromeChainLength(87));
-console.log(palindromeChainLength(22));
+// console.log(palindromeChainLength(87));
+// console.log(palindromeChainLength(22));
+
+function findLongest(array) {
+  const elLength = array.map((el) => String(el).length);
+  const max = Math.max(...elLength);
+  const index = elLength.indexOf(max);
+  return array[index];
+}
+
+console.log(findLongest([1, 10, 100]));
+console.log(findLongest([1, 900, 500]));
+console.log(findLongest([1000, 10, 100]));
