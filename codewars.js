@@ -1594,15 +1594,22 @@
 // console.log(palindromeChainLength(87));
 // console.log(palindromeChainLength(22));
 
-function findLongest(array) {
-  const elLength = array.map((el) => String(el).length);
-  const max = Math.max(...elLength);
-  const index = elLength.indexOf(max);
-  return array[index];
+// function findLongest(array) {
+//   const elLength = array.map((el) => String(el).length);
+//   const max = Math.max(...elLength);
+//   const index = elLength.indexOf(max);
+//   return array[index];
+// }
+
+// console.log(findLongest([1, 10, 100]));
+// console.log(findLongest([1, 900, 500]));
+// console.log(findLongest([1000, 10, 100]));
+// console.log(findLongest([130, 10, 100]));
+// console.log(findLongest([60, 10, 100]));
+
+function helloWorld(name) {
+  let str = 'Hello world';
+  return console.log(str + name);
 }
 
-console.log(findLongest([1, 10, 100]));
-console.log(findLongest([1, 900, 500]));
-console.log(findLongest([1000, 10, 100]));
-console.log(findLongest([130, 10, 100]));
-console.log(findLongest([60, 10, 100]));
+console.log(helloWorld(' Ann'));
