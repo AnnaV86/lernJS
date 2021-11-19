@@ -1607,9 +1607,23 @@
 // console.log(findLongest([130, 10, 100]));
 // console.log(findLongest([60, 10, 100]));
 
-function helloWorld(name) {
-  let str = 'Hello world';
-  return console.log(str + name);
+// function helloWorld(name) {
+//   let str = 'Hello world';
+//   return console.log(str + name);
+// }
+
+// console.log(helloWorld(' Ann'));
+
+function flattenAndSort(array) {
+  return array.reduce((acc, el) => acc.concat(el), []).sort((a, b) => a - b);
 }
 
-console.log(helloWorld(' Ann'));
+console.log(
+  flattenAndSort([
+    [3, 2, 100],
+    [7, 9, 8],
+    [6, 4, 5],
+  ])
+);
+console.log(flattenAndSort([[], []]));
+console.log(flattenAndSort([[], [1]]));
