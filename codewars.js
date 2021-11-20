@@ -1614,16 +1614,22 @@
 
 // console.log(helloWorld(' Ann'));
 
-function flattenAndSort(array) {
-  return array.reduce((acc, el) => acc.concat(el), []).sort((a, b) => a - b);
+// function flattenAndSort(array) {
+//   return array.reduce((acc, el) => acc.concat(el), []).sort((a, b) => a - b);
+// }
+
+// console.log(
+//   flattenAndSort([
+//     [3, 2, 100],
+//     [7, 9, 8],
+//     [6, 4, 5],
+//   ])
+// );
+// console.log(flattenAndSort([[], []]));
+// console.log(flattenAndSort([[], [1]]));
+
+function sumStrings(a, b) {
+  return String(BigInt(a) + BigInt(b));
 }
 
-console.log(
-  flattenAndSort([
-    [3, 2, 100],
-    [7, 9, 8],
-    [6, 4, 5],
-  ])
-);
-console.log(flattenAndSort([[], []]));
-console.log(flattenAndSort([[], [1]]));
+console.log(sumStrings('123', '456'));
