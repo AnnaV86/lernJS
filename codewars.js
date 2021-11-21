@@ -1628,8 +1628,18 @@
 // console.log(flattenAndSort([[], []]));
 // console.log(flattenAndSort([[], [1]]));
 
-function sumStrings(a, b) {
-  return String(BigInt(a) + BigInt(b));
+// function sumStrings(a, b) {
+//   return String(BigInt(a) + BigInt(b));
+// }
+
+// console.log(sumStrings('123', '456'));
+
+function factorial(n) {
+  let multy = 1;
+  for (let i = 1; i <= n; i++) {
+    multy = multy * i;
+  }
+  return multy;
 }
 
-console.log(sumStrings('123', '456'));
+console.log(factorial(7));
