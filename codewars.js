@@ -1634,12 +1634,24 @@
 
 // console.log(sumStrings('123', '456'));
 
-function factorial(n) {
-  let multy = 1;
-  for (let i = 1; i <= n; i++) {
-    multy = multy * i;
-  }
-  return multy;
+// function factorial(n) {
+//   let multy = 1;
+//   for (let i = 1; i <= n; i++) {
+//     multy = multy * i;
+//   }
+//   return multy;
+// }
+
+// console.log(factorial(7));
+
+// function triangular(n) {
+//   return n <= 0
+//     ? 0
+//     : [...Array(n)].map((_, ind) => ind + 1).reduce((acc, el) => acc + el, 0);
+// }
+
+function triangular(n) {
+  return (n * (n + 1)) / 2;
 }
 
-console.log(factorial(7));
+console.log(triangular(433329420));
