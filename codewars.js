@@ -1650,8 +1650,22 @@
 //     : [...Array(n)].map((_, ind) => ind + 1).reduce((acc, el) => acc + el, 0);
 // }
 
-function triangular(n) {
-  return (n * (n + 1)) / 2;
-}
+// function triangular(n) {
+//   return (n * (n + 1)) / 2;
+// }
 
-console.log(triangular(433329420));
+// console.log(triangular(433329420));
+
+// function angle(n) {
+//   return (n - 2) * 180;
+// }
+
+// console.log(angle(4));
+
+function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+  const Arr = [age1, age2, age3, age4, age5, age6, age7, age8].map(
+    (el) => el * el
+  );
+  return Math.floor(Math.sqrt(Arr.reduce((acc, n) => acc + n, 0)) / 2);
+}
+console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45));
