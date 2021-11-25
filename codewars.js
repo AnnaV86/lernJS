@@ -1662,10 +1662,41 @@
 
 // console.log(angle(4));
 
-function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
-  const Arr = [age1, age2, age3, age4, age5, age6, age7, age8].map(
-    (el) => el * el
-  );
-  return Math.floor(Math.sqrt(Arr.reduce((acc, n) => acc + n, 0)) / 2);
+// function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+//   const Arr = [age1, age2, age3, age4, age5, age6, age7, age8].map(
+//     (el) => el * el
+//   );
+//   return Math.floor(Math.sqrt(Arr.reduce((acc, n) => acc + n, 0)) / 2);
+// }
+// console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45));
+
+// const findDeletedNumber = (arr, mixArr) =>
+//   arr.find((el) => !mixArr.includes(el)) || 0;
+
+// // console.log(findDeletedNumber([1, 2, 3, 4, 5], [3, 4, 1, 5]));
+// console.log(
+//   findDeletedNumber(
+//     [
+//       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+//       22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+//       40, 41,
+//     ],
+//     [
+//       19, 17, 12, 35, 11, 40, 33, 1, 38, 29, 15, 20, 14, 27, 8, 36, 37, 24, 30,
+//       10, 13, 41, 21, 39, 25, 16, 4, 5, 9, 7, 34, 3, 32, 23, 26, 18, 6, 31, 22,
+//       2,
+//     ]
+//   )
+// );
+
+class Dinglemouse {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`.trim();
+  }
 }
-console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45));
+
+console.log(new Dinglemouse('Clint', 'Eastwood').getFullName());
