@@ -3,12 +3,10 @@
 // }
 // console.log(removeExclamationMarks("Hello World!!"))
 
-
 // function disemvowel(str) {
 //     return str.replace(/[aeiuo]/ig, '');
 // }
 // console.log(disemvowel("This website is for losers LOL!"))
-
 
 // // **Номера Телефона**
 // function createPhoneNumber(numbers) {
@@ -16,13 +14,21 @@
 // }
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
 
-
 // function songDecoder(song) {
 //     return song.replace(/WUB/g, ' ').split(' ').filter(el => /\S/.exec(el)).join(' ')
 // }
 
 function songDecoder(song) {
-    return song.replace(/A*/g, "q")
+  return song.replace(/A*/g, 'q');
 }
 
-console.log(songDecoder("BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC  "))
+console.log(songDecoder('BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC  '));
+
+function toCamelCase(str) {
+  return str.replace(/(_.)|(-.)/g, (x) => x[1].toUpperCase());
+}
+
+console.log(toCamelCase(''));
+console.log(toCamelCase('the_stealth_warrior'));
+console.log(toCamelCase('The-Stealth-Warrior'));
+console.log(toCamelCase('A-B-C'));

@@ -1689,14 +1689,115 @@
 //   )
 // );
 
-class Dinglemouse {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`.trim();
-  }
-}
+// class Dinglemouse {
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`.trim();
+//   }
+//   static test() {
+//     console.log('ggg')
+//   }
+// }
 
-console.log(new Dinglemouse('Clint', 'Eastwood').getFullName());
+// console.log(new Dinglemouse('Clint', 'Eastwood').getFullName());
+// Dinglemouse.getFullName()
+
+// function twoSort(s) {
+//   return s.sort()[0].split('').join('***');
+// }
+// console.log(
+//   twoSort([
+//     'bitcoin',
+//     'take',
+//     'over',
+//     'the',
+//     'world',
+//     'maybe',
+//     'who',
+//     'knows',
+//     'perhaps',
+//   ])
+// );
+
+// function stringy(size) {
+//   return [...Array(size)].map((_, ind) => (ind % 2 === 0 ? 1 : 0)).join('');
+// }
+
+// console.log(stringy(3));
+
+// function well(x) {
+//   const goodArr = x.filter((el) => el === 'good').length;
+//   if (goodArr == 0) {
+//     return 'Fail!';
+//   }
+//   if (goodArr < 3) {
+//     return 'Publish!';
+//   }
+//   return 'I smell a series!';
+// }
+
+// console.log(well(['bad', 'bad', 'bad']));
+// console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
+// console.log(
+//   well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good'])
+// );
+
+// function mouthSize(animal) {
+//   return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
+// }
+
+// console.log(mouthSize('alligator'));
+// console.log(mouthSize('ant bear'));
+
+// function toCamelCase(str) {
+//   return str.replace(/(_.)|(-.)/g, (x) => x[1].toUpperCase())
+// }
+
+// console.log(toCamelCase(''));
+// console.log(toCamelCase('the_stealth_warrior'));
+// console.log(toCamelCase('The-Stealth-Warrior'));
+// console.log(toCamelCase('A-B-C'));
+
+// function list(names) {
+//   if (names.length === 0) {
+//     return '';
+//   }
+//   if (names.length === 1) {
+//     return names[0].name;
+//   }
+//   return (
+//     names
+//       .map((el) => el.name)
+//       .slice(0, -1)
+//       .join(', ') +
+//     ' & ' +
+//     names[names.length - 1].name
+//   );
+// }
+
+// console.log(
+//   list([
+//     { name: 'Bart' },
+//     { name: 'Lisa' },
+//     { name: 'Maggie' },
+//     { name: 'Homer' },
+//     { name: 'Marge' },
+//   ])
+// );
+// console.log(list([{ name: 'Bart' }, { name: 'Lisa' }, { name: 'Maggie' }]));
+// console.log(list([{ name: 'Bart' }, { name: 'Lisa' }]));
+// console.log(list([]));
+
+function alternateCase(s) {
+  return s.split('').reduce((acc, el) => {
+    const alternateCase =
+      el === el.toUpperCase() ? el.toLowerCase() : el.toUpperCase();
+    return acc + alternateCase;
+  }, '');
+}
+console.log(alternateCase('abc'));
+console.log(alternateCase('ADC'));
+console.log(alternateCase('AdDwC'));
