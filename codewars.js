@@ -1791,13 +1791,23 @@
 // console.log(list([{ name: 'Bart' }, { name: 'Lisa' }]));
 // console.log(list([]));
 
-function alternateCase(s) {
-  return s.split('').reduce((acc, el) => {
-    const alternateCase =
-      el === el.toUpperCase() ? el.toLowerCase() : el.toUpperCase();
-    return acc + alternateCase;
-  }, '');
-}
-console.log(alternateCase('abc'));
-console.log(alternateCase('ADC'));
-console.log(alternateCase('AdDwC'));
+// function alternateCase(s) {
+//   return s.split('').reduce((acc, el) => {
+//     const alternateCase =
+//       el === el.toUpperCase() ? el.toLowerCase() : el.toUpperCase();
+//     return acc + alternateCase;
+//   }, '');
+// }
+// console.log(alternateCase('abc'));
+// console.log(alternateCase('ADC'));
+// console.log(alternateCase('AdDwC'));
+
+// function solution(str) {}
+// console.log(solution('abcdef'));
+// console.log(solution('abcdefw'));
+
+// function multiply(a, b) {
+//   return (BigInt(a) * BigInt(b)).toString();
+// }
+
+// console.log(multiply('11', '85'));
