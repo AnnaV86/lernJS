@@ -1811,3 +1811,12 @@
 // }
 
 // console.log(multiply('11', '85'));
+
+function toUnderscore(string) {
+  return String(string)
+    .replace(/(.)([A-Z])/g, `$1_$2`)
+    .toLowerCase();
+}
+
+console.log(toUnderscore('TestController'));
+console.log(toUnderscore(1));
