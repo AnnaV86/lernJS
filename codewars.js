@@ -1826,5 +1826,10 @@
 // }
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
+// console.log('Ann')
 
-console.log('Ann')
+function sevenAte9(str) {
+  return str.replace(/79(?=7)/g, '7');
+}
+
+console.log(sevenAte9('97979797'));
