@@ -1828,8 +1828,27 @@
 
 // console.log('Ann')
 
-function sevenAte9(str) {
-  return str.replace(/79(?=7)/g, '7');
+// function sevenAte9(str) {
+//   return str.replace(/79(?=7)/g, '7');
+// }
+
+// console.log(sevenAte9('97979797'));
+
+// function solve(s) {
+//   return Math.max(...s.match(/\d+/g));
+// }
+
+// console.log(solve('gh12cdy695m1')); //[ '12', '695', '1' ]
+
+// function domainName(url) {
+//   return url.replace(/(.+\/\/)|(www\.)|(\..+)/g, ``);
+// }
+
+function domainName(url) {
+  return url.replace(/(.*\/\/)|(www\.)/g, '').split('.')[0];
 }
 
-console.log(sevenAte9('97979797'));
+console.log(domainName('http://google.com'));
+console.log(domainName('http://google.co.jp'));
+console.log(domainName('www.xakep.ru'));
+console.log(domainName('http://www.codewars.com/kata/'));
