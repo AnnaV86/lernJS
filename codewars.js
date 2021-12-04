@@ -1851,4 +1851,4 @@ function domainName(url) {
 console.log(domainName('http://google.com'));
 console.log(domainName('http://google.co.jp'));
 console.log(domainName('www.xakep.ru'));
-console.log(domainName('http://www.codewars.com/kata/'));
+console.log(domainName('http://www.codewars.com/kata/'))
