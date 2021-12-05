@@ -1844,11 +1844,19 @@
 //   return url.replace(/(.+\/\/)|(www\.)|(\..+)/g, ``);
 // }
 
-function domainName(url) {
-  return url.replace(/(.*\/\/)|(www\.)/g, '').split('.')[0];
+// function domainName(url) {
+//   return url.replace(/(.*\/\/)|(www\.)/g, '').split('.')[0];
+// }
+
+// console.log(domainName('http://google.com'));
+// console.log(domainName('http://google.co.jp'));
+// console.log(domainName('www.xakep.ru'));
+// console.log(domainName('http://www.codewars.com/kata/'))
+
+function stringBreakers(n, s) {
+  return s
+    .replace(/\s/g, '')
+    .replace(new RegExp('(.{' + n + '})', 'g'), '$1\n');
 }
 
-console.log(domainName('http://google.com'));
-console.log(domainName('http://google.co.jp'));
-console.log(domainName('www.xakep.ru'));
-console.log(domainName('http://www.codewars.com/kata/'))
+console.log(stringBreakers(5, 'This is an example string'));
