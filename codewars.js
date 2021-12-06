@@ -1853,12 +1853,19 @@
 // console.log(domainName('www.xakep.ru'));
 // console.log(domainName('http://www.codewars.com/kata/'))
 
-function stringBreakers(n, s) {
-  return s
-    .replace(/\s/g, '')
-    .replace(new RegExp('(.{' + n + '})', 'g'), '$1\n');
+// function stringBreakers(n, s) {
+//   return s
+//     .replace(/\s/g, '')
+//     .replace(new RegExp('(.{' + n + '})', 'g'), '$1\n');
+// }
+
+// console.log(stringBreakers(5, 'This is an example string'));
+
+// //test
+
+function formatMoney(amount) {
+  return `$${amount.toFixed(2)}`;
 }
-
-console.log(stringBreakers(5, 'This is an example string'));
-
-//test
+console.log(formatMoney(39.99));
+console.log(formatMoney(40.1));
+console.log(formatMoney(39.995));
