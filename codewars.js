@@ -1863,9 +1863,19 @@
 
 // //test
 
-function formatMoney(amount) {
-  return `$${amount.toFixed(2)}`;
+// function formatMoney(amount) {
+//   return `$${amount.toFixed(2)}`;
+// }
+// console.log(formatMoney(39.99));
+// console.log(formatMoney(40.1));
+// console.log(formatMoney(39.995));
+
+// function multiTable(number) {
+//   return `1 * ${number} = ${1 * number}\n2 * ${number} = ${2 * number}\n3 * ${number} = ${3 * number}\n4 * ${number} = ${4 * number}\n5 * ${number} = ${5 * number}\n6 * ${number} = ${6 * number}\n7 * ${number} = ${7 * number}\n8 * ${number} = ${8 * number}\n9 * ${number} = ${9 * number}\n10 * ${number} = ${10 * number}`;
+// }
+
+function multiTable(number) {
+  return [...Array(10)].map((_, i) => `${i + 1} * ${number} = ${(i + 1) * number}`).join('\n');
 }
-console.log(formatMoney(39.99));
-console.log(formatMoney(40.1));
-console.log(formatMoney(39.995));
+
+console.log(multiTable(5));
