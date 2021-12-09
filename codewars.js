@@ -1880,10 +1880,17 @@
 
 // console.log(multiTable(5));
 
-function letterCount(s) {
-  return [...s].reduce((acc, number) => {
-    acc[number]=++acc[number]||1
-    return acc}, {})
+// function letterCount(s) {
+//   return [...s].reduce((acc, number) => {
+//     acc[number]=++acc[number]||1
+//     return acc}, {})
+// }
+
+// console.log(letterCount("codewars"));
+
+function isPangram(string) {
+  const arr = string.toLowerCase().replace(/[^a-z]/g, '');
+  return [...new Set(arr)].length === 26;
 }
 
-console.log(letterCount("codewars"));
+console.log(isPangram('The quick brown fox jumps over the lazy dog.'));
