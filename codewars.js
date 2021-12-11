@@ -1888,9 +1888,11 @@
 
 // console.log(letterCount("codewars"));
 
-function isPangram(string) {
-  const arr = string.toLowerCase().replace(/[^a-z]/g, '');
-  return [...new Set(arr)].length === 26;
-}
+// function isPangram(string) {
+//   const arr = string.toLowerCase().replace(/[^a-z]/g, '');
+//   return [...new Set(arr)].length === 26;
+// }
 
-console.log(isPangram('The quick brown fox jumps over the lazy dog.'));
+// console.log(isPangram('The quick brown fox jumps over the lazy dog.'));
+
+console.log('veh');
