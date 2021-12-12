@@ -1895,4 +1895,16 @@
 
 // console.log(isPangram('The quick brown fox jumps over the lazy dog.'));
 
-console.log('veh');
+// function count (string) {
+//   return [...string].reduce((acc, number) => {
+// 		acc[number]= ++acc[number]||1
+// 		return acc}, {})
+// }
+
+// console.log(count(""))
+
+function solution(string) {
+  return string.replace(/([A-Z])/g, ' $1');
+}
+
+console.log(solution('camelCasingTest'));
