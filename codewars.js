@@ -1903,7 +1903,14 @@
 
 // console.log(count(""))
 
-function solution(string) {
-  return string.replace(/([A-Z])/g, ' $1');
-}
-console.log(solution('camelCasingTest'));
+// function solution(string) {
+//   return string.replace(/([A-Z])/g, ' $1');
+// }
+// console.log(solution('camelCasingTest'));
+
+var greet = function (name) {
+  return `Hello ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!`;
+};
+
+console.log(greet('riley'));
+console.log(greet('rIley'));
