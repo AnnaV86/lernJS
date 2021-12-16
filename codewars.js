@@ -1908,9 +1908,14 @@
 // }
 // console.log(solution('camelCasingTest'));
 
-var greet = function (name) {
-  return `Hello ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!`;
-};
+// var greet = function (name) {
+//   return `Hello ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!`;
+// };
 
-console.log(greet('riley'));
-console.log(greet('rIley'));
+// console.log(greet('riley'));
+// console.log(greet('rIley'));
+
+function switcheroo(x) {
+  return x.replace(/(a)|(b)/g, (x) => x === 'a' ? 'b' : 'a');
+}
+console.log(switcheroo('aaabcccbaaa'));
