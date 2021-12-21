@@ -1915,7 +1915,13 @@
 // console.log(greet('riley'));
 // console.log(greet('rIley'));
 
+// function switcheroo(x) {
+//   return x.replace(/(a)|(b)/g, (x) => x === 'a' ? 'b' : 'a');
+// }
+// console.log(switcheroo('aaabcccbaaa'));
+
+
 function switcheroo(x) {
-  return x.replace(/(a)|(b)/g, (x) => x === 'a' ? 'b' : 'a');
+  return x.replace(/(c)|(b)/g, (x) => x === 'c' ? '*' : 'a');
 }
 console.log(switcheroo('aaabcccbaaa'));
