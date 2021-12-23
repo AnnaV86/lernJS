@@ -1920,8 +1920,13 @@
 // }
 // console.log(switcheroo('aaabcccbaaa'));
 
+// function switcheroo(x) {
+//   return x.replace(/(c)|(b)/g, (x) => x === 'c' ? '*' : 'a');
+// }
+// console.log(switcheroo('aaabcccbaaa'));
 
-function switcheroo(x) {
-  return x.replace(/(c)|(b)/g, (x) => x === 'c' ? '*' : 'a');
+function wave(str) {
+  return [...Array(str.length)].map((_, ind) => `${str.slice(0, ind)}${str[ind].toUpperCase()}${str.slice(ind+1)}`);
 }
-console.log(switcheroo('aaabcccbaaa'));
+
+console.log(wave('hello'));
