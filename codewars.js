@@ -1925,8 +1925,20 @@
 // }
 // console.log(switcheroo('aaabcccbaaa'));
 
-function wave(str) {
-  return [...Array(str.length)].map((_, ind) => `${str.slice(0, ind)}${str[ind].toUpperCase()}${str.slice(ind+1)}`);
-}
+// function wave(str) {
+//   return [...Array(str.length)]
+//     .map(
+//       (_, ind) =>
+//         `${str.slice(0, ind)}${str[ind].toUpperCase()}${str.slice(ind + 1)}`
+//     )
+//     .filter((word) => word !== word.toLowerCase());
+// }
 
-console.log(wave('hello'));
+// console.log(wave('hello'));
+// console.log(wave('m hello'));
+
+const repeatIt = function (str, n) {
+  return typeof str === 'string' ? str.repeat(n): 'Not a string'
+};
+
+console.log(repeatIt(26, 3));
