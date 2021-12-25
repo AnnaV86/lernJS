@@ -1938,7 +1938,7 @@
 // console.log(wave('m hello'));
 
 const repeatIt = function (str, n) {
-  return typeof str === 'string' ? str.repeat(n): 'Not a string'
+  return typeof str === 'string' ? str.repeat(n) : 'Not a string';
 };
 
 console.log(repeatIt(26, 3));
