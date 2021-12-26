@@ -1937,8 +1937,17 @@
 // console.log(wave('hello'));
 // console.log(wave('m hello'));
 
-const repeatIt = function (str, n) {
-  return typeof str === 'string' ? str.repeat(n) : 'Not a string';
-};
+// const repeatIt = function (str, n) {
+//   return typeof str === 'string' ? str.repeat(n) : 'Not a string';
+// };
 
-console.log(repeatIt(26, 3));
+// console.log(repeatIt(26, 3));
+
+function divCon(numbers) {
+  return numbers.reduce(
+    (acc, number) => (typeof number === 'string' ? acc - number : acc + number),
+    0
+  );
+}
+
+console.log(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]));
