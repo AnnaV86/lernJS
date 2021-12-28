@@ -1943,11 +1943,32 @@
 
 // console.log(repeatIt(26, 3));
 
-function divCon(numbers) {
-  return numbers.reduce(
-    (acc, number) => (typeof number === 'string' ? acc - number : acc + number),
-    0
+// function divCon(numbers) {
+//   return numbers.reduce(
+//     (acc, number) => (typeof number === 'string' ? acc - number : acc + number),
+//     0
+//   );
+// }
+
+// console.log(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]));
+
+// function expandedForm(num) {
+//   return [...String(num)]
+//     .reverse()
+//     .map((el, index) => el === '0' ? '' : el = el + '0'.repeat(index))
+//     .reverse().filter(Boolean)
+//     .join(' + ');
+// }
+
+// console.log(expandedForm(70304));
+// console.log(expandedForm(12));
+
+function narcissistic(value) {
+  return (
+    [...String(value)]
+      .map((el) => Math.pow(el, String(value).length))
+      .reduce((acc, n) => acc + n, 0) === value
   );
 }
 
-console.log(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]));
+console.log(narcissistic(371));
