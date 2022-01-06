@@ -8,7 +8,7 @@ console.log(b);
 
 const arr = [1, 2, 3, 4];
 const [one, two] = arr;
-console.log(one, two);
+console.log('Array', one, two);
 
 const obj = {
   name: 'Anna',

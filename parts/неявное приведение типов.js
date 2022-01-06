@@ -15,5 +15,11 @@
 
 // console.log('number минус string:', 1 - '1');
 
-console.log(!!'');
-console.log(!!{});
+// console.log(!!'');
+// console.log(!!{});
+// console.log((2).toFixed(2));
+
+console.log(parseInt('0'));
+console.log(Number('0'));
+console.log(parseInt(' '));
+console.log(Number(' '));
