@@ -20,6 +20,7 @@ function objHandler({ height }) {
   return height;
 }
 console.log(objHandler(obj));
+вв;
 const { height, age } = obj;
 console.log(height, age);
 

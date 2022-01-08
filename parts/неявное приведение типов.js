@@ -23,3 +23,5 @@ console.log(parseInt('0'));
 console.log(Number('0'));
 console.log(parseInt(' '));
 console.log(Number(' '));
+console.log(2 + undefined);
+console.log(null + 2);
