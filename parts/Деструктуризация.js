@@ -25,3 +25,19 @@ const { height, age } = obj;
 console.log(height, age);
 
 console.log([obj, obj, obj].map(({ age }) => age));
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+const { a, c } = obj; //
+
+console.log(a, c);
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+const [x, y, thirdElement] = arr; //
+
+console.log(thirdElement);

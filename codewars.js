@@ -2045,4 +2045,62 @@
 
 // console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 1));
 
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+// };
 
+// const { a, c } = obj; //
+
+// console.log(a, c);
+
+// const arr = [1, 2, 3, 4, 5, 6];
+
+// const [x, y, thirdElement] = arr; //
+
+// console.log(thirdElement);
+
+// let morningList = [
+//   'Встать с кровати',
+//   'Почистить зубы',
+//   'Сделать зарядку',
+//   'Позавтракать',
+//   'Помыть посуду',
+// ];
+
+// for (let i = 0; i < morningList.length; i++) {
+//   console.log(morningList[i]);
+// }
+
+// function consoleKitten() {
+//   let a = '   Λ _ Λ';
+//   let b = ' (=චᆽච=)==∫';
+//   let c = '   ˉ ˉ   ˉ ˉ';
+
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+
+// consoleKitten()
+
+let employee = {
+  firstName: 'Василий',
+  lastName: 'Тёркин',
+  age: 28,
+};
+
+console.log(employee);
+
+function getFullName(firstName, lastName) {
+  console.log(`${firstName} ${lastName}`);
+}
+
+getFullName(employee.firstName, employee.lastName);
+
+// function getFullName(employee) {
+//   console.log(`${employee.firstName} ${employee.lastName}`);
+// }
+
+// getFullName(employee);
