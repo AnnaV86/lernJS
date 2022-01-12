@@ -2085,22 +2085,31 @@
 
 // consoleKitten()
 
-let employee = {
-  firstName: 'Василий',
-  lastName: 'Тёркин',
-  age: 28,
-};
+// let employee = {
+//   firstName: 'Василий',
+//   lastName: 'Тёркин',
+//   age: 28,
+// };
 
-console.log(employee);
+// console.log(employee);
 
-function getFullName(firstName, lastName) {
-  console.log(`${firstName} ${lastName}`);
-}
+// function getFullName(firstName, lastName) {
+//   console.log(`${firstName} ${lastName}`);
+// }
 
-getFullName(employee.firstName, employee.lastName);
+// getFullName(employee.firstName, employee.lastName);
 
 // function getFullName(employee) {
 //   console.log(`${employee.firstName} ${employee.lastName}`);
 // }
 
 // getFullName(employee);
+
+function findMissingLetter(array) {
+  return String.fromCharCode(array
+    .map((el) => el.charCodeAt())
+    .filter((_, index, array) => array[index + 1] - array[index] !== 1)[0]+1);
+}
+
+console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']));
+console.log(findMissingLetter(['O', 'Q', 'R', 'S']));
