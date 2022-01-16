@@ -36,17 +36,17 @@ import fetch from 'node-fetch';
 // };
 // getUser();
 
-const updateUser = async (object, id) => {
-  const response = await fetch(`http://localhost:3010/people/${id}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-    body: JSON.stringify(object),
-  });
-  const result = await response.json();
-  console.log(result);
-  return result;
-};
+// const updateUser = async (object, id) => {
+//   const response = await fetch(`http://localhost:3010/people/${id}`, {
+//     method: 'PUT',
+//     headers: {
+//       'Content-Type': 'application/json;charset=utf-8',
+//     },
+//     body: JSON.stringify(object),
+//   });
+//   const result = await response.json();
+//   console.log(result);
+//   return result;
+// };
 
-updateUser({ name: 'Ann' }, 1);
+// updateUser({ name: 'Ann' }, 1);
