@@ -2105,11 +2105,20 @@
 
 // getFullName(employee);
 
-function findMissingLetter(array) {
-  return String.fromCharCode(array
-    .map((el) => el.charCodeAt())
-    .filter((_, index, array) => array[index + 1] - array[index] !== 1)[0]+1);
-}
+// function findMissingLetter(array) {
+//   return String.fromCharCode(array
+//     .map((el) => el.charCodeAt())
+//     .filter((_, index, array) => array[index + 1] - array[index] !== 1)[0]+1);
+// }
 
-console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']));
-console.log(findMissingLetter(['O', 'Q', 'R', 'S']));
+// console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']));
+// console.log(findMissingLetter(['O', 'Q', 'R', 'S']));
+
+const pattern = (n) =>
+  n < 1
+    ? ''
+    : [...Array(n)]
+        .map((_, index) => (`${++index}`.repeat(index)))
+        .join('\n');
+
+console.log(pattern(5)); // "1\n22\n333\n4444\n55555"
