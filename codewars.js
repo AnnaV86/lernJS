@@ -2114,11 +2114,19 @@
 // console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f']));
 // console.log(findMissingLetter(['O', 'Q', 'R', 'S']));
 
-const pattern = (n) =>
-  n < 1
-    ? ''
-    : [...Array(n)]
-        .map((_, index) => (`${++index}`.repeat(index)))
-        .join('\n');
+// const pattern = (n) =>
+//   n < 1
+//     ? ''
+//     : [...Array(n)].map((_, index) => `${++index}`.repeat(index)).join('\n');
 
-console.log(pattern(5)); // "1\n22\n333\n4444\n55555"
+// console.log(pattern(5)); // "1\n22\n333\n4444\n55555"
+
+function findUniq(arr) {
+  return Object.entries(
+    arr.reduce((acc, number) => {
+      acc[number] = ++acc[number] || 1;
+      return acc;
+    }, {})
+  ).filter((el) => el[1] === 1)[0][0];
+}
+console.log(findUniq([3, 10, 3, 3, 3]));
