@@ -2121,12 +2121,21 @@
 
 // console.log(pattern(5)); // "1\n22\n333\n4444\n55555"
 
-function findUniq(arr) {
-  return Object.entries(
-    arr.reduce((acc, number) => {
-      acc[number] = ++acc[number] || 1;
-      return acc;
-    }, {})
-  ).filter((el) => el[1] === 1)[0][0];
-}
-console.log(findUniq([3, 10, 3, 3, 3]));
+// function findUniq(arr) {
+//   return Object.entries(
+//     arr.reduce((acc, number) => {
+//       acc[number] = ++acc[number] || 1;
+//       return acc;
+//     }, {})
+//   ).filter((el) => el[1] === 1)[0][0];
+// }
+
+const findUniq = (arr) =>
+  arr.reduce((acc, number, index, arr) => {
+    acc[number] = ++acc[number] || 1;
+    return arr.length - 1 === index
+      ? Object.entries(acc).sort((a, b) => a[1] - b[1])[0][0]
+      : acc;
+  }, {});
+
+console.log(findUniq([3, 10, 10, 10, 3, 3, 3, 9, 9]));

@@ -31,7 +31,11 @@
 // console.log((obj.g = 100));
 // console.log(obj);
 
-const obj4 = { a: 1, b: 2 };
+// const obj4 = { a: 1, b: 2 };
 
-const obj5 = { ...obj4, a: 3 };
-console.log(obj5);
+// const obj5 = { ...obj4, a: 3 };
+// console.log(obj5);
+
+const spreadParameter = (a, b, ...spreadParam) => spreadParam.concat(a + b);
+
+console.log(spreadParameter(1, 2, 5, 6, 7));
