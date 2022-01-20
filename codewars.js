@@ -2130,12 +2130,14 @@
 //   ).filter((el) => el[1] === 1)[0][0];
 // }
 
-const findUniq = (arr) =>
-  arr.reduce((acc, number, index, arr) => {
-    acc[number] = ++acc[number] || 1;
-    return arr.length - 1 === index
-      ? Object.entries(acc).sort((a, b) => a[1] - b[1])[0][0]
-      : acc;
-  }, {});
+// const findUniq = (arr) =>
+//   arr.reduce((acc, number, index, arr) => {
+//     acc[number] = ++acc[number] || 1;
+//     return arr.length - 1 === index
+//       ? Object.entries(acc).sort((a, b) => a[1] - b[1])[0][0]
+//       : acc;
+//   }, {});
 
-console.log(findUniq([3, 10, 10, 10, 3, 3, 3, 9, 9]));
+// console.log(findUniq([3, 10, 10, 10, 3, 3, 3, 9, 9]));
+
+// test2;
