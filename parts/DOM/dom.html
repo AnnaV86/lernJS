@@ -1,15 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/parts/DOM/style.css" />
     <script defer src="./dom.js"></script>
     <title>Document</title>
   </head>
-  <body>
-    <div style="display: flex; justify-content: center">
-      <button class="test" style="color: red">Test!</button>
-    </div>
+  <body class="root">
+    <header class="header">
+      <section
+        data-setting-target=":root"
+        data-setting-type="attribute"
+        class="theme js_button"
+      >
+        <button
+          data-setting-name="themeName"
+          data-setting-value="light"
+          class="button button-theme__light active"
+          type="button"
+        ></button>
+        <button
+          data-setting-name="themeName"
+          data-setting-value="dark"
+          class="button button-theme__dark"
+          type="button"
+        ></button>
+      </section>
+
+      <section
+        data-setting-target=".card__box"
+        data-setting-type="class"
+        class="markup js_button"
+      >
+        <button
+          data-setting-name="viewCard"
+          data-setting-value="card__box_cards"
+          class="button button-markup__cards"
+          type="button"
+        ></button>
+        <button
+          data-setting-name="viewCard"
+          data-setting-value="card__box_standart"
+          class="button button-markup__standart active"
+          type="button"
+        ></button>
+      </section>
+    </header>
+
+    <section class="cards">
+      <ul class="card__box">
+        <li class="card__item">
+          <h2 class="card__title">Картинка</h2>
+          <p class="card__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            fugit quia tenetur dicta ipsum. Delectus, doloribus eos dignissimos
+            esse assumenda quo quod error adipisci temporibus quam sequi, quidem
+            aliquam quos?
+          </p>
+          <div class="card__photo"></div>
+        </li>
+        <li class="card__item">
+          <h2 class="card__title">Картинка</h2>
+          <p class="card__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            inventore quisquam assumenda molestias suscipit impedit. Quibusdam
+            laboriosam id magnam. Quod nemo molestiae eos culpa voluptatibus
+            obcaecati et quaerat dignissimos repudiandae.
+          </p>
+          <div class="card__photo"></div>
+        </li>
+        <li class="card__item">
+          <h2 class="card__title">Картинка</h2>
+          <p class="card__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus,
+            porro possimus laboriosam adipisci autem distinctio voluptas
+            molestias a quia consequatur repellendus eius, expedita blanditiis
+            sapiente? Eaque nulla iure ea quasi?
+          </p>
+          <div class="card__photo"></div>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>

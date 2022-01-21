@@ -1,0 +1,108 @@
+:root[data-theme-name='light'] {
+  --background-color: aliceblue;
+  --color: black;
+}
+
+:root[data-theme-name='dark'] {
+  --background-color: black;
+  --color: white;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color);
+  background-color: var(--background-color);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid chocolate;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px chocolate;
+}
+
+.active {
+  border: 3px solid chocolate;
+}
+.button-theme__light {
+  background-color: aliceblue;
+}
+
+.button-theme__dark {
+  background-color: black;
+}
+
+.markup {
+}
+
+.button-markup__cards {
+  background-image: url(/img/tile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button-markup__standart {
+  background-image: url(/img/standart.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cards {
+  width: 600px;
+}
+
+.card__box {
+  padding: 0;
+  margin: 50px 0;
+  list-style: none;
+  display: flex;
+}
+
+.card__photo {
+  width: 100px;
+  height: 100px;
+  background-color: chocolate;
+}
+
+.card__item {
+  border: 2px solid chocolate;
+  border-radius: 5px;
+}
+
+.card__box_cards {
+  flex-direction: row;
+}
+
+.card__text {
+  margin: 20px;
+}
+
+.card__box_standart {
+  flex-direction: column;
+}
+
+.card__item_markup_standart {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.card__item_markup_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
