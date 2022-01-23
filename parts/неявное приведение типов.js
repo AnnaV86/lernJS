@@ -19,9 +19,18 @@
 // console.log(!!{});
 // console.log((2).toFixed(2));
 
-console.log(parseInt('0'));
-console.log(Number('0'));
-console.log(parseInt(' '));
-console.log(Number(' '));
-console.log(2 + undefined);
-console.log(null + 2);
+// console.log(parseInt('0'));
+// console.log(Number('0'));
+// console.log(parseInt(' '));
+// console.log(Number(' '));
+// console.log(2 + undefined);
+// console.log(null + 2);
+
+// console.log(!![]);
+// console.log(!!{});
+
+console.log([] && 'component');
+console.log(!![].length && 'component');
+console.log(!![1].length && 'component');
+console.log('' || 'component2');
+console.log(0 || '');

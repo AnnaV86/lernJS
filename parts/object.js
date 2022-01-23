@@ -45,3 +45,14 @@
 // multiply();
 
 // console.log(value);
+
+const replace = {
+  G: 'C',
+  C: 'G',
+  T: {
+    G: '3',
+  },
+  A: 'T',
+};
+
+console.log(String(replace));

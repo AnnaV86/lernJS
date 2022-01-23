@@ -10,7 +10,12 @@
 // console.log('1');
 
 // async function getData() {
-//   return await Promise.resolve('I made it!');
+//   const a = await Promise.resolve('I made it!');
+//   cdsdfhasfhs(a);
+//   return a;
 // }
 // getData().then((message) => console.log(message));
-// console.log('1');
+// (async () => {
+//   const a = await getData();
+// })();
+// console.log(Promise.resolve(5))
