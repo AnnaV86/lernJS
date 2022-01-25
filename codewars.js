@@ -2142,3 +2142,158 @@
 
 // test1;
 // доп изменения
+
+// const bogatyrs = '33 богатыря';
+// const knights = '24 рыцаря Круглого стола';
+// const spartans = '300 спартанцев';
+// const totalHeroes = parseInt(bogatyrs) + parseInt(knights) + parseInt(spartans);
+
+// console.log(totalHeroes);
+
+// const hundred = 100;
+// const fiveHundred = 500;
+
+// console.log(String(hundred) + fiveHundred);
+
+// let password = prompt('Введите пароль:');
+
+// if (password === '') {
+//   password = prompt('Пароль обязателен и не может быть пустым.');
+// }
+// |
+
+// const a = [
+//   'Гарри Поттер и философский камень',
+//   'Гарри Поттер и Тайная комната',
+//   'Гарри Поттер и узник Азкабана',
+//   'Гарри Поттер и Кубок огня',
+//   'Гарри Поттер и Орден феникса',
+//   'Гарри Поттер и Принц-полукровка',
+//   'Гарри Поттер и Дары смерти',
+//   'Гарри Поттер и методы рационального мышления',
+// ];
+
+// const b = [];
+
+// a.forEach(function (item) {
+//   b.push(item.slice(15));
+// });
+
+// console.log(b);
+
+// const characters = [
+//   'Люк Скайуокер',
+//   'Оби Ван',
+//   'Чубакка',
+//   'Энакин Скайуокер',
+//   'Хан Соло',
+//   'Палпатин',
+// ];
+
+// const newCharacters = characters.map(function (character) {
+//   console.log(character);
+//   character === 'Энакин Скайуокер' ? 'Дарт Вейдер' : character;
+// });
+
+// console.log(newCharacters);
+
+// const cards = [
+//   '6 червей',
+//   '7 червей',
+//   '8 червей',
+//   '9 червей',
+//   '10 червей',
+//   'Валет червей',
+//   'Дама червей',
+//   'Король червей',
+//   'Туз червей',
+//   '6 пик',
+//   '7 пик',
+//   '8 пик',
+//   '9 пик',
+//   '10 пик',
+//   'Валет пик',
+//   'Дама пик',
+//   'Король пик',
+//   'Туз пик',
+//   '6 треф',
+//   '7 треф',
+//   '8 треф',
+//   '9 треф',
+//   '10 треф',
+//   'Валет треф',
+//   'Дама треф',
+//   'Король треф',
+//   'Туз треф',
+//   '6 бубен',
+//   '7 бубен',
+//   '8 бубен',
+//   '9 бубен',
+//   '10 бубен',
+//   'Валет бубен',
+//   'Дама бубен',
+//   'Король бубен',
+//   'Туз бубен',
+// ];
+
+// const cardsFiltered = cards.filter(function (card) {
+//   return (card.includes('бубен') || card.includes('червей')) && parseInt(card, 10)
+// });
+
+// console.log(cardsFiltered);
+
+// const cat = ['Муся', 'Дуся', 'Дуся кошка'];
+// const b = cat.find(function (el) {
+//   return el.includes('Дуся');
+// });
+// console.log(b);
+
+/* нужно дополнить функцию isPrime, принимающую число на вход
+и возвращающую true, если число простое, а иначе false */
+
+// const integersToCheck = [2, 3, 193, 79, 7, 29];
+
+// /* нужно дополнить функцию isPrime, принимающую число на вход
+// и возвращающую true, если число простое, а иначе false */
+
+// function isPrime(num) {
+//   for (let i = 2; i < num; i++) {
+//     if (num % i === 0) return false;
+//   }
+//   return num > 1;
+// }
+
+// console.log(integersToCheck.every(isPrime));
+
+// /* ниже используйте метод .every() и функцию isPrime,
+// чтобы проверить элементы маcсива */
+
+const chessChampions = [
+  'Вильгельм Стейниц',
+  'Эммануил Ласкер',
+  'Хосе-Рауль Капабланка',
+  'Александр Алехин',
+  'Макс Эйве',
+  'Михаил Ботвинник',
+  'Василий Смыслов',
+  'Михаил Таль',
+  'Тигран Петросян',
+  'Борис Спасский',
+  'Роберт Фишер',
+  'Анатолий Карпов',
+  'Гарри Каспаров',
+  'Владимир Крамник',
+  'Вишванатан Ананд',
+  'Магнус Карлсен',
+];
+
+chessChampions.sort(function (a, b) {
+  const aSecondName = a.split(' ')[1].toLowerCase();
+  const bSecondName = b.split(' ')[1].toLowerCase();
+	if (aSecondName > bSecondName) return 1;
+if (aSecondName < bSecondName) return -1;
+
+return 0; 
+});
+
+console.log(chessChampions);
