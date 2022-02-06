@@ -2251,7 +2251,7 @@
 /* нужно дополнить функцию isPrime, принимающую число на вход
 и возвращающую true, если число простое, а иначе false */
 
-// const integersToCheck = [2, 3, 193, 79, 7, 29];
+const integersToCheck = [2, 3, 193, 79, 7, 29];
 
 // /* нужно дополнить функцию isPrime, принимающую число на вход
 // и возвращающую true, если число простое, а иначе false */
@@ -2268,32 +2268,171 @@
 // /* ниже используйте метод .every() и функцию isPrime,
 // чтобы проверить элементы маcсива */
 
-const chessChampions = [
-  'Вильгельм Стейниц',
-  'Эммануил Ласкер',
-  'Хосе-Рауль Капабланка',
-  'Александр Алехин',
-  'Макс Эйве',
-  'Михаил Ботвинник',
-  'Василий Смыслов',
-  'Михаил Таль',
-  'Тигран Петросян',
-  'Борис Спасский',
-  'Роберт Фишер',
-  'Анатолий Карпов',
-  'Гарри Каспаров',
-  'Владимир Крамник',
-  'Вишванатан Ананд',
-  'Магнус Карлсен',
+// const chessChampions = [
+//   'Вильгельм Стейниц',
+//   'Эммануил Ласкер',
+//   'Хосе-Рауль Капабланка',
+//   'Александр Алехин',
+//   'Макс Эйве',
+//   'Михаил Ботвинник',
+//   'Василий Смыслов',
+//   'Михаил Таль',
+//   'Тигран Петросян',
+//   'Борис Спасский',
+//   'Роберт Фишер',
+//   'Анатолий Карпов',
+//   'Гарри Каспаров',
+//   'Владимир Крамник',
+//   'Вишванатан Ананд',
+//   'Магнус Карлсен',
+// ];
+
+// chessChampions.sort(function (a, b) {
+//   const aSecondName = a.split(' ')[1].toLowerCase();
+//   const bSecondName = b.split(' ')[1].toLowerCase();
+//   if (aSecondName > bSecondName) return 1;
+//   if (aSecondName < bSecondName) return -1;
+
+//   return 0;
+// });
+
+// const obj = {
+//   a: 1,
+//   b: 2,
+// };
+// const { b } = obj;
+
+// console.log(b);
+
+// const arr = [1, 2, 3];
+// const [tree, one] = arr;
+
+// console.log(one, tree);
+
+// let future;
+// const where = prompt(
+//   'Куда едешь? Налево, направо или прямо?',
+//   ''
+// ).toLowerCase();
+
+// switch (where) {
+//   case 'налево':
+//     future = 'Быть тебе женатым';
+//     break;
+//   case 'направо':
+//     future = 'Быть тебе богатым';
+//     break;
+//   case 'прямо':
+//     future = 'Живым не бывать';
+// }
+
+// console.log(future);
+
+// const obj = { arr, integersToCheck };
+// console.log(obj);
+
+// const welcomeMessages = {
+//   russian: 'Добро пожаловать',
+//   english: 'Welcome',
+//   french: 'Bienvenue',
+//   italian: 'Benvenuto',
+//   spanish: 'bienvenido',
+//   chinese: '歡迎',
+//   finnish: 'Tervetuloa',
+// };
+
+// function countLanguages(obj, propsArr) {
+//   return propsArr.filter((el) => obj[el]).length;
+// }
+
+// console.log(countLanguages(welcomeMessages, ['english', 'french', 'mandarin'])); // 2
+// console.log(countLanguages(welcomeMessages, ['russian', 'czech'])); // 1
+
+// const mya = {
+//   'бремя': 'burden',
+//   'время': 'time',
+//   'вымя': 'udder',
+//   'мяч': 'ball',
+//   'знамя': 'banner',
+//   'имя': 'name',
+//   'мясо': 'meat',
+// };
+
+// Object.keys(mya).forEach((key) => {
+// if (key.endsWith('мя')){
+//     delete mya[key]
+// })})
+
+// console.log(mya);
+
+// function swap(obj) {
+//   const res = {};
+//   Object.entries(obj).forEach((el) => res[el[1]] = el[0])
+
+//   return res;
+// }
+
+// const myObj = {
+//   first: 1,
+//   second: 2,
+//   third: 3,
+// };
+
+// console.log(myObj); // { first: 1, second: 2, third: 3 }
+// console.log(swap(myObj)); // { 1: "first", 2: "second", 3: "third" }
+
+// function copy(obj) {
+//   const copy = {}
+//   Object.entries(obj).forEach((el) => copy[el[0]] = el[1])
+//   return copy
+
+// }
+
+// const firstObj = {
+//   one: 1,
+//   two: 2,
+//   three: 3,
+// };
+
+// const secondObj = firstObj;
+// const thirdObj = copy(firstObj);
+
+// console.log(firstObj); // { one: 1, three: 3, two: 2 }
+// console.log(secondObj); // { one: 1, three: 3, two: 2 }
+// console.log(thirdObj); // { one: 1, three: 3, two: 2 }
+
+// firstObj.four = 4;
+
+// console.log(firstObj); // { four: 4, one: 1, three: 3, two: 2 }
+// console.log(secondObj); // { four: 4, one: 1, three: 3, two: 2 }
+
+// // thirdObj не изменился
+// console.log(thirdObj); // { one: 1, three: 3, two: 2 }
+
+// function double(value) {
+//   typeof value === 'number'
+//     ? console.log(2 * value)
+//     : console.log(value.map((el) => 2 * el));
+// }
+// console.log(double(2)); // 4
+// console.log(double([1, 2, 3])); // [2, 4, 6]
+
+const coverHeading = document.querySelector('.cover__heading');
+const playListTitles = [
+  'Игорь Тальков. Лучшее',
+  'Музыка категории Б',
+  'Подборка с фестиваля FYRE',
 ];
 
-chessChampions.sort(function (a, b) {
-  const aSecondName = a.split(' ')[1].toLowerCase();
-  const bSecondName = b.split(' ')[1].toLowerCase();
-	if (aSecondName > bSecondName) return 1;
-if (aSecondName < bSecondName) return -1;
+function getRandomElement(arr) {
+  const randomId = Math.floor(Math.random() * arr.length);
+  return arr[randomId];
+}
 
-return 0; 
-});
+console.log(getRandomElement(playListTitles));
+function doubleClickHandler() {
+  coverHeading.textContent = getRandomElement(playListTitles);
+}
 
-console.log(chessChampions);
+coverHeading.addEventListener('dblclick', doubleClickHandler);
+coverHeading.removeEventListener('dblclick', doubleClickHandler);
