@@ -2417,22 +2417,38 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(double(2)); // 4
 // console.log(double([1, 2, 3])); // [2, 4, 6]
 
-const coverHeading = document.querySelector('.cover__heading');
-const playListTitles = [
-  'Игорь Тальков. Лучшее',
-  'Музыка категории Б',
-  'Подборка с фестиваля FYRE',
-];
+// const coverHeading = document.querySelector('.cover__heading');
+// const playListTitles = [
+//   'Игорь Тальков. Лучшее',
+//   'Музыка категории Б',
+//   'Подборка с фестиваля FYRE',
+// ];
 
-function getRandomElement(arr) {
-  const randomId = Math.floor(Math.random() * arr.length);
-  return arr[randomId];
+// function getRandomElement(arr) {
+//   const randomId = Math.floor(Math.random() * arr.length);
+//   return arr[randomId];
+// }
+
+// console.log(getRandomElement(playListTitles));
+// function doubleClickHandler() {
+//   coverHeading.textContent = getRandomElement(playListTitles);
+// }
+
+// coverHeading.addEventListener('dblclick', doubleClickHandler);
+// coverHeading.removeEventListener('dblclick', doubleClickHandler);
+
+function reverseNumber(n) {
+  if (n < 0) {
+    return Number(`-${String(n).split('').reverse().slice(0, -1).join('')}`);
+  } else if (n > 0) {
+    return Number(String(n).split('').reverse().join(''));
+  }
+  else {
+    return n
+  }
 }
 
-console.log(getRandomElement(playListTitles));
-function doubleClickHandler() {
-  coverHeading.textContent = getRandomElement(playListTitles);
-}
-
-coverHeading.addEventListener('dblclick', doubleClickHandler);
-coverHeading.removeEventListener('dblclick', doubleClickHandler);
+console.log(reverseNumber(123));
+console.log(reverseNumber(-456));
+console.log(reverseNumber(1000));
+console.log(reverseNumber(0));
