@@ -2437,18 +2437,24 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // coverHeading.addEventListener('dblclick', doubleClickHandler);
 // coverHeading.removeEventListener('dblclick', doubleClickHandler);
 
-function reverseNumber(n) {
-  if (n < 0) {
-    return Number(`-${String(n).split('').reverse().slice(0, -1).join('')}`);
-  } else if (n > 0) {
-    return Number(String(n).split('').reverse().join(''));
-  }
-  else {
-    return n
-  }
+// function reverseNumber(n) {
+//   if (n < 0) {
+//     return Number(`-${String(n).split('').reverse().slice(0, -1).join('')}`);
+//   } else if (n > 0) {
+//     return Number(String(n).split('').reverse().join(''));
+//   }
+//   else {
+//     return n
+//   }
+// }
+
+// console.log(reverseNumber(123));
+// console.log(reverseNumber(-456));
+// console.log(reverseNumber(1000));
+// console.log(reverseNumber(0));
+
+function repeater(string, n) {
+  return string.repeat(n)
 }
 
-console.log(reverseNumber(123));
-console.log(reverseNumber(-456));
-console.log(reverseNumber(1000));
-console.log(reverseNumber(0));
+console.log(repeater('a', 5));
