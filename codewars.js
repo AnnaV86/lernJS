@@ -2453,8 +2453,90 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(reverseNumber(1000));
 // console.log(reverseNumber(0));
 
-function repeater(string, n) {
-  return string.repeat(n)
+// function repeater(string, n) {
+//   return string.repeat(n)
+// }
+
+// console.log(repeater('a', 5));
+
+// function getPlanetName(id) {
+//   let name;
+//   switch (id) {
+//     case 1:
+//       name = 'Mercury';
+//       break;
+//     case 2:
+//       name = 'Venus';
+//       break;
+//     case 3:
+//       name = 'Earth';
+//       break;
+//     case 4:
+//       name = 'Mars';
+//       break;
+//     case 5:
+//       name = 'Jupiter';
+//       break;
+//     case 6:
+//       name = 'Saturn';
+//       break;
+//     case 7:
+//       name = 'Uranus';
+//       break;
+//     case 8:
+//       name = 'Neptune';
+//       break;
+//   }
+
+//   return name;
+// }
+
+// console.log(getPlanetName(2));
+
+// function Fighter(name, health, damagePerAttack) {
+//   this.name = name;
+//   this.health = health;
+//   this.damagePerAttack = damagePerAttack;
+//   this.toString = function () {
+//     return this.name;
+//   };
+// }
+// function declareWinner(fighter1, fighter2, firstAttacker) {
+//   const attak1 = Math.ceil(fighter2.health / fighter1.damagePerAttack);
+//   const attak2 = Math.ceil(fighter1.health / fighter2.damagePerAttack);
+//   console.log(attak1, attak2);
+//   if (firstAttacker === fighter1.name) {
+//     return attak1 <= attak2 ? fighter1.name : fighter2.name;
+//   } else {
+//     return attak2 > attak1 ? fighter1.name : fighter2.name;
+//   }
+// }
+
+// console.log(
+//   declareWinner(
+//     new Fighter('Harald', 20, 5),
+//     new Fighter('Harry', 5, 4),
+//     'Harald'
+//   )
+// );
+
+function firstNonRepeatingLetter(s) {
+  const objList = s
+    .toLowerCase()
+    .split('')
+    .reduce((acc, simbol) => {
+      acc[simbol] = ++acc[simbol] || 1;
+      return acc;
+    }, {});
+  const filterObjList = Object.entries(objList).filter((el) => el[1] === 1);
+
+  if (filterObjList.length > 0) {
+    return s.includes(filterObjList[0][0])
+      ? filterObjList[0][0]
+      : filterObjList[0][0].toUpperCase();
+  } else {
+    return '';
+  }
 }
 
-console.log(repeater('a', 5));
+console.log(firstNonRepeatingLetter('abWba'));
