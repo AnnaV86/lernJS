@@ -2520,23 +2520,38 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 //   )
 // );
 
-function firstNonRepeatingLetter(s) {
-  const objList = s
-    .toLowerCase()
-    .split('')
-    .reduce((acc, simbol) => {
-      acc[simbol] = ++acc[simbol] || 1;
-      return acc;
-    }, {});
-  const filterObjList = Object.entries(objList).filter((el) => el[1] === 1);
+// function firstNonRepeatingLetter(s) {
+//   const objList = s
+//     .toLowerCase()
+//     .split('')
+//     .reduce((acc, simbol) => {
+//       acc[simbol] = ++acc[simbol] || 1;
+//       return acc;
+//     }, {});
+//   const filterObjList = Object.entries(objList).filter((el) => el[1] === 1);
 
-  if (filterObjList.length > 0) {
-    return s.includes(filterObjList[0][0])
-      ? filterObjList[0][0]
-      : filterObjList[0][0].toUpperCase();
-  } else {
-    return '';
-  }
-}
+//   if (filterObjList.length > 0) {
+//     return s.includes(filterObjList[0][0])
+//       ? filterObjList[0][0]
+//       : filterObjList[0][0].toUpperCase();
+//   } else {
+//     return '';
+//   }
+// }
 
-console.log(firstNonRepeatingLetter('abWba'));
+// console.log(firstNonRepeatingLetter('abWba'));
+
+// function rentalCarCost(d) {
+//   const price = 40
+//   if ( d < 3) {
+//     return d * price
+//   } else if (d < 7) {
+//     return d * price - 20
+//   } else {
+//     return d * price - 50
+//   }
+// }
+// console.log(rentalCarCost(1));
+// console.log(rentalCarCost(5));
+// console.log(rentalCarCost(7));
+// console.log(rentalCarCost(8));
