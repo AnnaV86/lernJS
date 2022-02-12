@@ -2555,3 +2555,20 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(rentalCarCost(5));
 // console.log(rentalCarCost(7));
 // console.log(rentalCarCost(8));
+
+// console.log(firstNonRepeatingLetter('abWba'));
+
+// function rentalCarCost(d) {
+//   const price = 40
+//   if ( d < 3) {
+//     return d * price
+//   } else if (d < 7) {
+//     return d * price - 20
+//   } else {
+//     return d * price - 50
+//   }
+// }
+// console.log(rentalCarCost(1));
+// console.log(rentalCarCost(5));
+// console.log(rentalCarCost(7));
+// console.log(rentalCarCost(8));
