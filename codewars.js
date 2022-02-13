@@ -2572,3 +2572,5 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(rentalCarCost(5));
 // console.log(rentalCarCost(7));
 // console.log(rentalCarCost(8));
+
+console.log('Привет');
