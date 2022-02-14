@@ -2573,4 +2573,12 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(rentalCarCost(7));
 // console.log(rentalCarCost(8));
 
-console.log('Привет');
+function greet(name, owner) {
+  if (name === owner) {
+    return 'Hello boss';
+  } else {
+    return 'Hello guest';
+  }
+}
+console.log(greet('Daniel', 'Daniel'));
+console.log(greet('Greg', 'Daniel'));
