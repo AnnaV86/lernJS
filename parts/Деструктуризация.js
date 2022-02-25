@@ -53,4 +53,5 @@ console.log(a, b);
 const arr = [1, 2, 3];
 
 const [One, Two] = arr;
-console.log(One, Two);
+
+console.log(One);
