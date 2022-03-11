@@ -55,3 +55,4 @@ const arr = [1, 2, 3];
 const [One, Two] = arr;
 
 console.log(One);
+console.log(One);
