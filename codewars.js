@@ -2530,85 +2530,162 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 //     }, {});
 //   const filterObjList = Object.entries(objList).filter((el) => el[1] === 1);
 
-//   if (filterObjList.length > 0) {
-//     return s.includes(filterObjList[0][0])
-//       ? filterObjList[0][0]
-//       : filterObjList[0][0].toUpperCase();
+// //   if (filterObjList.length > 0) {
+// //     return s.includes(filterObjList[0][0])
+// //       ? filterObjList[0][0]
+// //       : filterObjList[0][0].toUpperCase();
+// //   } else {
+// //     return '';
+// //   }
+// // }
+
+// // console.log(firstNonRepeatingLetter('abWba'));
+
+// // function rentalCarCost(d) {
+// //   const price = 40
+// //   if ( d < 3) {
+// //     return d * price
+// //   } else if (d < 7) {
+// //     return d * price - 20
+// //   } else {
+// //     return d * price - 50
+// //   }
+// // }
+// // console.log(rentalCarCost(1));
+// // console.log(rentalCarCost(5));
+// // console.log(rentalCarCost(7));
+// // console.log(rentalCarCost(8));
+
+// // console.log(firstNonRepeatingLetter('abWba'));
+
+// // function rentalCarCost(d) {
+// //   const price = 40
+// //   if ( d < 3) {
+// //     return d * price
+// //   } else if (d < 7) {
+// //     return d * price - 20
+// //   } else {
+// //     return d * price - 50
+// //   }
+// // }
+// // console.log(rentalCarCost(1));
+// // console.log(rentalCarCost(5));
+// // console.log(rentalCarCost(7));
+// // console.log(rentalCarCost(8));
+
+// function greet(name, owner) {
+//   if (name === owner) {
+//     return 'Hello boss';
 //   } else {
-//     return '';
+//     return 'Hello guest';
+//   }
+// }
+// console.log(greet('Daniel', 'Daniel'));
+// console.log(greet('Greg', 'Daniel'));
+
+// function greet(name, owner) {
+//   if (name === owner) {
+//     return 'Hello boss';
+//   } else {
+//     return 'Hello guest';
+//   }
+// }
+// console.log(greet('Daniel', 'Daniel'));
+// console.log(greet('Greg', 'Daniel'));
+
+// function greet(name, owner) {
+//   if (name === owner) {
+//     return 'Hello boss';
+//   } else {
+//     return 'Hello guest';
+//   }
+// }
+// console.log(greet('Daniel', 'Daniel'));
+// console.log(greet('Greg', 'Daniel'));
+
+// function greet(name, owner) {
+//   if (name === owner) {
+//     return 'Hello boss';
+//   } else {
+//     return 'Hello guest';
+//   }
+// }
+// console.log(greet('Daniel', 'Daniel'));
+// console.log(greet('Greg', 'Daniel'));
+
+// const tweets = [
+//   'Какой-то странный тред',
+//   'Твит, адресованный Илону Маску',
+//   'Ответ на инфоповод',
+// ];
+
+// function forEach(arr, callback) {
+//   for (let i = 1; i < arr.length; i++) {
+//     callback(arr[i - 1]);
 //   }
 // }
 
-// console.log(firstNonRepeatingLetter('abWba'));
+// forEach(tweets, function (tweet) {
+//   console.log(tweet);
+// });
 
-// function rentalCarCost(d) {
-//   const price = 40
-//   if ( d < 3) {
-//     return d * price
-//   } else if (d < 7) {
-//     return d * price - 20
-//   } else {
-//     return d * price - 50
-//   }
-// }
-// console.log(rentalCarCost(1));
-// console.log(rentalCarCost(5));
-// console.log(rentalCarCost(7));
-// console.log(rentalCarCost(8));
+const list1 = [
+  {
+    firstName: 'Daniel',
+    lastName: 'J.',
+    country: 'Aruba',
+    continent: 'Americas',
+    age: 42,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Kseniya',
+    lastName: 'T.',
+    country: 'Belarus',
+    continent: 'Europe',
+    age: 22,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Hanna',
+    lastName: 'L.',
+    country: 'Hungary',
+    continent: 'Europe',
+    age: 65,
+    language: 'JavaScript',
+  },
+];
 
-// console.log(firstNonRepeatingLetter('abWba'));
-
-// function rentalCarCost(d) {
-//   const price = 40
-//   if ( d < 3) {
-//     return d * price
-//   } else if (d < 7) {
-//     return d * price - 20
-//   } else {
-//     return d * price - 50
-//   }
-// }
-// console.log(rentalCarCost(1));
-// console.log(rentalCarCost(5));
-// console.log(rentalCarCost(7));
-// console.log(rentalCarCost(8));
-
-function greet(name, owner) {
-  if (name === owner) {
-    return 'Hello boss';
-  } else {
-    return 'Hello guest';
-  }
+const list2 = [
+  {
+    firstName: 'Mariami',
+    lastName: 'G.',
+    country: 'Georgia',
+    continent: 'Europe',
+    age: 29,
+    language: 'Python',
+  },
+  {
+    firstName: 'Mia',
+    lastName: 'H.',
+    country: 'Germany',
+    continent: 'Europe',
+    age: 39,
+    language: 'Ruby',
+  },
+  {
+    firstName: 'Maria',
+    lastName: 'I.',
+    country: 'Greece',
+    continent: 'Europe',
+    age: 32,
+    language: 'C',
+  },
+];
+function isSameLanguage(list) {
+  const language = list[0].language;
+  return list.every((element) => element.language === language);
 }
-console.log(greet('Daniel', 'Daniel'));
-console.log(greet('Greg', 'Daniel'));
 
-function greet(name, owner) {
-  if (name === owner) {
-    return 'Hello boss';
-  } else {
-    return 'Hello guest';
-  }
-}
-console.log(greet('Daniel', 'Daniel'));
-console.log(greet('Greg', 'Daniel'));
-
-function greet(name, owner) {
-  if (name === owner) {
-    return 'Hello boss';
-  } else {
-    return 'Hello guest';
-  }
-}
-console.log(greet('Daniel', 'Daniel'));
-console.log(greet('Greg', 'Daniel'));
-
-function greet(name, owner) {
-  if (name === owner) {
-    return 'Hello boss';
-  } else {
-    return 'Hello guest';
-  }
-}
-console.log(greet('Daniel', 'Daniel'));
-console.log(greet('Greg', 'Daniel'));
+console.log(isSameLanguage(list1));
+console.log(isSameLanguage(list2));

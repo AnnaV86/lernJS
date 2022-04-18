@@ -65,12 +65,10 @@
 
 // console.log(person);
 
-const person = {
-  name: 'Lydia',
-  age: 21,
-};
+// console.log('123'.test('8'));
 
-let city = person.city;
-city = 'Amsterdam';
+const elements = { artist: 'Поп', song: 'Бурабу' };
 
-console.log(person);
+const { artist, song } = elements;
+
+console.log(artist, song);

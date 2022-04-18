@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 // Create, Read, Update, Delete
 
@@ -28,6 +28,7 @@ import fetch from 'node-fetch';
 
 // createUser({ name: 'Kirill' });
 
+// Read
 // const getUser = async () => {
 //   const response = await fetch(`http://localhost:3010/people/`);
 //   const result = await response.json();
@@ -36,6 +37,7 @@ import fetch from 'node-fetch';
 // };
 // getUser();
 
+// Update
 // const updateUser = async (object, id) => {
 //   const response = await fetch(`http://localhost:3010/people/${id}`, {
 //     method: 'PUT',
