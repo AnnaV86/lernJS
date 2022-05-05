@@ -2629,63 +2629,124 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 //   console.log(tweet);
 // });
 
-const list1 = [
-  {
-    firstName: 'Daniel',
-    lastName: 'J.',
-    country: 'Aruba',
-    continent: 'Americas',
-    age: 42,
-    language: 'JavaScript',
-  },
-  {
-    firstName: 'Kseniya',
-    lastName: 'T.',
-    country: 'Belarus',
-    continent: 'Europe',
-    age: 22,
-    language: 'JavaScript',
-  },
-  {
-    firstName: 'Hanna',
-    lastName: 'L.',
-    country: 'Hungary',
-    continent: 'Europe',
-    age: 65,
-    language: 'JavaScript',
-  },
-];
+// const list1 = [
+//   {
+//     firstName: 'Daniel',
+//     lastName: 'J.',
+//     country: 'Aruba',
+//     continent: 'Americas',
+//     age: 42,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Kseniya',
+//     lastName: 'T.',
+//     country: 'Belarus',
+//     continent: 'Europe',
+//     age: 22,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Hanna',
+//     lastName: 'L.',
+//     country: 'Hungary',
+//     continent: 'Europe',
+//     age: 65,
+//     language: 'JavaScript',
+//   },
+// ];
 
-const list2 = [
-  {
-    firstName: 'Mariami',
-    lastName: 'G.',
-    country: 'Georgia',
-    continent: 'Europe',
-    age: 29,
-    language: 'Python',
-  },
-  {
-    firstName: 'Mia',
-    lastName: 'H.',
-    country: 'Germany',
-    continent: 'Europe',
-    age: 39,
-    language: 'Ruby',
-  },
-  {
-    firstName: 'Maria',
-    lastName: 'I.',
-    country: 'Greece',
-    continent: 'Europe',
-    age: 32,
-    language: 'C',
-  },
-];
-function isSameLanguage(list) {
-  const language = list[0].language;
-  return list.every((element) => element.language === language);
+// const list2 = [
+//   {
+//     firstName: 'Mariami',
+//     lastName: 'G.',
+//     country: 'Georgia',
+//     continent: 'Europe',
+//     age: 29,
+//     language: 'Python',
+//   },
+//   {
+//     firstName: 'Mia',
+//     lastName: 'H.',
+//     country: 'Germany',
+//     continent: 'Europe',
+//     age: 39,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Maria',
+//     lastName: 'I.',
+//     country: 'Greece',
+//     continent: 'Europe',
+//     age: 32,
+//     language: 'C',
+//   },
+// ];
+// function isSameLanguage(list) {
+//   const language = list[0].language;
+//   return list.every((element) => element.language === language);
+// }
+
+// console.log(isSameLanguage(list1));
+// console.log(isSameLanguage(list2));
+
+// function maxGap(numbers) {
+//   const array =  numbers.sort((a, b) => b - a)
+// 	              .map((_, ind, arr) => ind !== arr.length - 1 ? arr[ind] - arr[ind + 1] : 0).sort((a, b) => b - a)
+// 	return array[0]
+// }
+
+// function maxGap(numbers) {
+//   return numbers
+//     .sort((a, b) => b - a)
+//     .reduce(
+//       (acc, el, ind) =>
+//         numbers[ind - 1] - el > acc ? numbers[ind - 1] - el : acc,
+//       0
+//     );
+// }
+
+// console.log(maxGap([13, 10, 2, 9, 5]));
+// console.log(maxGap([24, 299, 131, 14, 26, 25]));
+// console.log(maxGap([-7, -42, -809, -14, -12]));
+
+// function getProperty(obj, path) {
+//   const arr = path.split('.')
+//   let res = obj
+//   for (let i = 0; i<arr.length; i++) {
+//   res = res[arr[i]]
+//   }
+  
+//   return res
+// }
+
+// const object = {
+//   one: 1,
+//   two: {
+//     three: 3,
+//   },
+//   four: 4,
+// };
+
+// console.log(getProperty(object, 'one')); // 1
+// console.log(getProperty(object, 'two.three')); // 3
+
+
+// function capitalize(str) {
+//   return str.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ')
+// }
+
+// console.log(capitalize('Надоел, надоел, надоел ты')); // Надоел, Надоел, Надоел Ты
+// console.log(capitalize('Надоели, надоели, надоели вы все')); // Надоели, Надоели, Надоели Вы Все
+// console.log(capitalize('Прошу уходи, уходи')); // Прошу Уходи, Уходи
+// console.log(capitalize('Уходи прошу, уходи совсем')); // Уходи Прошу, Уходи Совсем
+
+const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+
+function findVowels(str) {
+    return str.split('').filter((el) => vowels.includes(el)).length
 }
 
-console.log(isSameLanguage(list1));
-console.log(isSameLanguage(list2));
+console.log(findVowels('здравствуй')) // 2
+console.log(findVowels('привет')) // 2
+console.log(findVowels('хеллоу')) // 3
