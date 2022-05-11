@@ -2716,7 +2716,7 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 //   for (let i = 0; i<arr.length; i++) {
 //   res = res[arr[i]]
 //   }
-  
+
 //   return res
 // }
 
@@ -2731,7 +2731,6 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(getProperty(object, 'one')); // 1
 // console.log(getProperty(object, 'two.three')); // 3
 
-
 // function capitalize(str) {
 //   return str.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ')
 // }
@@ -2741,12 +2740,63 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(capitalize('Прошу уходи, уходи')); // Прошу Уходи, Уходи
 // console.log(capitalize('Уходи прошу, уходи совсем')); // Уходи Прошу, Уходи Совсем
 
-const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+// const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
 
-function findVowels(str) {
-    return str.split('').filter((el) => vowels.includes(el)).length
+// function findVowels(str) {
+//     return str.split('').filter((el) => vowels.includes(el)).length
+// }
+
+// console.log(findVowels('здравствуй')) // 2
+// console.log(findVowels('привет')) // 2
+// console.log(findVowels('хеллоу')) // 3
+
+// const list1 = [
+//   {
+//     firstName: 'Noah',
+//     lastName: 'M.',
+//     country: 'Switzerland',
+//     continent: 'Europe',
+//     age: 19,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Maia',
+//     lastName: 'S.',
+//     country: 'Tahiti',
+//     continent: 'Oceania',
+//     age: 28,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Shufen',
+//     lastName: 'L.',
+//     country: 'Taiwan',
+//     continent: 'Asia',
+//     age: 35,
+//     language: 'HTML',
+//   },
+//   {
+//     firstName: 'Sumayah',
+//     lastName: 'M.',
+//     country: 'Tajikistan',
+//     continent: 'Asia',
+//     age: 30,
+//     language: 'CSS',
+//   },
+// ];
+
+// function countDevelopers(list) {
+//   return list.filter((el) => el.continent === 'Europe').length
+// }
+
+// console.log(countDevelopers(list1));
+
+function getEvenNumbers(numbersArray) {
+  return numbersArray.filter((el) => el%2 === 0)  
 }
 
-console.log(findVowels('здравствуй')) // 2
-console.log(findVowels('привет')) // 2
-console.log(findVowels('хеллоу')) // 3
+console.log(getEvenNumbers([1, 2, 3, 6, 8, 10]));
+console.log(getEvenNumbers([1, 2]));
+console.log(getEvenNumbers([12, 14, 15]));
+console.log(getEvenNumbers([13, 15]));
+console.log(getEvenNumbers([1,3,9]));
