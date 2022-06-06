@@ -2791,12 +2791,25 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 
 // console.log(countDevelopers(list1));
 
-function getEvenNumbers(numbersArray) {
-  return numbersArray.filter((el) => el%2 === 0)  
+// function getEvenNumbers(numbersArray) {
+//   return numbersArray.filter((el) => el%2 === 0)
+// }
+
+// console.log(getEvenNumbers([1, 2, 3, 6, 8, 10]));
+// console.log(getEvenNumbers([1, 2]));
+// console.log(getEvenNumbers([12, 14, 15]));
+// console.log(getEvenNumbers([13, 15]));
+// console.log(getEvenNumbers([1,3,9]));
+
+// function towerBuilder(nFloors) {}
+
+// console.log(towerBuilder(3));
+
+function largestPairSim(numbers) {
+	const arrSort = numbers.sort((a, b) => b - a)
+return arrSort[0] + arrSort[1]
+
 }
 
-console.log(getEvenNumbers([1, 2, 3, 6, 8, 10]));
-console.log(getEvenNumbers([1, 2]));
-console.log(getEvenNumbers([12, 14, 15]));
-console.log(getEvenNumbers([13, 15]));
-console.log(getEvenNumbers([1,3,9]));
+console.log(largestPairSim([10, 14, 2, 23, 19]));
+console.log(largestPairSim([-100,-29,-24,-19,19]));

@@ -46,13 +46,17 @@
 
 // console.log(value);
 
-const replace = {
-  G: 'C',
-  C: 'G',
-  T: {
-    G: '3',
-  },
-  A: 'T',
-};
+// const replace = {
+//   G: 'C',
+//   C: 'G',
+//   T: {
+//     G: '3',
+//   },
+//   A: 'T',
+// };
 
-console.log(String(replace));
+// console.log(String(replace));
+// [{'Vasya': 50},{'Petya': 40}]
+const players = [{name: 'Vasya', score: 50},{name: 'Petya', score: 40}]
+
+console.log(players.map((el) => ({[el.name]: el.score})))
