@@ -2805,11 +2805,18 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 
 // console.log(towerBuilder(3));
 
-function largestPairSim(numbers) {
-	const arrSort = numbers.sort((a, b) => b - a)
-return arrSort[0] + arrSort[1]
+// function largestPairSim(numbers) {
+// 	const arrSort = numbers.sort((a, b) => b - a)
+// return arrSort[0] + arrSort[1]
 
-}
+// }
 
-console.log(largestPairSim([10, 14, 2, 23, 19]));
-console.log(largestPairSim([-100,-29,-24,-19,19]));
+// console.log(largestPairSim([10, 14, 2, 23, 19]));
+// console.log(largestPairSim([-100,-29,-24,-19,19]));
+
+const getRandomQuote = (arr) => {
+  const rand = Math.floor(Math.random() * arr.length);
+  return arr[rand];
+};
+
+console.log(getRandomQuote([0, 1, 2, 3, 4, 5]));
