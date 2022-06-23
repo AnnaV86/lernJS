@@ -2814,9 +2814,55 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(largestPairSim([10, 14, 2, 23, 19]));
 // console.log(largestPairSim([-100,-29,-24,-19,19]));
 
-const getRandomQuote = (arr) => {
-  const rand = Math.floor(Math.random() * arr.length);
-  return arr[rand];
-};
+// const getRandomQuote = (arr) => {
+//   const rand = Math.floor(Math.random() * arr.length);
+//   return arr[rand];
+// };
 
-console.log(getRandomQuote([0, 1, 2, 3, 4, 5]));
+// console.log(getRandomQuote([0, 1, 2, 3, 4, 5]));
+
+
+// function vowelIndices(word){
+//   return word.split('').map((el, index) => (/[aeiouy]/i.test(el)) ? index + 1 : false ).filter(Boolean)
+// }
+
+// console.log(vowelIndices("mmm"))
+// console.log(vowelIndices("apple"))
+// console.log(vowelIndices("super"))
+// console.log(vowelIndices("orange"))
+
+// function vertMirror(strng) {
+//  return strng.split('\n').map((el) => el.split('').reverse().join('')).join('\n')
+// }
+// function horMirror(strng) {
+//   return strng.split('\n').reverse().join('\n')
+// }
+// function oper(fct, s) {
+//   if (fct === vertMirror) {
+//    return vertMirror(s)
+//   } else return horMirror(s)
+// }
+
+// console.log(oper(vertMirror, "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
+// console.log(oper(vertMirror, "IzOTWE\nkkbeCM\nWuzZxM\nvDddJw\njiJyHF\nPVHfSx"))
+// console.log(oper(horMirror, "lVHt\nJVhv\nCSbg\nyeCt"))
+// console.log(oper(horMirror, "njMK\ndbrZ\nLPKo\ncEYz"))
+
+// function adjacentElementsProduct(array) {
+//   return array.map((el, ind) => ind === 0 ? false : el * array[ind - 1]).filter(el => el !==false).sort((a, b) => b - a)[0]
+// }
+
+// console.log(adjacentElementsProduct([-23, 4, -5, 99, -27, 329, -2, 7, -921]));
+// console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+// console.log(adjacentElementsProduct([1, 0, 1, 0, 1000]));
+// console.log(adjacentElementsProduct([1, 2, 3, 0]));
+// console.log(adjacentElementsProduct([5, 8]));
+
+function evenNumbers(array, number) {
+  const newArray = array.filter(el => el % 2 === 0)
+  return newArray.slice(-number)
+}
+
+console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2));
+console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1));
