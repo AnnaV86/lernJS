@@ -2251,7 +2251,7 @@
 /* нужно дополнить функцию isPrime, принимающую число на вход
 и возвращающую true, если число простое, а иначе false */
 
-const integersToCheck = [2, 3, 193, 79, 7, 29];
+// const integersToCheck = [2, 3, 193, 79, 7, 29];
 
 // /* нужно дополнить функцию isPrime, принимающую число на вход
 // и возвращающую true, если число простое, а иначе false */
@@ -2821,7 +2821,6 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 
 // console.log(getRandomQuote([0, 1, 2, 3, 4, 5]));
 
-
 // function vowelIndices(word){
 //   return word.split('').map((el, index) => (/[aeiouy]/i.test(el)) ? index + 1 : false ).filter(Boolean)
 // }
@@ -2858,11 +2857,102 @@ const integersToCheck = [2, 3, 193, 79, 7, 29];
 // console.log(adjacentElementsProduct([1, 2, 3, 0]));
 // console.log(adjacentElementsProduct([5, 8]));
 
-function evenNumbers(array, number) {
-  const newArray = array.filter(el => el % 2 === 0)
-  return newArray.slice(-number)
-}
+// function evenNumbers(array, number) {
+//   const newArray = array.filter(el => el % 2 === 0)
+//   return newArray.slice(-number)
+// }
 
-console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
-console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2));
-console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1));
+// console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+// console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2));
+// console.log(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1));
+
+// function one(arr, fun){
+//   return arr.map(el => fun(el)).filter(el => el === true).length === 1
+// }
+
+// console.log(one([1,2,3,4,5], function(item){ return item<2}));
+// console.log(one([1,2,3,4,5], function(item){ return item%2 }));
+// console.log(one([1,2,3,4,5], function(item){ return item>5 }));
+
+// let num = 10;
+
+// const increaseNumber = () => num++;
+// const increasePassedNumber = number => number++;
+
+// const num1 = increaseNumber();
+// const num2 = increasePassedNumber(num1);
+// const num3 = increaseNumber();
+
+// console.log(num1);
+// console.log('num1', num);
+// console.log(num2);
+// console.log('num2', num);
+// console.log(num1);
+// console.log('num3', num);
+// console.log(num2);
+// console.log('num4', num);
+// console.log(num3);
+// console.log('num5', num);
+
+// console.log('Катюша'.padStart(3))
+// console.log('Катюша'.padStart(20))
+
+// (async function dataz(){
+//   async function getData() {
+//     const data = await Promise.resolve("I made it!");
+//     return data
+//   }
+//   const data = await getData();
+//   console.log(data)})()
+
+// var SequenceSum = (function() {
+//   function SequenceSum() {}
+
+//   SequenceSum.showSequence = function(count) {
+//     if (count < 0) {
+//       return `> ${count}`
+//     } else if (count === 0) {
+//       return '0 = 0'
+//     } else {
+//       const array =  [...Array(count+1)].map((el, ind) => el = ind)
+//       const result = array.reduce((acc, el) => acc + el, 0)
+//       return `${array.join('+')} = ${result}`}
+
+//   };
+
+//   return SequenceSum;
+
+// })();
+
+// console.log(SequenceSum.showSequence(6))
+// console.log(SequenceSum.showSequence(-15))
+// console.log(SequenceSum.showSequence(0))
+
+// function partlist(arr) {
+//   return arr;
+// }
+
+// console.log(partlist(['az', 'toto', 'picaro', 'zone', 'kiwi']));
+// // [
+//   [ 'az', 'toto picaro zone kiwi' ],
+//   [ 'az toto', 'picaro zone kiwi' ],
+//   [ 'az toto picaro', 'zone kiwi' ],
+//   [ 'az toto picaro zone', 'kiwi' ]
+// ]
+
+// function evenOrOdd(str) {
+//   const evan = [...str]
+//     .filter((el) => el % 2 === 0)
+//     .reduce((acc, el) => acc + Number(el), 0);
+//   const odd = [...str]
+//     .filter((el) => el % 2)
+//     .reduce((acc, el) => acc + Number(el), 0);
+//   if (odd === evan) {
+//     return 'Even and Odd are the same';
+//   }
+//   return odd > evan ? 'Odd is greater than Even' : 'Even is greater than Odd';
+// }
+
+// console.log(evenOrOdd('12'));
+// console.log(evenOrOdd('123'));
+// console.log(evenOrOdd('112'));
