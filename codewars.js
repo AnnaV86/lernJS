@@ -2956,3 +2956,29 @@
 // console.log(evenOrOdd('12'));
 // console.log(evenOrOdd('123'));
 // console.log(evenOrOdd('112'));
+// const set = new Set();
+
+// set.add(1);
+// set.add('Lydia');
+// set.add({ name: 'Lydia' });
+
+// for (let item of set) {
+//   console.log(item + 2);
+// }
+
+function partlist(arr) {
+  return [...Array(arr.length - 1)].map((_, index) => [
+    arr.slice(0, index + 1).join(' '),
+    arr.slice(index + 1).join(' '),
+  ]);
+}
+
+console.log(partlist(['I', 'wish', 'I', "hadn't", 'come']));
+
+console.log(partlist(['az', 'toto', 'picaro', 'zone', 'kiwi']));
+// [
+//   [ 'az', 'toto picaro zone kiwi' ],
+//   [ 'az toto', 'picaro zone kiwi' ],
+//   [ 'az toto picaro', 'zone kiwi' ],
+//   [ 'az toto picaro zone', 'kiwi' ]
+// ]
