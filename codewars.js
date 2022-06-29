@@ -2966,19 +2966,48 @@
 //   console.log(item + 2);
 // }
 
-function partlist(arr) {
-  return [...Array(arr.length - 1)].map((_, index) => [
-    arr.slice(0, index + 1).join(' '),
-    arr.slice(index + 1).join(' '),
-  ]);
-}
+// function partlist(arr) {
+//   return [...Array(arr.length - 1)].map((_, index) => [
+//     arr.slice(0, index + 1).join(' '),
+//     arr.slice(index + 1).join(' '),
+//   ]);
+// }
 
-console.log(partlist(['I', 'wish', 'I', "hadn't", 'come']));
+// console.log(partlist(['I', 'wish', 'I', "hadn't", 'come']));
 
-console.log(partlist(['az', 'toto', 'picaro', 'zone', 'kiwi']));
-// [
-//   [ 'az', 'toto picaro zone kiwi' ],
-//   [ 'az toto', 'picaro zone kiwi' ],
-//   [ 'az toto picaro', 'zone kiwi' ],
-//   [ 'az toto picaro zone', 'kiwi' ]
-// ]
+// console.log(partlist(['az', 'toto', 'picaro', 'zone', 'kiwi']));
+// // [
+// //   [ 'az', 'toto picaro zone kiwi' ],
+// //   [ 'az toto', 'picaro zone kiwi' ],
+// //   [ 'az toto picaro', 'zone kiwi' ],
+// //   [ 'az toto picaro zone', 'kiwi' ]
+// // ]
+
+// function solution(pairs) {
+//   return Object.entries(pairs)
+//     .map((el) => el.join(' = '))
+//     .join(',');
+// }
+
+// console.log(solution({ a: 1, b: '2' }));
+// console.log(solution({ name: 'Vasya', age: 12 }));
+
+// function halvingSum(n) {
+//   if (n === 1) return n;
+//   return n + halvingSum(Math.floor(n / 2));
+// }
+
+// console.log(halvingSum(25));
+// console.log(halvingSum(127));
+
+// let c = {a: '2'}
+// let d;
+
+// d = c;
+// c.b = '3'
+
+// console.log(new Number(3) === 3);
+
+function gps(s, x) {}
+
+console.log(gps(20, [0.0, 0.23, 0.46, 0.69, 0.92, 1.15, 1.38, 1.61]));
