@@ -3008,6 +3008,44 @@
 
 // console.log(new Number(3) === 3);
 
-function gps(s, x) {}
+// function minSum(arr) {
+//   const arrSort = arr.sort((a, b) => a - b);
+//   const length = arr.length;
+//   return [...Array(length / 2)]
+//     .map((el, ind) => arrSort[ind] * arrSort[length - 1 - ind])
+//     .reduce((acc, el) => acc + el, 0);
+// }
 
-console.log(gps(20, [0.0, 0.23, 0.46, 0.69, 0.92, 1.15, 1.38, 1.61]));
+// console.log(minSum([5, 4, 2, 3]));
+// console.log(minSum([12, 6, 10, 26, 3, 24]));
+// console.log(minSum([9, 2, 8, 7, 5, 4, 0, 6]));
+
+const arr = [
+  { Бяк: 1 },
+  { Аякса: 2 },
+  { бал: 3 },
+  { Аякса: 3 },
+  { абажур: 4 },
+  { Аякса: 1 },
+];
+
+console.log(
+  arr.sort((a, b) => {
+    const word1 = Object.keys(a)[0].toUpperCase();
+    const word2 = Object.keys(b)[0].toUpperCase();
+
+    if (word1 === word2) {
+      return Object.values(a) - Object.values(b)
+    }
+    return word1.localeCompare(word2);
+  })
+);
+
+// [
+//   { 'абажур': 4 },
+//   { 'Аякса': 1 },
+//   { 'Аякса': 2 },
+//   { 'Аякса': 3 },
+//   { 'бал': 3 },
+//   { 'Бяк': 1 }
+// ]
