@@ -3020,26 +3020,26 @@
 // console.log(minSum([12, 6, 10, 26, 3, 24]));
 // console.log(minSum([9, 2, 8, 7, 5, 4, 0, 6]));
 
-const arr = [
-  { Бяк: 1 },
-  { Аякса: 2 },
-  { бал: 3 },
-  { Аякса: 3 },
-  { абажур: 4 },
-  { Аякса: 1 },
-];
+// const arr = [
+//   { Бяк: 1 },
+//   { Аякса: 2 },
+//   { бал: 3 },
+//   { Аякса: 3 },
+//   { абажур: 4 },
+//   { Аякса: 1 },
+// ];
 
-console.log(
-  arr.sort((a, b) => {
-    const word1 = Object.keys(a)[0].toUpperCase();
-    const word2 = Object.keys(b)[0].toUpperCase();
+// console.log(
+//   arr.sort((a, b) => {
+//     const word1 = Object.keys(a)[0].toUpperCase();
+//     const word2 = Object.keys(b)[0].toUpperCase();
 
-    if (word1 === word2) {
-      return Object.values(a) - Object.values(b)
-    }
-    return word1.localeCompare(word2);
-  })
-);
+//     if (word1 === word2) {
+//       return Object.values(a) - Object.values(b)
+//     }
+//     return word1.localeCompare(word2);
+//   })
+// );
 
 // [
 //   { 'абажур': 4 },
@@ -3049,3 +3049,17 @@ console.log(
 //   { 'бал': 3 },
 //   { 'Бяк': 1 }
 // ]
+
+// function solve(arr) {
+//   return arr.map(
+//     (el) =>
+//       [...el].filter(
+//         (el, ind) => ind + 1 === el.toLowerCase().charCodeAt() - 96
+//       ).length
+//   );
+// }
+
+// console.log(solve(['abode', 'ABc', 'xyzD']));
+// console.log(solve(['abide', 'ABc', 'xyz']));
+// console.log(solve(['IAMDEFANDJKL', 'thedefgh', 'xyzDEFghijabc']));
+// console.log(solve(['encode', 'abc', 'xyzD', 'ABmD']));
