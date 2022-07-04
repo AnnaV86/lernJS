@@ -3063,3 +3063,20 @@
 // console.log(solve(['abide', 'ABc', 'xyz']));
 // console.log(solve(['IAMDEFANDJKL', 'thedefgh', 'xyzDEFghijabc']));
 // console.log(solve(['encode', 'abc', 'xyzD', 'ABmD']));
+
+
+// function cookingTime(eggs) {
+// 	return Math.ceil(eggs / 8)*5
+// }
+
+// console.log(cookingTime(0))
+// console.log(cookingTime(5))
+// console.log(cookingTime(13))
+
+function sumCubes(n){
+  return [...Array(n)].map((_, index) => (index + 1) ** 3).reduce((acc, num) => acc + num, 0)
+}
+
+console.log(sumCubes(2))
+console.log(sumCubes(3))
+console.log(sumCubes(4))
