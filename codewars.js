@@ -3064,7 +3064,6 @@
 // console.log(solve(['IAMDEFANDJKL', 'thedefgh', 'xyzDEFghijabc']));
 // console.log(solve(['encode', 'abc', 'xyzD', 'ABmD']));
 
-
 // function cookingTime(eggs) {
 // 	return Math.ceil(eggs / 8)*5
 // }
@@ -3073,10 +3072,93 @@
 // console.log(cookingTime(5))
 // console.log(cookingTime(13))
 
-function sumCubes(n){
-  return [...Array(n)].map((_, index) => (index + 1) ** 3).reduce((acc, num) => acc + num, 0)
-}
+// function sumCubes(n){
+//   return [...Array(n)].map((_, index) => (index + 1) ** 3).reduce((acc, num) => acc + num, 0)
+// }
 
-console.log(sumCubes(2))
-console.log(sumCubes(3))
-console.log(sumCubes(4))
+// console.log(sumCubes(2))
+// console.log(sumCubes(3))
+// console.log(sumCubes(4))
+
+// function getAge(...args) {
+//   console.log(args);
+// }
+
+// getAge(21);
+
+// let person = 'jlj'
+
+// for (const value of person) {
+//   console.log(value);
+// }
+
+// let iterable = [10, 20, 30];
+
+// for (const value of iterable) {
+//   console.log(value);
+// }
+
+// function f(n){
+// 	return typeof n === 'number' && n > 0 && Number.isInteger(n) ? [...Array(n)].map((_, ind) => ind + 1).reduce((acc, n) => acc + n, 0) : false };
+
+// 	console.log(f(100))
+// 	console.log(f(300))
+// 	console.log(f(50000))
+// 	console.log(f('n'))
+// 	console.log(f())
+// 	console.log(f(3.14))
+// 	console.log(f(0))
+// 	console.log(f(-5))
+
+// function sortGiftCode(code){
+//   return [...code].sort().join('')
+// }
+// // console.log(sortGiftCode('abcdef'))
+// // console.log(sortGiftCode('pqksuvy'))
+// // console.log(sortGiftCode('zyxwvutsrqponmlkjihgfedcba'))
+
+// console.log(typeof sortGiftCode)
+
+const orderFood = (list) =>
+  list.reduce((acc, {meal}) => (acc[meal] = ++acc[meal] || 1) && acc, {});
+
+console.log(
+  orderFood([
+    {
+      firstName: 'Noah',
+      lastName: 'M.',
+      country: 'Switzerland',
+      continent: 'Europe',
+      age: 19,
+      language: 'C',
+      meal: 'vegetarian',
+    },
+    {
+      firstName: 'Anna',
+      lastName: 'R.',
+      country: 'Liechtenstein',
+      continent: 'Europe',
+      age: 52,
+      language: 'JavaScript',
+      meal: 'standard',
+    },
+    {
+      firstName: 'Ramona',
+      lastName: 'R.',
+      country: 'Paraguay',
+      continent: 'Americas',
+      age: 29,
+      language: 'Ruby',
+      meal: 'vegan',
+    },
+    {
+      firstName: 'George',
+      lastName: 'B.',
+      country: 'England',
+      continent: 'Europe',
+      age: 81,
+      language: 'C',
+      meal: 'vegetarian',
+    },
+  ])
+);
