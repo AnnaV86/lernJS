@@ -3119,46 +3119,50 @@
 
 // console.log(typeof sortGiftCode)
 
-const orderFood = (list) =>
-  list.reduce((acc, {meal}) => (acc[meal] = ++acc[meal] || 1) && acc, {});
+// const orderFood = (list) =>
+//   list.reduce((acc, {meal}) => (acc[meal] = ++acc[meal] || 1) && acc, {});
 
-console.log(
-  orderFood([
-    {
-      firstName: 'Noah',
-      lastName: 'M.',
-      country: 'Switzerland',
-      continent: 'Europe',
-      age: 19,
-      language: 'C',
-      meal: 'vegetarian',
-    },
-    {
-      firstName: 'Anna',
-      lastName: 'R.',
-      country: 'Liechtenstein',
-      continent: 'Europe',
-      age: 52,
-      language: 'JavaScript',
-      meal: 'standard',
-    },
-    {
-      firstName: 'Ramona',
-      lastName: 'R.',
-      country: 'Paraguay',
-      continent: 'Americas',
-      age: 29,
-      language: 'Ruby',
-      meal: 'vegan',
-    },
-    {
-      firstName: 'George',
-      lastName: 'B.',
-      country: 'England',
-      continent: 'Europe',
-      age: 81,
-      language: 'C',
-      meal: 'vegetarian',
-    },
-  ])
-);
+// console.log(
+//   orderFood([
+//     {
+//       firstName: 'Noah',
+//       lastName: 'M.',
+//       country: 'Switzerland',
+//       continent: 'Europe',
+//       age: 19,
+//       language: 'C',
+//       meal: 'vegetarian',
+//     },
+//     {
+//       firstName: 'Anna',
+//       lastName: 'R.',
+//       country: 'Liechtenstein',
+//       continent: 'Europe',
+//       age: 52,
+//       language: 'JavaScript',
+//       meal: 'standard',
+//     },
+//     {
+//       firstName: 'Ramona',
+//       lastName: 'R.',
+//       country: 'Paraguay',
+//       continent: 'Americas',
+//       age: 29,
+//       language: 'Ruby',
+//       meal: 'vegan',
+//     },
+//     {
+//       firstName: 'George',
+//       lastName: 'B.',
+//       country: 'England',
+//       continent: 'Europe',
+//       age: 81,
+//       language: 'C',
+//       meal: 'vegetarian',
+//     },
+//   ])
+// );
+
+const get = (key, object) => {};
+
+console.log(get('red.big.apple', { red: { big: { apple: 'ЯБЛОКО' } } }));
