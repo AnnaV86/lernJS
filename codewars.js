@@ -3163,6 +3163,57 @@
 //   ])
 // );
 
-const get = (key, object) => {};
+// const get = (key, object) => {};
 
-console.log(get('red.big.apple', { red: { big: { apple: 'ЯБЛОКО' } } }));
+// console.log(get('red.big.apple', { red: { big: { apple: 'ЯБЛОКО' } } }));
+
+// function digits(n) {
+//   return String(n).length;
+// }
+
+// console.log(digits(9));
+// console.log(digits(10));
+// console.log(digits(9876543210));
+
+// function countRedBeads(n, red = 0) {
+//   if (n < 1) {
+//     return 0;
+//   }
+//   if (n === 1) {
+//     return red;
+//   } else return countRedBeads(n - 1, red + 2);
+// }
+
+// console.log(countRedBeads(0));
+// console.log(countRedBeads(1));
+// console.log(countRedBeads(2));
+// console.log(countRedBeads(3));
+// console.log(countRedBeads(5));
+
+// var findDigit = function (num, nth) {
+//   if (nth <= 0) {
+//     return -1;
+//   } else {
+//     const arr = String(Math.abs(num)).split('').reverse().map(el => Number(el));
+//     console.log(arr)
+//     return (arr.length < nth) ? 0 : arr[nth-1];
+//   }
+// };
+
+// console.log(findDigit(5673, 4));
+// console.log(findDigit(129, 2));
+// console.log(findDigit(-2825, 3));
+// console.log(findDigit(-456, 4));
+// console.log(findDigit(0, 20));
+// console.log(findDigit(65, 0));
+// console.log(findDigit(24, -8));
+
+function averages(numbers) {
+  if ((numbers.length < 2, numbers === null)) {
+    return [];
+  } return numbers.map((el, index) => (index + 1) < numbers.length ? (( el + numbers[index + 1]) / 2) : el).slice(0, -1)
+}
+
+console.log(averages([2, 2, 2, 2, 2]));
+console.log(averages([2, -2, 2, -2, 2]));
+console.log(averages([1, 3, 5, 1, -10]));

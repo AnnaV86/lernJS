@@ -1,6 +1,6 @@
 function closure() {
   let count = 0;
-  return function () {
+  return () => {
     count++;
     return count;
   };
@@ -20,3 +20,16 @@ for (let j = 0; j < 3; j++) {
 }
 
 console.log('i', i);
+
+test();
+function test() {
+  console.log('1: ', a);
+  if (true) {
+    var a = 1;
+  }
+  console.log('2: ', a);
+  if (true) {
+    const b = 1;
+  }
+  console.log('3: ', b);
+}
