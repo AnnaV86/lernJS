@@ -3208,12 +3208,127 @@
 // console.log(findDigit(65, 0));
 // console.log(findDigit(24, -8));
 
-function averages(numbers) {
-  if ((numbers.length < 2, numbers === null)) {
-    return [];
-  } return numbers.map((el, index) => (index + 1) < numbers.length ? (( el + numbers[index + 1]) / 2) : el).slice(0, -1)
+// function averages(numbers) {
+//   if ((numbers.length < 2, numbers === null)) {
+//     return [];
+//   } return numbers.map((el, index) => (index + 1) < numbers.length ? (( el + numbers[index + 1]) / 2) : el).slice(0, -1)
+// }
+
+// console.log(averages([2, 2, 2, 2, 2]));
+// console.log(averages([2, -2, 2, -2, 2]));
+// console.log(averages([1, 3, 5, 1, -10]));
+
+// function hasUniqueChars(str) {
+//   return Object.entries(str.split('').reduce((acc, simbol) => {acc[simbol] = ++acc[simbol] || 1
+// 	return acc}, {})).filter((el) => el[1] === 2).length === 0 ? true : false
+// }
+
+// function hasUniqueChars(str) {
+//   return new Set(str).size === str.length;
+// }
+
+// console.log(hasUniqueChars('  nAa'));
+// console.log(hasUniqueChars('abcdef'));
+// console.log(hasUniqueChars('aA'));
+// console.log(hasUniqueChars('++-'));
+
+// const checkBrackets = (str) => {
+//   const object = [...str].reduce((acc, el) => {
+//     acc[el] = ++acc[el] || 1;
+//     return acc;
+//   }, {});
+
+//   return (
+//     object['('] === object[')'] &&
+//     object['{'] === object['}'] &&
+//     object['['] === object[']']
+//   );
+// };
+
+// console.log(checkBrackets('((()))'));
+// console.log(checkBrackets('((()(())))])'));
+
+const arrey = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9];
+
+// const withoutRepeat = (arr) => {
+//   const object = arr.reduce((acc, el) => {
+//     acc[el] = ++acc[el] || 1;
+//     return acc;
+//   }, {});
+
+//   return Object.entries(object)
+//     .filter((el) => el[1] === 1)
+//     .map((el) => Number(el[0]));
+// };
+// const withoutRepeat = (numbers) => {
+//   const objectNumbers = numbers.reduce((acc, el) => {
+//     acc[el] = ++acc[el] || 1;
+//     return acc;
+//   }, {});
+
+//   return numbers.filter((el) => objectNumbers[el] === 1);
+// };
+
+// console.log(withoutRepeat(arrey));
+
+// function User(name, age) {
+// 	this.name = name;
+// 	this.age = age
+// }
+// const user = new User('Anya', 35);
+
+// console.log(user)
+
+// const obj = {
+// 	name: 'Vasya',
+// 	age: 37
+// }
+
+// console.log(obj.hasOwnProperty('name'))
+// console.log('age' in obj)
+
+// console.log(obj.hasOwnProperty('dog'))
+// console.log('cat' in obj)
+
+// MyObject = {
+//   id: 1,
+// 	name: "sample"
+// }
+
+// console.log(MyObject)
+
+// const person = { name: 'Lydia' };
+
+// Object.defineProperty(person, 'age', { value: 21 });
+
+// person.pet = 'dog';
+
+// console.log(Object.keys(person));
+// console.log(Object.entries(person));
+// console.log(Object.values(person));
+// console.log(person);
+// console.log(person.hasOwnProperty('age'));
+// console.log(person.age)
+
+// const obj = {
+//   a: {
+//     b: 5,
+//   },
+// };
+
+// const copy = Object.assign({}, obj);
+// console.log(copy.a === obj.a);
+
+// const copy2 = JSON.parse(JSON.stringify(obj));
+// console.log(copy2.a === obj.a);
+
+function cubeOdd(arr) {
+  if (!arr.every((el) => !isNaN(el))) {
+    return undefined;
+  }
+  return arr.filter((el) => el % 2).reduce((acc, el) => acc + el ** 3, 0);
 }
 
-console.log(averages([2, 2, 2, 2, 2]));
-console.log(averages([2, -2, 2, -2, 2]));
-console.log(averages([1, 3, 5, 1, -10]));
+console.log(cubeOdd([1, 2, 3, 4]));
+console.log(cubeOdd([-3, -2, 2, 3]));
+console.log(cubeOdd(['a', 12, 9, 'z', 42]));

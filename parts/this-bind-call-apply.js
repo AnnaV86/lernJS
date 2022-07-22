@@ -22,17 +22,17 @@
 // console.log(shape.diameter()); // 20
 // console.log(shape.perimeter()); // NaN
 
-// const person = { name: 'Lydia' };
+const person = { name: 'Lydia' };
 
-// function sayHi(age = 'ничего не передали') {
-//   return `${this.name} is ${age}`;
-// }
+function sayHi(age = 'ничего не передали') {
+  return `${this.name} is ${age}`;
+}
 
 // console.log('call без параметров', sayHi.call(person));
 // console.log('call', sayHi.call(person, 21));
 // console.log('apply', sayHi.apply(person, [21]));
-// const bindFunction = sayHi.bind(person, 21);
-// console.log('bind', bindFunction());
+const bindFunction = sayHi.bind(person, 21);
+console.log('bind', bindFunction());
 
 // global.status = '😎';
 
@@ -67,8 +67,8 @@
 
 // console.log('123'.test('8'));
 
-const elements = { artist: 'Поп', song: 'Бурабу' };
+// const elements = { artist: 'Поп', song: 'Бурабу' };
 
-const { artist, song } = elements;
+// const { artist, song } = elements;
 
-console.log(artist, song);
+// console.log(artist, song);
