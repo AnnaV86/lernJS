@@ -3322,13 +3322,57 @@ const arrey = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9];
 // const copy2 = JSON.parse(JSON.stringify(obj));
 // console.log(copy2.a === obj.a);
 
-function cubeOdd(arr) {
-  if (!arr.every((el) => !isNaN(el))) {
-    return undefined;
-  }
-  return arr.filter((el) => el % 2).reduce((acc, el) => acc + el ** 3, 0);
+// function cubeOdd(arr) {
+//   if (!arr.every((el) => !isNaN(el))) {
+//     return undefined;
+//   }
+//   return arr.filter((el) => el % 2).reduce((acc, el) => acc + el ** 3, 0);
+// }
+
+// console.log(cubeOdd([1, 2, 3, 4]));
+// console.log(cubeOdd([-3, -2, 2, 3]));
+// console.log(cubeOdd(['a', 12, 9, 'z', 42]));
+
+// console.log('парапарам'.indexOf('м'));
+
+// const mov = { nameRU: 'Школа жизни' };
+
+// console.log(mov.nameRU.toLowerCase().indexOf('школа'));
+
+// function freqSeq(str, sep) {
+//   const array = str.split('');
+//   const count = array.reduce((acc, el) => {
+//     acc[el] = ++acc[el] || 1;
+//     return acc;
+//   }, {});
+//   return array.map((el) => count[el]).join(`${sep}`)
+// }
+
+// console.log(freqSeq('hello world', '-'));
+// console.log(freqSeq('19999999', ':'));
+// console.log(freqSeq('^^^**$', 'x'));
+
+// function greetDevelopers(list) {
+//   return list.map((dev) => ({
+//     ...dev,
+//     greeting: `Hi ${dev.firstName}, what do you like the most about ${dev.language}?`,
+//   }));
+// }
+
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return true;
+      }
+      return false;
+    }
+    return true;
+  } else return false;
 }
 
-console.log(cubeOdd([1, 2, 3, 4]));
-console.log(cubeOdd([-3, -2, 2, 3]));
-console.log(cubeOdd(['a', 12, 9, 'z', 42]));
+console.log(isLeapYear(1234));
+console.log(isLeapYear(1984));
+console.log(isLeapYear(2000));
+console.log(isLeapYear(2010));
+console.log(isLeapYear(2013));
