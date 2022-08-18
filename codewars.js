@@ -3359,20 +3359,96 @@ const arrey = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9];
 //   }));
 // }
 
-function isLeapYear(year) {
-  if (year % 4 === 0) {
-    if (year % 100 === 0) {
-      if (year % 400 === 0) {
-        return true;
-      }
-      return false;
-    }
-    return true;
-  } else return false;
-}
+// function isLeapYear(year) {
+//   if (year % 4 === 0) {
+//     if (year % 100 === 0) {
+//       if (year % 400 === 0) {
+//         return true;
+//       }
+//       return false;
+//     }
+//     return true;
+//   } else return false;
+// }
 
-console.log(isLeapYear(1234));
-console.log(isLeapYear(1984));
-console.log(isLeapYear(2000));
-console.log(isLeapYear(2010));
-console.log(isLeapYear(2013));
+// console.log(isLeapYear(1234));
+// console.log(isLeapYear(1984));
+// console.log(isLeapYear(2000));
+// console.log(isLeapYear(2010));
+// console.log(isLeapYear(2013));
+
+// function automorphic(n) {
+//   const number = String(n).length;
+//   const square = Math.pow(n, 2);
+//   return String(square).split('').slice(-number).join('') == n
+//     ? 'Automorphic'
+//     : 'Not!!';
+// }
+
+// console.log(automorphic(1));
+// console.log(automorphic(3));
+// console.log(automorphic(6));
+// console.log(automorphic(9));
+// console.log(automorphic(25));
+// console.log(automorphic(53));
+// console.log(automorphic(625));
+// console.log(automorphic(225));
+
+// function inviteMoreWomen(L) {
+//  return L.reduce((a, b) => a + b) > 0
+// }
+
+// console.log(inviteMoreWomen([1, -1, 1]));
+// console.log(inviteMoreWomen([1, 1, 1]));
+// console.log(inviteMoreWomen([-1, -1, -1]));
+// console.log(inviteMoreWomen([1, -1]));
+
+// const orderedCount = function (text) {
+//   if (text.length === 0) {
+//     return [];
+//   }
+// 	const newArray = [];
+//   const array = text.split('')
+//   array.map((el) => (newArray.includes(el) ? newArray.push([el]) : newArray.push([el, 1])));
+//   return newArray;
+// };
+
+// const orderedCount = (str) =>
+//   [...new Set([...str])].map((char) => [char, str.split(char).length - 1]);
+
+// console.log(orderedCount('233312'));
+
+// function balancedNum(number) {
+//   const numberStringLength = String(number).length;
+//   const array = [...String(number)];
+//   let leftNumber;
+//   let rigthNumber;
+//   if (numberStringLength === 1) {
+//     return 'Balanced';
+//   }
+//   if (numberStringLength % 2) {
+//     leftNumber = array
+//       .slice(0, (numberStringLength - 1) / 2)
+//       .reduce((acc, el) => acc + Number(el), 0);
+//     rigthNumber = array
+//       .slice((numberStringLength - 1) / 2 + 1)
+//       .reduce((acc, el) => acc + Number(el), 0);
+//   } else {
+//     console.log('тут:', numberStringLength / 2 - 1);
+//     leftNumber = array
+//       .slice(0, numberStringLength / 2 - 1)
+//       .reduce((acc, el) => acc + Number(el), 0);
+//     rigthNumber = array
+//       .slice(numberStringLength / 2 + 1)
+//       .reduce((acc, el) => acc + Number(el), 0);
+//   }
+
+//   return leftNumber === rigthNumber ? 'Balanced' : 'Not Balanced';
+// }
+
+// console.log(balancedNum(424));
+// console.log(balancedNum(562339814));
+// console.log(balancedNum(7));
+// console.log(balancedNum(953));
+// console.log(balancedNum(1451));
+// console.log(balancedNum(856975));
