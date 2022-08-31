@@ -65,24 +65,23 @@
 // console.log(strong(7));
 
 // const spacer = (stringLength, textArr) => {
-//   const arrLength = textArr
-//     .map((el) => el.length)
-//     .reduce((acc, el) => acc + el);
+//   const arrLength = textArr.join('').length;
 //   const textArrEl = textArr.length;
+//   const lengthRemain = stringLength - arrLength;
 
 //   if (textArrEl === 1) {
 //     const smallString = textArr
-//       .map((el) => `${el}${' '.repeat(stringLength - arrLength)}`)
+//       .map((el) => `${el}${' '.repeat(lengthRemain)}`)
 //       .join('');
 //     return smallString;
 //   }
 
-//   const spiceCount = Math.floor((stringLength - arrLength) / (textArrEl - 1));
+//   const spiceCount = Math.floor(lengthRemain / (textArrEl - 1));
+//   const remainsSpaces = lengthRemain % (textArrEl - 1);
 //   const stringResult = textArr
 //     .map((el, ind) => {
-//       if (stringLength - arrLength !== spiceCount * (textArrEl - 1)) {
-//         const addSpice =
-//           stringLength - arrLength - spiceCount * (textArrEl - 1);
+//       if (lengthRemain !== spiceCount * (textArrEl - 1)) {
+//         const addSpice = lengthRemain - spiceCount * (textArrEl - 1);
 //         return ind < addSpice ? `${el} ` : el;
 //       } else return el;
 //     })
@@ -115,3 +114,53 @@
 // }
 
 // console.log(repeats([4, 5, 7, 5, 4, 8]));
+// function pairs(array, count = 0) {
+//   for (let i = 0; i < array.length; i += 2)
+//     if (Math.abs(array[i] - array[i + 1]) === 1) count += 1;
+//   return count;
+// }
+
+// console.log(
+//   pairs([
+//     -50, -49, -16, 50, -17, -88, -87, 52, 51, -6, -5, 54, 18, 55, 57, 58, 21,
+//     15, 20, -4, -5, -79, 41, -78, -69, -70, -7, 4, -8, 24, 23, -52, 4, -53, -18,
+//     48, -19, -14, -13, -52, -51,
+//   ])
+// );
+
+// function maxTriSum(numbers) {
+//   const arrSet = [...new Set(numbers)];
+//   const sortArr = arrSet.sort((a, b) => b - a);
+//   return sortArr[0] + sortArr[1] + sortArr[2];
+// }
+
+// console.log(maxTriSum([3, 2, 6, 8, 2, 3]));
+
+// const reverse = (array) => array.reverse();
+// console.log(reverse([1, 2, 3]));
+
+// function calc(x) {
+//   const total1String = [...x].map((el) => el.charCodeAt()).join('');
+//   const total2 = [...total1String.replace(/7/g, '1')].reduce(
+//     (acc, num) => acc + Number(num),
+//     0
+//   );
+//   const total1 = [...total1String].reduce((acc, num) => acc + Number(num), 0);
+//   return total1 - total2;
+// }
+
+// console.log(calc('aaaaaddddr'));
+
+function pigIt(str) {
+  return str.split(' ').map((el) => {
+    if (/[^A-Za-z]/.test(el)) {
+      return el;
+    }
+    const arr = [...el];
+    arr.push(`${arr.shift()}ay`);
+    return arr.join('');
+  }).join(' ');
+}
+
+console.log(pigIt('Pig latin is cool'));
+console.log(pigIt('Hello world !'));
