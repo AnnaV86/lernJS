@@ -151,16 +151,102 @@
 
 // console.log(calc('aaaaaddddr'));
 
-function pigIt(str) {
-  return str.split(' ').map((el) => {
-    if (/[^A-Za-z]/.test(el)) {
-      return el;
-    }
-    const arr = [...el];
-    arr.push(`${arr.shift()}ay`);
-    return arr.join('');
-  }).join(' ');
+// function pigIt(str) {
+//   return str
+//     .split(' ')
+//     .map((el) => (/[^A-Za-z]/.test(el) ? el : `${el.substr(1)}${el[0]}ay`))
+//     .join(' ');
+// }
+
+// console.log(pigIt('Pig latin is cool')); //igPay atinlay siay oolcay
+// console.log(pigIt('Hello world !')); //elloHay orldway !
+
+// function solve(arr) {
+//   return arr.find((el) => !arr.includes(-el));
+// }
+
+// console.log(solve([1, -1, 2, -2, 3]));
+// console.log(solve([1, -1, 2, -2, 3]));
+// console.log(solve([-9, -105, -9, -9, -9, -9, 105]));
+
+// const o = { x: 1, y: { z: 2 } };
+// const o1 = o;
+// const o2 = { ...o };
+// const o3 = { ...o, y: { ...o.y } };
+// const o4 = JSON.parse(JSON.stringify(o));
+// o.x = 11;
+// o.y.z = 22;
+
+// // console.log(o1.x);
+// // console.log(o1.y.z);
+// console.log(o4.x);
+// console.log(o4.y.z);
+// console.log(o4);
+
+// function createCounter() {
+//   let counter = 0;
+//   return () => ++counter;
+// }
+// const counter = createCounter();
+// const counter2 = createCounter();
+// console.log(counter()); // 1
+// console.log(counter()); // 2
+// console.log(counter()); // 3
+// console.log(counter2()); // 1
+
+// sum - сумма, необходимая к выдаче
+// holdings - массив купюр, которые есть в наличии в банкомате
+// возвращает аналогичный holdings массив, в котором количество выдаваемых
+
+// Пример:
+// на входе: (7300, [5000, 1000, 500, 100])
+// на выходе: [1, 2, 0, 3]
+// const getBanknotes = (sum, holdings) =>
+//   holdings.reduce(
+//     (acc, el, index) => {
+//       if (acc.sum > el) {
+//         const count = Math.floor(acc.sum / el);
+//         acc.banknoteCount[index] = count;
+//         acc.sum -= el * count;
+//       }
+//       return holdings.length - 1 === index ? acc.banknoteCount : acc;
+//     },
+//     { sum, banknoteCount: [0, 0, 0, 0] }
+//   );
+
+// console.log(getBanknotes(7300, [5000, 1000, 500, 100]));
+
+// const getBanknotes = (sum, holdings) =>
+//   holdings.reduce(
+//     (acc, [value, quantity], index) => {
+//       if (acc.sum > value) {
+//         const count = Math.floor(acc.sum / value);
+//         if (count < quantity + 1) {
+//           acc.banknoteCount[index] = count;
+//           acc.sum -= value * count;
+//         } else {
+//           acc.banknoteCount[index] = quantity;
+//           acc.sum -= value * quantity;
+//         }
+//       }
+//       return holdings.length - 1 === index ? acc.banknoteCount : acc;
+//     },
+//     { sum, banknoteCount: [...Array(holdings.length)].fill(0) }
+//   );
+
+// console.log(
+//   getBanknotes(7300, [
+//     [5000, 0],
+//     [1000, 17],
+//     [100, 31],
+//     [50, 1],
+//   ])
+// );
+
+function tidyNumber(n) {
+  return [...String(n)].sort().join('') == n;
 }
 
-console.log(pigIt('Pig latin is cool'));
-console.log(pigIt('Hello world !'));
+console.log(tidyNumber(12));
+console.log(tidyNumber(9672));
+console.log(tidyNumber(2335));

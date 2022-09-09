@@ -11,6 +11,11 @@ console.log(viewCount());
 console.log(viewCount());
 console.log(viewCount());
 
+const viewCount2 = closure();
+console.log(viewCount2());
+console.log(viewCount2());
+console.log(viewCount2());
+
 for (var i = 0; i < 3; i++) {
   setTimeout(() => console.log('var', i), 1);
 }

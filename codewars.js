@@ -3453,3 +3453,133 @@ const arrey = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9];
 // console.log(balancedNum(1451));
 // console.log(balancedNum(856975));
 
+// const multiplyAll = (arr) => (integer) => arr.map((el) => el * integer);
+
+// console.log(multiplyAll([1, 2, 3])(1));
+// console.log(multiplyAll([1, 2, 3])(2));
+// console.log(multiplyAll([1, 2, 3])(0));
+// console.log(multiplyAll([])(10));
+
+// const mygcd = (x, y) => {};
+
+// console.log(mygcd(30, 12));
+// console.log(mygcd(8, 9));
+// console.log(mygcd(1, 1));
+
+// function mygcd(x, y) {
+//   if (x === 1 && y === 1) {
+//     return 1;
+//   }
+//   return Math.max(
+//     ...[...Array(x > y ? x : y)].reduce((acc, el, ind) => {
+//       if (x % ind === 0 && y % ind === 0) {
+//         acc = acc.concat(ind);
+//       }
+//       return acc;
+//     }, [])
+//   );
+// }
+// const mygcd = (x, y) => {
+//   console.log(x, y);
+//   return y ? mygcd(y, x % y) : x;
+// };
+
+// console.log(mygcd(30, 12));
+// console.log(mygcd(8, 9));
+// console.log(mygcd(1, 1));
+
+// const obj = {
+//   a: {
+//     b: () => {
+//       return 'функция';
+//     },
+//   },
+//   d: {
+//     e: {
+//       f: 2,
+//     },
+//   },
+// };
+
+// function copy(inputObj) {
+//   if (!inputObj) {
+//     return inputObj;
+//   }
+
+//   let outputObj = Array.isArray(inputObj) ? [] : {};
+
+//   let value;
+
+//   Object.keys(inputObj).forEach((key) => {
+//     value = inputObj[key];
+
+//     outputObj[key] = typeof value === 'object' ? copy(value) : value;
+//   });
+
+//   return outputObj;
+// }
+
+// const copy = (inputObj) => {
+//   if (!inputObj) {
+//     return inputObj;
+//   }
+
+//   let outputObj = Array.isArray(inputObj) ? [] : {};
+
+//   let value;
+
+//   Object.keys(inputObj).forEach((key) => {
+//     value = inputObj[key];
+//     outputObj[key] = typeof value === 'object' ? copy(value) : value;
+//   });
+//   return outputObj;
+// };
+
+// const newObj = copy(obj);
+
+// console.log(newObj);
+// console.log(newObj.a.b());
+
+// newObj.a.b = null;
+// newObj.d.e = null;
+
+// console.log(obj.a.b());
+// console.log(obj);
+
+// function arrayLeaders(numbers) {
+//   return numbers.filter(
+//     (el, ind) => el > numbers.slice(ind + 1).reduce((acc, el) => acc + el, 0)
+//   );
+// }
+
+// console.log(arrayLeaders([1, 2, 3, 4, 0]));
+// console.log(arrayLeaders([16, 17, 4, 3, 5, 2]));
+// console.log(arrayLeaders([-1, -29, -26, -2]));
+
+// function nthSmallest(arr, pos) {
+//   console.log(arr.sort((a, b) => a - b));
+//   return arr.sort((a, b) => a - b)[pos - 1];
+// }
+
+// console.log(nthSmallest([3, 1, 2], 2));
+// console.log(nthSmallest([15, 20, 7, 10, 4, 3], 3));
+// console.log(nthSmallest([-5, -1, -6, -18], 4));
+
+function squares(x, n) {
+  return n < 1
+    ? []
+    : [...Array(n)].reduce(
+        (acc, el, ind) => {
+          if (ind === 0) {
+            acc[ind] = x;
+            return acc;
+          }
+          acc[ind] = acc[ind - 1] ** 2;
+          return acc;
+        },
+        [...Array(n)]
+      );
+}
+
+console.log(squares(2, 5));
+console.log(squares(3, 3));
