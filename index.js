@@ -243,10 +243,50 @@
 //   ])
 // );
 
-function tidyNumber(n) {
-  return [...String(n)].sort().join('') == n;
-}
+// function tidyNumber(n) {
+//   return [...String(n)].sort().join('') == n;
+// }
 
-console.log(tidyNumber(12));
-console.log(tidyNumber(9672));
-console.log(tidyNumber(2335));
+// console.log(tidyNumber(12));
+// console.log(tidyNumber(9672));
+// console.log(tidyNumber(2335));
+
+// function sortMyString(S) {
+//   return [...S]
+//     .reduce(
+//       (acc, el, ind) => {
+//         ind % 2 ? acc[1].push(el) : acc[0].push(el);
+//         return acc;
+//       },
+//       [[], []]
+//     )
+//     .map((el) => el.join(''))
+//     .join(' ');
+// }
+
+// console.log(sortMyString('CodeWars'));
+// console.log(sortMyString("YCOLUE'VREER"));
+
+// function add(num1, num2) {
+//   console.log(num1, num2);
+//   const arr1 = [...String(num1)].map(Number).reverse();
+//   const arr2 = [...String(num2)].map(Number).reverse();
+//   const arr = [
+//     ...Array(arr1.length > arr2.length ? arr1.length : arr2.length),
+//   ].map((el) => (el = 0));
+
+//   return Number(
+//     arr
+//       .reduce((acc, _, ind) => {
+//         acc[ind] = (arr1[ind] || 0) + (arr2[ind] || 0);
+//         console.log(acc);
+//         return acc;
+//       }, arr)
+//       .reverse()
+//       .join('')
+//   );
+// }
+
+// console.log(add(2, 11));
+// console.log(add(26, 39));
+// console.log(add(1222, 30277));
