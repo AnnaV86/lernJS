@@ -3565,21 +3565,216 @@ const arrey = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9];
 // console.log(nthSmallest([15, 20, 7, 10, 4, 3], 3));
 // console.log(nthSmallest([-5, -1, -6, -18], 4));
 
-function squares(x, n) {
-  return n < 1
-    ? []
-    : [...Array(n)].reduce(
-        (acc, el, ind) => {
-          if (ind === 0) {
-            acc[ind] = x;
-            return acc;
-          }
-          acc[ind] = acc[ind - 1] ** 2;
-          return acc;
-        },
-        [...Array(n)]
-      );
+// function squares(x, n) {
+//   console.log('arguments function', arguments);
+//   console.log(arguments);
+//   return n < 1
+//     ? []
+//     : [...Array(n)].reduce(
+//         (acc, el, ind) => {
+//           if (ind === 0) {
+//             acc[ind] = x;
+//             return acc;
+//           }
+//           acc[ind] = acc[ind - 1] ** 2;
+//           return acc;
+//         },
+//         [...Array(n)]
+//       );
+// }
+
+// console.log(squares(2, 5));
+// console.log(squares(3, 3));
+// const squares2 = (x, n) => {
+//   console.log('arguments = () =>', arguments)
+//   return n < 1
+//     ? []
+//     : [...Array(n)].reduce(
+//         (acc, el, ind) => {
+//           if (ind === 0) {
+//             acc[ind] = x;
+//             return acc;
+//           }
+//           acc[ind] = acc[ind - 1] ** 2;
+//           return acc;
+//         },
+//         [...Array(n)]
+//       );
+// }
+
+// // squares(2, 3)
+// squares2(2, 3)
+
+// const check = (str) => {
+//   const arr = [...str].reduce((acc, el) => {
+//     el in acc ? acc[el] = acc[el] + 1 : acc[el] = 1;
+//     return acc;
+//   }, {})
+//   return arr['('] === arr[')'] && arr['}'] === arr['{'] && arr['['] === arr[']']
+// };
+
+// console.log(check('((())[])'));
+// console.log(check('(]{}[(()))()'));
+
+// function getAge(...args) {
+//   console.log(args);
+// }
+
+// getAge(21);
+
+// const getPromise = (number) =>
+//   new Promise((resolve) => {
+//     console.log(number);
+//     resolve();
+//   });
+
+// getPromise(2)
+//   .then(() => {
+//     getPromise(1);
+//   })
+//   .then(() => {
+//     console.log(3);
+//   });
+
+// const routes = {
+//   r4ffe2: {
+//     price: 23444,
+//     dates: ['30092092', '11092020'],
+//   },
+//   o34p5: {
+//     dates: ['555', '777'],
+//   },
+// };
+
+// function get(data) {
+//   return Object.keys(data).reduce(
+//     (acc, key) => acc.concat(data[key].dates),
+//     []
+//   );
+// }
+
+// console.log(get(routes));
+
+// const a = []
+// let i = 0
+
+// while (i !== 10) {
+//   a[i++] = function() {
+
+//     return i
+//   }
+//   console.log(a)
+// }
+
+// console.log(a[3]())
+
+// function reg(item, list) {
+//   return list.filter(el => el !== item)
+// }
+
+// console.log(reg(1, [1,2]))
+
+// const animal  = 'snake'
+// function makeShout() {
+//   let animal = "cat"
+//   const shout = function() {
+//   console.log(animal)
+//   }
+//   animal = "dog"
+//   return shout
+// }
+
+// shout = makeShout()
+// shout()
+
+// shout = function() {
+//   console.log(animal)
+// }
+
+// shout()
+
+// function sum(n) {
+//   let result = 0;
+
+//   if (!n) {
+//     return result;
+//   } else {
+//     return function (n) {
+//       result += n;
+//       return sum;
+//     };
+//   }
+// }
+
+// console.log(sum(1)(5)(4));
+
+// const sum = x => y => (y !== undefined ) ? +x + +y : +x
+// console.log(sum(1)(5)(4))
+
+// const arr = [11, 22, 33, 44];
+
+// for (var i = 0; i < arr.length; i++) {
+//   setTimeout(
+//     (
+//       (i) => () =>
+//         console.log(`index: ${i}, element: ${arr[i]}`)
+//     )(i),
+//     1000
+//   );
+// }
+
+// function maxProduct(numbers, size) {
+//   return numbers
+//     .sort((a, b) => b - a)
+//     .slice(0, size)
+//     .reduce((acc, num) => acc * num, 1);
+// }
+
+// console.log(maxProduct([4,3,5], 2));
+
+// function vaporcode(string) {
+//   return string.toUpperCase().replace(/\s/g, '').split('').join('  ')
+// }
+
+// console.log(vaporcode('Lets go to the movies'));
+
+// function encode(str, n) {
+//   const key = String(n)
+//   return [...str].map((char, ind) => char.charCodeAt() - 96 + Number(key[ind % key.length]))
+// }
+
+// console.log(encode('scout', 1939));
+
+// console.log(encode('cwb', 2585));
+
+// var FilterString = function (value) {
+//   return Number(value.replace(/[a-z]/gi, ''));
+// };
+
+// console.log(FilterString('a1b2c3'));
+
+function outed(meet, boss) {
+  const arr = Object.values(meet);
+  return (arr.reduce((acc, el) => acc + el, 0)  + meet[boss]) / arr.length <= 5
+    ? 'Get Out Now!'
+    : 'Nice Work Champ!';
 }
 
-console.log(squares(2, 5));
-console.log(squares(3, 3));
+console.log(
+  outed(
+    {
+      tim: 0,
+      jim: 2,
+      randy: 0,
+      sandy: 7,
+      andy: 0,
+      katie: 5,
+      laura: 1,
+      saajid: 2,
+      alex: 3,
+      john: 2,
+      mr: 0,
+    },
+    'laura'
+  )
+);
