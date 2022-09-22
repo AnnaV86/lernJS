@@ -200,7 +200,7 @@
 
 // Пример:
 // на входе: (7300, [5000, 1000, 500, 100])
-// на выходе: [1, 2, 0, 3]
+// // на выходе: [1, 2, 0, 3]
 // const getBanknotes = (sum, holdings) =>
 //   holdings.reduce(
 //     (acc, el, index) => {
@@ -290,3 +290,52 @@
 // console.log(add(2, 11));
 // console.log(add(26, 39));
 // console.log(add(1222, 30277));
+
+// const reverse = (number) =>
+//   Number(
+//     number < 10
+//       ? number
+//       : String(number % 10) + reverse(Math.floor(number / 10))
+//   );
+
+// console.log(reverse(154) === 451);
+
+// const reverse = (number, acc = 0) => {
+//   if (!number) {
+//     return acc;
+//   }
+
+//   acc = acc * 10 + (number % 10);
+
+//   return reverse(Math.floor(number / 10), acc);
+// };
+
+// console.log(reverse(154) === 451);
+
+// function incrementer(nums) {
+//   if (nums === []) {
+//     return [];
+//   }
+//   return nums.map((num, ind) =>
+//     num + (ind + 1) > 9 ? +String(num + ind + 1).slice(-1) : num + (ind + 1)
+//   );
+// }
+
+// console.log(incrementer([4, 6, 7, 1, 3]));
+
+function calculate(num1, operation, num2) {
+  switch (operation) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+
+    case '/':
+      return num1 / num2;
+
+    default:
+      return null;
+  }
+}
+
+console.log(calculate(3.2, '+', 8));

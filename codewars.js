@@ -3753,28 +3753,28 @@ const arrey = [1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9];
 
 // console.log(FilterString('a1b2c3'));
 
-function outed(meet, boss) {
-  const arr = Object.values(meet);
-  return (arr.reduce((acc, el) => acc + el, 0)  + meet[boss]) / arr.length <= 5
-    ? 'Get Out Now!'
-    : 'Nice Work Champ!';
-}
+// function outed(meet, boss) {
+//   const arr = Object.values(meet);
+//   return (arr.reduce((acc, el) => acc + el, 0)  + meet[boss]) / arr.length <= 5
+//     ? 'Get Out Now!'
+//     : 'Nice Work Champ!';
+// }
 
-console.log(
-  outed(
-    {
-      tim: 0,
-      jim: 2,
-      randy: 0,
-      sandy: 7,
-      andy: 0,
-      katie: 5,
-      laura: 1,
-      saajid: 2,
-      alex: 3,
-      john: 2,
-      mr: 0,
-    },
-    'laura'
-  )
-);
+// console.log(
+//   outed(
+//     {
+//       tim: 0,
+//       jim: 2,
+//       randy: 0,
+//       sandy: 7,
+//       andy: 0,
+//       katie: 5,
+//       laura: 1,
+//       saajid: 2,
+//       alex: 3,
+//       john: 2,
+//       mr: 0,
+//     },
+//     'laura'
+//   )
+// );
