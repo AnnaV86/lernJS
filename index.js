@@ -323,19 +323,83 @@
 
 // console.log(incrementer([4, 6, 7, 1, 3]));
 
-function calculate(num1, operation, num2) {
-  switch (operation) {
-    case '+':
-      return num1 + num2;
-    case '-':
-      return num1 - num2;
+// function calculate(num1, operation, num2) {
+//   switch (operation) {
+//     case '+':
+//       return num1 + num2;
+//     case '-':
+//       return num1 - num2;
 
-    case '/':
-      return num1 / num2;
+//     case '/':
+//       return num1 / num2;
 
-    default:
-      return null;
-  }
+//     default:
+//       return null;
+//   }
+// }
+
+// console.log(calculate(3.2, '+', 8));
+
+// const filter = {
+//   values: ['111', '25'],
+//   value_type: 'PRICE',
+// };
+
+// const multiplier = filter.value_type === 'PRICE' ? 100 : 1;
+// const value = filter.values?.map((i) => i * multiplier).join('%-%');
+
+// console.log(value);
+
+// const department = {
+//   accounts: 1,
+//   finance: 2,
+//   canteen: 10,
+//   regulation: 3,
+//   trading: 6,
+//   change: 6,
+//   IS: 8,
+//   retail: 5,
+//   cleaning: 4,
+//   'pissing about': 25,
+// };
+// function boredom(staff) {
+//   const arr = Object.values(staff)
+//     .map((el) => (el = department[el]))
+//     .reduce((acc, el) => acc + el, 0);
+//   return arr <=80 ? 'kill me now' :
+//   arr < 100 ?  'i can handle this' : 'party time!!'
+// }
+
+// console.log(
+//   boredom({
+//     tim: 'change',
+//     jim: 'accounts',
+//     randy: 'canteen',
+//     sandy: 'change',
+//     andy: 'change',
+//     katie: 'IS',
+//     laura: 'change',
+//     saajid: 'IS',
+//     alex: 'trading',
+//     john: 'accounts',
+//     mr: 'finance',
+//   })
+// );
+
+// function min(arr, toReturn) {
+//   const min = Math.min(...arr);
+//   return toReturn === 'value' ? min : arr.indexOf(min);
+// }
+
+// console.log(min([1, 2, 3, 4, 5], 'value'));
+// console.log(min([1, 2, 3, 4, 5], 'index'));
+
+function capitalize(s, arr) {
+  return [...s]
+    .map((el, ind) => (arr.includes(ind) ? el.toUpperCase() : el))
+    .join('');
 }
 
-console.log(calculate(3.2, '+', 8));
+console.log(capitalize('abcdef', [1, 2, 5]));
+console.log(capitalize('abcdef', [1, 2, 5, 100]));
+console.log(capitalize('codewarriors', [5]));
