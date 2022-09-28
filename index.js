@@ -394,12 +394,24 @@
 // console.log(min([1, 2, 3, 4, 5], 'value'));
 // console.log(min([1, 2, 3, 4, 5], 'index'));
 
-function capitalize(s, arr) {
-  return [...s]
-    .map((el, ind) => (arr.includes(ind) ? el.toUpperCase() : el))
-    .join('');
-}
+// function capitalize(s, arr) {
+//   return [...s]
+//     .map((el, ind) => (arr.includes(ind) ? el.toUpperCase() : el))
+//     .join('');
+// }
 
-console.log(capitalize('abcdef', [1, 2, 5]));
-console.log(capitalize('abcdef', [1, 2, 5, 100]));
-console.log(capitalize('codewarriors', [5]));
+// console.log(capitalize('abcdef', [1, 2, 5]));
+// console.log(capitalize('abcdef', [1, 2, 5, 100]));
+// console.log(capitalize('codewarriors', [5]));
+
+// function wordValue(a) {
+//   return a.map(
+//     (word, ind) =>
+//       [...word]
+//         .map((chart) => (chart === ' ' ? 0 : chart.charCodeAt() - 96))
+//         .reduce((acc, el) => acc + el, 0) *
+//       (ind + 1)
+//   );
+// }
+
+// console.log(wordValue(['abc abc', 'abc abc', 'abc', 'abc']));
