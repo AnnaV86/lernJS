@@ -415,3 +415,75 @@
 // }
 
 // console.log(wordValue(['abc abc', 'abc abc', 'abc', 'abc']));
+
+// class Block {
+//   constructor(data) {
+//     [this.width, this.length, this.height] = data;
+//   }
+
+//   getWidth() {
+//     return this.width;
+//   }
+
+//   getLength() {
+//     return this.length;
+//   }
+
+//   getHeight() {
+//     return this.height;
+//   }
+
+//   getVolume() {
+//     return this.width * this.length * this.height;
+//   }
+
+//   getSurfaceArea() {
+//     return (
+//       2 *
+//       (this.width * this.length +
+//         this.length * this.height +
+//         this.height * this.width)
+//     );
+//   }
+// }
+
+// let block = new Block([2, 4, 6]);
+
+// console.log(block.getSurfaceArea());
+
+// function vowel2index(str) {
+//   return str.replace(/[aeiou]/gi, (simb, ind) => ind + 1);
+// }
+
+// console.log(
+//   vowel2index(
+//     `90's cornhole Austin, pickled butcher yr messenger bag gastropub next level leggings listicle meditation try-hard Vice. Taxidermy gastropub gentrify, meh fap organic ennui fingerstache pickled vegan. Seitan sustainable PBR&B cornhole VHS. Jean shorts actually bitters ugh blog Intelligentsia. Artisan Kickstarter DIY, fixie cliche salvia lo-fi four loko. PBR&B Odd Future ugh fingerstache cray Wes Anderson chia typewriter iPhone bespoke four loko, Intelligentsia photo booth direct trade. Aesthetic Tumblr Portland XOXO squid, synth viral listicle skateboard four dollar toast cornhole Blue Bottle semiotics.`
+//   )
+// );
+
+// function lastSurvivor(letters, coords) {
+//   let string = [...letters];
+//   coords.map((el) =>
+//     string.map((elStr, ind) => (ind === el ? string.splice(ind, 1) : elStr))
+//   );
+
+//   return string.join('');
+// }
+
+// console.log(lastSurvivor('kbc', [2, 1]));
+
+// function unluckyDays(year) {
+//   let count = 0;
+//   for (let ind = 0; ind < 13; ind++) {
+//     const str = `${year}-0${ind + 1}-13`;
+//     const date = new Date(str);
+//     const dayOfWeek = date.getDay();
+//     if (dayOfWeek === 5) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// console.log(unluckyDays(1001));
