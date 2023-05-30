@@ -487,3 +487,28 @@
 // }
 
 // console.log(unluckyDays(1001));
+
+// function productArray(numbers) {
+//   return numbers.map((el) => numbers.reduce((acc, num) => acc * num, 1) / el);
+// }
+
+// console.log(productArray([3, 27, 4, 2]));
+
+// function catMouse(x) {
+//   return x.length > 5 ? 'Escaped!' : 'Caught!';
+// }
+
+// console.log(catMouse('C....m'));
+// console.log(catMouse('C..m'));
+// console.log(catMouse('C.m'));
+// console.log(catMouse('C...m'));
+// console.log(catMouse('C..........m'));
+
+// function specialNumber(n) {
+//   return /[6-9]/.test(n) ? 'NOT!!' : 'Special!!';
+// }
+
+// console.log(specialNumber(2));
+// console.log(specialNumber(9));
+// console.log(specialNumber(513));
+// console.log(specialNumber(581));
