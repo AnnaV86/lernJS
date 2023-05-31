@@ -512,3 +512,19 @@
 // console.log(specialNumber(9));
 // console.log(specialNumber(513));
 // console.log(specialNumber(581));
+
+// function meeting(x) {
+//   const index = x.indexOf('O');
+//   console.log(x, index);
+//   return index < 0 ? 'None available!' : index;
+// }
+
+// console.log(meeting(['X', 'O', 'X']));
+
+function swap(string) {
+  const vowels = ['a', 'i', 'o', 'u', 'e'];
+  return [...string].map((el) => (vowels.includes(el) ? el.toUpperCase() : el));
+}
+
+console.log(swap('   @@@'));
+console.log(swap('abracadabra'));
