@@ -521,10 +521,172 @@
 
 // console.log(meeting(['X', 'O', 'X']));
 
-function swap(string) {
-  const vowels = ['a', 'i', 'o', 'u', 'e'];
-  return [...string].map((el) => (vowels.includes(el) ? el.toUpperCase() : el));
-}
+// function swap(string) {
+//   const vowels = ['a', 'i', 'o', 'u', 'e'];
+//   return [...string].map((el) => (vowels.includes(el) ? el.toUpperCase() : el));
+// }
 
-console.log(swap('   @@@'));
-console.log(swap('abracadabra'));
+// console.log(swap('   @@@'));
+// console.log(swap('abracadabra'));
+
+// setTimeout(function timeout() {
+//   console.log('Таймаут');
+//   }, 0);
+
+//   let p = new Promise(function(resolve, reject) {
+//   console.log('Создание промиса');
+//   resolve();
+//   });
+
+//   p.then(function(){
+//   console.log('Обработка промиса');
+//   });
+
+//   console.log('Конец скрипта');
+
+// console.log(1);
+
+// setTimeout(() => console.log(2));
+
+// Promise.resolve().then(() => console.log(3));
+
+// Promise.resolve().then(() => setTimeout(() => console.log(4)));
+
+// Promise.resolve().then(() => console.log(5));
+
+// setTimeout(() => console.log(6));
+
+// console.log(7);
+
+// console.log(1);
+
+//1,7,1,3,5,2,6,4
+
+// console.log(1);
+
+// setTimeout(() => console.log(2));
+
+// Promise.reject(3).catch(console.log);
+
+// new Promise((resolve) => setTimeout(resolve)).then(() => console.log(4));
+
+// Promise.resolve(5).then(console.log);
+
+// console.log(6);
+
+// setTimeout(() => console.log(7), 0);
+
+// //1,
+
+// const myPromise = (delay) =>
+//   new Promise((res, rej) => {
+//     setTimeout(res, delay);
+//   });
+// setTimeout(() => console.log('in setTimeout1'), 1000);
+// myPromise(1000).then((res) => console.log('in Promise 1'));
+// setTimeout(() => console.log('in setTimeout2'), 100);
+// myPromise(2000).then((res) => console.log('in Promise 2'));
+// setTimeout(() => console.log('in setTimeout3'), 2000);
+// myPromise(1000).then((res) => console.log('in Promise 3'));
+// setTimeout(() => console.log('in setTimeout4'), 1000);
+// myPromise(5000).then((res) => console.log('in Promise '));
+
+// //
+
+// const sum = (x) => {
+//   return (y) => y;
+// };
+
+// console.log(sum(5)(3));
+
+// const palindrome = (string) => {
+//   const str = string.toLowerCase();
+//   return [...str].reverse().join('') === str;
+// };
+
+// console.log(palindrome('racecar'));
+// console.log(palindrome('table'));
+
+// const Fizzbuzz = (n) => {
+//   return [...Array(n)]
+//     .map((_, ind) => ind + 1)
+//     .forEach((el) => {
+//       if (el % 3 === 0 && el % 5 === 0) console.log('FizzBuzz!');
+//       if (el % 3 === 0) console.log('Fizz!');
+//       if (el % 5 === 0) console.log('Buzz!');
+//       else {
+//         console.log(el);
+//       }
+//     });
+// };
+
+// Fizzbuzz(15);
+
+// const jjj = 'jkjkjkfiigu';
+
+// const reducer = (str) => {
+//   return [...str].reduce((acc, el) => {
+//     acc[el] = ++acc[el] || 1;
+//     return acc;
+//   }, {});
+// };
+
+// console.log(reducer(jjj));
+
+// function stringMerge(string1, string2, letter) {
+//   const word1 = string1.slice(0, string1.indexOf(letter));
+//   const word2 = string2.slice(string2.indexOf(letter));
+//   return word1 + word2;
+// }
+
+// console.log(stringMerge('person', 'here', 'e'));
+
+// function toTime(seconds) {
+//   const hours = Math.floor(seconds / 3600);
+//   const minuts = Math.floor((seconds % 3600) / 60);
+
+//   return `${hours} hour(s) and ${minuts} minute(s)`;
+// }
+
+// console.log(toTime(3600)); //'1 hour(s) and 0 minute(s)'
+
+// function crap(x, bags, cap) {
+//   if (x.filter((el) => el.includes('D')).length) return 'Dog!!';
+//   const crap = x.filter((el) => el.includes('@')).length;
+//   return bags * cap >= crap ? 'Clean' : 'Cr@p';
+// }
+
+// console.log(
+//   crap(
+//     [
+//       ['_', '_', '_', '_'],
+//       ['_', '_', '_', '@'],
+//       ['_', '_', '@', '_'],
+//     ],
+//     2,
+//     2
+//   )
+// );
+// console.log(
+//   crap(
+//     [
+//       ['_', '_', '_', '_'],
+//       ['_', '_', '_', '@'],
+//       ['_', '_', '@', '_'],
+//     ],
+//     1,
+//     1
+//   )
+// );
+
+// console.log(
+//   crap(
+//     [
+//       ['_', '_'],
+//       ['_', '@'],
+//       ['D', '_'],
+//     ],
+//     2,
+//     2
+//   )
+// );
