@@ -690,3 +690,65 @@
 //     2
 //   )
 // );
+
+const leet = {
+  A: '@',
+  B: '8',
+  C: '(',
+  D: 'D',
+  E: '3',
+  F: 'F',
+  G: '6',
+  H: '#',
+  I: '!',
+  J: 'J',
+  K: 'K',
+  L: '1',
+  M: 'M',
+  N: 'N',
+  O: '0',
+  P: 'P',
+  Q: 'Q',
+  R: 'R',
+  S: '$',
+  T: '7',
+  U: 'U',
+  V: 'V',
+  W: 'W',
+  X: 'X',
+  Y: 'Y',
+  Z: '2',
+};
+
+// function toLeetSpeak(str) {
+//   return [...str].map((el) => (leet[el] ? leet[el] : el)).join('');
+// }
+
+// function toLeetSpeak(str) {
+//   return str.replace(/[ACEGHILOSTZ]/g, (s) => leet[s]);
+// }
+
+// console.log(toLeetSpeak('LEET'));
+
+// function removeConsecutiveDuplicates(string) {
+//   const stringNew = string
+//     .split(' ')
+//     .filter((array, el, ind) => ind === 0 || el !== array[ind - 1]);
+
+//   return stringNew.join(' ');
+// }
+
+// console.log(removeConsecutiveDuplicates('alpha alphaalpha alphaalphaalpha'));
+// console.log(
+//   removeConsecutiveDuplicates(
+//     'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+//   )
+// );
+
+function solve(a, b) {
+  return [...a, ...b]
+    .filter((el) => !a.includes(el) || !b.includes(el))
+    .join('');
+}
+
+console.log(solve('xyab', 'xzca'));
