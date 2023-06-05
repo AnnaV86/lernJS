@@ -745,10 +745,39 @@ const leet = {
 //   )
 // );
 
-function solve(a, b) {
-  return [...a, ...b]
-    .filter((el) => !a.includes(el) || !b.includes(el))
-    .join('');
-}
+// function solve(a, b) {
+//   return [...a, ...b]
+//     .filter((el) => !a.includes(el) || !b.includes(el))
+//     .join('');
+// }
 
-console.log(solve('xyab', 'xzca'));
+// console.log(solve('xyab', 'xzca'));
+
+// const splitInParts = function (s, partLength) {
+//   var parts = [];
+//   var array = s.split('');
+//   while (array.length) {
+//     parts.push(array.splice(0, partLength).join(''));
+//   }
+//   return parts.join(' ');
+// };
+
+// console.log(splitInParts('supercalifragilisticexpialidocious', 3));
+
+// function houseNumbersSum(inputArray) {
+//   const indexZero = inputArray.indexOf(0);
+//   return inputArray.splice(0, indexZero).reduce((acc, num) => acc + num, 0);
+// }
+
+// console.log(houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]));
+
+// function validSpacing(s) {
+//   return s.trim().replace(/\s{2,}/g, ' ').length === s.length;
+// }
+
+// console.log(validSpacing('rD  g'));
+
+// const tail = (arr) => arr.slice(1);
+
+// console.log(tail([1]));
+// console.log(tail([1, 2, 3]));
